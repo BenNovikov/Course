@@ -7,11 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		845AB2121B5F05450076828E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AB2111B5F05450076828E /* main.m */; };
+		845AB2481B5F07470076828E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AB2471B5F07470076828E /* main.m */; };
+		845AB2551B5F076F0076828E /* BNCreature.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AB24E1B5F076F0076828E /* BNCreature.m */; };
+		845AB2561B5F076F0076828E /* BNFemaleCreature.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AB2501B5F076F0076828E /* BNFemaleCreature.m */; };
+		845AB2571B5F076F0076828E /* BNMaleCreature.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AB2521B5F076F0076828E /* BNMaleCreature.m */; };
+		845AB2581B5F076F0076828E /* NSObject+BNExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AB2541B5F076F0076828E /* NSObject+BNExtensions.m */; };
+		845AB2611B5F09B10076828E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AB2601B5F09B10076828E /* main.m */; };
+		845AB27A1B5F09D80076828E /* BNBuilding.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AB2681B5F09D80076828E /* BNBuilding.m */; };
+		845AB27B1B5F09D80076828E /* BNCarwash.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AB26A1B5F09D80076828E /* BNCarwash.m */; };
+		845AB27C1B5F09D80076828E /* BNRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AB26C1B5F09D80076828E /* BNRoom.m */; };
+		845AB27D1B5F09D80076828E /* BNAccountant.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AB26F1B5F09D80076828E /* BNAccountant.m */; };
+		845AB27E1B5F09D80076828E /* BNCarwasher.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AB2711B5F09D80076828E /* BNCarwasher.m */; };
+		845AB27F1B5F09D80076828E /* BNClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AB2731B5F09D80076828E /* BNClient.m */; };
+		845AB2801B5F09D80076828E /* BNManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AB2751B5F09D80076828E /* BNManager.m */; };
+		845AB2811B5F09D80076828E /* BNPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AB2771B5F09D80076828E /* BNPerson.m */; };
+		845AB2821B5F09D80076828E /* BNStaff.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AB2791B5F09D80076828E /* BNStaff.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		845AB20C1B5F05450076828E /* CopyFiles */ = {
+		845AB2431B5F07470076828E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		845AB25C1B5F09B00076828E /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -23,12 +46,48 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		845AB20E1B5F05450076828E /* Course */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Course; sourceTree = BUILT_PRODUCTS_DIR; };
-		845AB2111B5F05450076828E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		845AB2451B5F07470076828E /* Creature */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Creature; sourceTree = BUILT_PRODUCTS_DIR; };
+		845AB2471B5F07470076828E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		845AB24D1B5F076F0076828E /* BNCreature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNCreature.h; sourceTree = "<group>"; };
+		845AB24E1B5F076F0076828E /* BNCreature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNCreature.m; sourceTree = "<group>"; };
+		845AB24F1B5F076F0076828E /* BNFemaleCreature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNFemaleCreature.h; sourceTree = "<group>"; };
+		845AB2501B5F076F0076828E /* BNFemaleCreature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNFemaleCreature.m; sourceTree = "<group>"; };
+		845AB2511B5F076F0076828E /* BNMaleCreature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNMaleCreature.h; sourceTree = "<group>"; };
+		845AB2521B5F076F0076828E /* BNMaleCreature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNMaleCreature.m; sourceTree = "<group>"; };
+		845AB2531B5F076F0076828E /* NSObject+BNExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+BNExtensions.h"; sourceTree = "<group>"; };
+		845AB2541B5F076F0076828E /* NSObject+BNExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+BNExtensions.m"; sourceTree = "<group>"; };
+		845AB2591B5F091A0076828E /* Tasks */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Tasks; sourceTree = "<group>"; };
+		845AB25E1B5F09B00076828E /* Carwash_1.0 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Carwash_1.0; sourceTree = BUILT_PRODUCTS_DIR; };
+		845AB2601B5F09B10076828E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		845AB2671B5F09D80076828E /* BNBuilding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNBuilding.h; sourceTree = "<group>"; };
+		845AB2681B5F09D80076828E /* BNBuilding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNBuilding.m; sourceTree = "<group>"; };
+		845AB2691B5F09D80076828E /* BNCarwash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNCarwash.h; sourceTree = "<group>"; };
+		845AB26A1B5F09D80076828E /* BNCarwash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNCarwash.m; sourceTree = "<group>"; };
+		845AB26B1B5F09D80076828E /* BNRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRoom.h; sourceTree = "<group>"; };
+		845AB26C1B5F09D80076828E /* BNRoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRoom.m; sourceTree = "<group>"; };
+		845AB26E1B5F09D80076828E /* BNAccountant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNAccountant.h; sourceTree = "<group>"; };
+		845AB26F1B5F09D80076828E /* BNAccountant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNAccountant.m; sourceTree = "<group>"; };
+		845AB2701B5F09D80076828E /* BNCarwasher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNCarwasher.h; sourceTree = "<group>"; };
+		845AB2711B5F09D80076828E /* BNCarwasher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNCarwasher.m; sourceTree = "<group>"; };
+		845AB2721B5F09D80076828E /* BNClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNClient.h; sourceTree = "<group>"; };
+		845AB2731B5F09D80076828E /* BNClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNClient.m; sourceTree = "<group>"; };
+		845AB2741B5F09D80076828E /* BNManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNManager.h; sourceTree = "<group>"; };
+		845AB2751B5F09D80076828E /* BNManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNManager.m; sourceTree = "<group>"; };
+		845AB2761B5F09D80076828E /* BNPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNPerson.h; sourceTree = "<group>"; };
+		845AB2771B5F09D80076828E /* BNPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNPerson.m; sourceTree = "<group>"; };
+		845AB2781B5F09D80076828E /* BNStaff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNStaff.h; sourceTree = "<group>"; };
+		845AB2791B5F09D80076828E /* BNStaff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNStaff.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		845AB20B1B5F05450076828E /* Frameworks */ = {
+		845AB2421B5F07470076828E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		845AB25B1B5F09B00076828E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,7 +100,9 @@
 		845AB2051B5F05450076828E = {
 			isa = PBXGroup;
 			children = (
-				845AB2101B5F05450076828E /* Course */,
+				845AB2591B5F091A0076828E /* Tasks */,
+				845AB2461B5F07470076828E /* Creature */,
+				845AB25F1B5F09B10076828E /* Carwash_1.0 */,
 				845AB20F1B5F05450076828E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,37 +110,121 @@
 		845AB20F1B5F05450076828E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				845AB20E1B5F05450076828E /* Course */,
+				845AB2451B5F07470076828E /* Creature */,
+				845AB25E1B5F09B00076828E /* Carwash_1.0 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		845AB2101B5F05450076828E /* Course */ = {
+		845AB2461B5F07470076828E /* Creature */ = {
 			isa = PBXGroup;
 			children = (
-				845AB2111B5F05450076828E /* main.m */,
+				845AB24C1B5F076F0076828E /* Creature */,
+				845AB2471B5F07470076828E /* main.m */,
 			);
-			path = Course;
+			path = Creature;
+			sourceTree = "<group>";
+		};
+		845AB24C1B5F076F0076828E /* Creature */ = {
+			isa = PBXGroup;
+			children = (
+				845AB24D1B5F076F0076828E /* BNCreature.h */,
+				845AB24E1B5F076F0076828E /* BNCreature.m */,
+				845AB24F1B5F076F0076828E /* BNFemaleCreature.h */,
+				845AB2501B5F076F0076828E /* BNFemaleCreature.m */,
+				845AB2511B5F076F0076828E /* BNMaleCreature.h */,
+				845AB2521B5F076F0076828E /* BNMaleCreature.m */,
+				845AB2531B5F076F0076828E /* NSObject+BNExtensions.h */,
+				845AB2541B5F076F0076828E /* NSObject+BNExtensions.m */,
+			);
+			path = Creature;
+			sourceTree = "<group>";
+		};
+		845AB25F1B5F09B10076828E /* Carwash_1.0 */ = {
+			isa = PBXGroup;
+			children = (
+				845AB2651B5F09D80076828E /* Source */,
+				845AB2601B5F09B10076828E /* main.m */,
+			);
+			path = Carwash_1.0;
+			sourceTree = "<group>";
+		};
+		845AB2651B5F09D80076828E /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				845AB2661B5F09D80076828E /* Locations */,
+				845AB26D1B5F09D80076828E /* People */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		845AB2661B5F09D80076828E /* Locations */ = {
+			isa = PBXGroup;
+			children = (
+				845AB2671B5F09D80076828E /* BNBuilding.h */,
+				845AB2681B5F09D80076828E /* BNBuilding.m */,
+				845AB2691B5F09D80076828E /* BNCarwash.h */,
+				845AB26A1B5F09D80076828E /* BNCarwash.m */,
+				845AB26B1B5F09D80076828E /* BNRoom.h */,
+				845AB26C1B5F09D80076828E /* BNRoom.m */,
+			);
+			path = Locations;
+			sourceTree = "<group>";
+		};
+		845AB26D1B5F09D80076828E /* People */ = {
+			isa = PBXGroup;
+			children = (
+				845AB26E1B5F09D80076828E /* BNAccountant.h */,
+				845AB26F1B5F09D80076828E /* BNAccountant.m */,
+				845AB2701B5F09D80076828E /* BNCarwasher.h */,
+				845AB2711B5F09D80076828E /* BNCarwasher.m */,
+				845AB2721B5F09D80076828E /* BNClient.h */,
+				845AB2731B5F09D80076828E /* BNClient.m */,
+				845AB2741B5F09D80076828E /* BNManager.h */,
+				845AB2751B5F09D80076828E /* BNManager.m */,
+				845AB2761B5F09D80076828E /* BNPerson.h */,
+				845AB2771B5F09D80076828E /* BNPerson.m */,
+				845AB2781B5F09D80076828E /* BNStaff.h */,
+				845AB2791B5F09D80076828E /* BNStaff.m */,
+			);
+			path = People;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		845AB20D1B5F05450076828E /* Course */ = {
+		845AB2441B5F07470076828E /* Creature */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 845AB2151B5F05450076828E /* Build configuration list for PBXNativeTarget "Course" */;
+			buildConfigurationList = 845AB2491B5F07470076828E /* Build configuration list for PBXNativeTarget "Creature" */;
 			buildPhases = (
-				845AB20A1B5F05450076828E /* Sources */,
-				845AB20B1B5F05450076828E /* Frameworks */,
-				845AB20C1B5F05450076828E /* CopyFiles */,
+				845AB2411B5F07470076828E /* Sources */,
+				845AB2421B5F07470076828E /* Frameworks */,
+				845AB2431B5F07470076828E /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Course;
-			productName = Course;
-			productReference = 845AB20E1B5F05450076828E /* Course */;
+			name = Creature;
+			productName = Creature;
+			productReference = 845AB2451B5F07470076828E /* Creature */;
+			productType = "com.apple.product-type.tool";
+		};
+		845AB25D1B5F09B00076828E /* Carwash_1.0 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 845AB2621B5F09B10076828E /* Build configuration list for PBXNativeTarget "Carwash_1.0" */;
+			buildPhases = (
+				845AB25A1B5F09B00076828E /* Sources */,
+				845AB25B1B5F09B00076828E /* Frameworks */,
+				845AB25C1B5F09B00076828E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Carwash_1.0;
+			productName = Carwash_1.0;
+			productReference = 845AB25E1B5F09B00076828E /* Carwash_1.0 */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -91,7 +236,10 @@
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = BenNovikov;
 				TargetAttributes = {
-					845AB20D1B5F05450076828E = {
+					845AB2441B5F07470076828E = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					845AB25D1B5F09B00076828E = {
 						CreatedOnToolsVersion = 6.4;
 					};
 				};
@@ -108,17 +256,39 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				845AB20D1B5F05450076828E /* Course */,
+				845AB2441B5F07470076828E /* Creature */,
+				845AB25D1B5F09B00076828E /* Carwash_1.0 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		845AB20A1B5F05450076828E /* Sources */ = {
+		845AB2411B5F07470076828E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				845AB2121B5F05450076828E /* main.m in Sources */,
+				845AB2551B5F076F0076828E /* BNCreature.m in Sources */,
+				845AB2581B5F076F0076828E /* NSObject+BNExtensions.m in Sources */,
+				845AB2571B5F076F0076828E /* BNMaleCreature.m in Sources */,
+				845AB2481B5F07470076828E /* main.m in Sources */,
+				845AB2561B5F076F0076828E /* BNFemaleCreature.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		845AB25A1B5F09B00076828E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				845AB2821B5F09D80076828E /* BNStaff.m in Sources */,
+				845AB27C1B5F09D80076828E /* BNRoom.m in Sources */,
+				845AB2811B5F09D80076828E /* BNPerson.m in Sources */,
+				845AB2801B5F09D80076828E /* BNManager.m in Sources */,
+				845AB27B1B5F09D80076828E /* BNCarwash.m in Sources */,
+				845AB2611B5F09B10076828E /* main.m in Sources */,
+				845AB27F1B5F09D80076828E /* BNClient.m in Sources */,
+				845AB27D1B5F09D80076828E /* BNAccountant.m in Sources */,
+				845AB27E1B5F09D80076828E /* BNCarwasher.m in Sources */,
+				845AB27A1B5F09D80076828E /* BNBuilding.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,7 +302,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
@@ -174,7 +344,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
@@ -202,16 +372,42 @@
 			};
 			name = Release;
 		};
-		845AB2161B5F05450076828E /* Debug */ = {
+		845AB24A1B5F07470076828E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		845AB2171B5F05450076828E /* Release */ = {
+		845AB24B1B5F07470076828E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		845AB2631B5F09B10076828E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		845AB2641B5F09B10076828E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -228,11 +424,19 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		845AB2151B5F05450076828E /* Build configuration list for PBXNativeTarget "Course" */ = {
+		845AB2491B5F07470076828E /* Build configuration list for PBXNativeTarget "Creature" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				845AB2161B5F05450076828E /* Debug */,
-				845AB2171B5F05450076828E /* Release */,
+				845AB24A1B5F07470076828E /* Debug */,
+				845AB24B1B5F07470076828E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		845AB2621B5F09B10076828E /* Build configuration list for PBXNativeTarget "Carwash_1.0" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				845AB2631B5F09B10076828E /* Debug */,
+				845AB2641B5F09B10076828E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

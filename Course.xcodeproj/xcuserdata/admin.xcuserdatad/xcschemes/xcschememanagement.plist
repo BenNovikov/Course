@@ -4,15 +4,37 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Course.xcscheme</key>
+		<key>Carwash_1.0.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>2</integer>
+		</dict>
+		<key>Creature.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<true/>
+			<key>orderHint</key>
+			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>845AB20D1B5F05450076828E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>845AB21B1B5F056D0076828E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>845AB2441B5F07470076828E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>845AB25D1B5F09B00076828E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
