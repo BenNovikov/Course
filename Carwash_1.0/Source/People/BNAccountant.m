@@ -14,7 +14,7 @@
 #pragma mark Public Methods
 
 - (void)countMoney {
-    NSLog(@"%@ is counting money. There is $%8.02f now", self, self.money);
+    NSLog(@"%@ is counting money... It's $%.02f", self, self.money);
 }
 
 - (void)performStaffSpecificOperation:(BNRoom *)location {

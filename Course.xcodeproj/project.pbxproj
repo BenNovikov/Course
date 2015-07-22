@@ -19,7 +19,7 @@
 		845AB27D1B5F09D80076828E /* BNAccountant.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AB26F1B5F09D80076828E /* BNAccountant.m */; };
 		845AB27E1B5F09D80076828E /* BNCarwasher.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AB2711B5F09D80076828E /* BNCarwasher.m */; };
 		845AB27F1B5F09D80076828E /* BNClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AB2731B5F09D80076828E /* BNClient.m */; };
-		845AB2801B5F09D80076828E /* BNManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AB2751B5F09D80076828E /* BNManager.m */; };
+		845AB2801B5F09D80076828E /* BNBoss.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AB2751B5F09D80076828E /* BNBoss.m */; };
 		845AB2811B5F09D80076828E /* BNPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AB2771B5F09D80076828E /* BNPerson.m */; };
 		845AB2821B5F09D80076828E /* BNStaff.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AB2791B5F09D80076828E /* BNStaff.m */; };
 /* End PBXBuildFile section */
@@ -71,8 +71,8 @@
 		845AB2711B5F09D80076828E /* BNCarwasher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNCarwasher.m; sourceTree = "<group>"; };
 		845AB2721B5F09D80076828E /* BNClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNClient.h; sourceTree = "<group>"; };
 		845AB2731B5F09D80076828E /* BNClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNClient.m; sourceTree = "<group>"; };
-		845AB2741B5F09D80076828E /* BNManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNManager.h; sourceTree = "<group>"; };
-		845AB2751B5F09D80076828E /* BNManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNManager.m; sourceTree = "<group>"; };
+		845AB2741B5F09D80076828E /* BNBoss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNBoss.h; sourceTree = "<group>"; };
+		845AB2751B5F09D80076828E /* BNBoss.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNBoss.m; sourceTree = "<group>"; };
 		845AB2761B5F09D80076828E /* BNPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNPerson.h; sourceTree = "<group>"; };
 		845AB2771B5F09D80076828E /* BNPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNPerson.m; sourceTree = "<group>"; };
 		845AB2781B5F09D80076828E /* BNStaff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNStaff.h; sourceTree = "<group>"; };
@@ -180,8 +180,8 @@
 				845AB2711B5F09D80076828E /* BNCarwasher.m */,
 				845AB2721B5F09D80076828E /* BNClient.h */,
 				845AB2731B5F09D80076828E /* BNClient.m */,
-				845AB2741B5F09D80076828E /* BNManager.h */,
-				845AB2751B5F09D80076828E /* BNManager.m */,
+				845AB2741B5F09D80076828E /* BNBoss.h */,
+				845AB2751B5F09D80076828E /* BNBoss.m */,
 				845AB2761B5F09D80076828E /* BNPerson.h */,
 				845AB2771B5F09D80076828E /* BNPerson.m */,
 				845AB2781B5F09D80076828E /* BNStaff.h */,
@@ -282,7 +282,7 @@
 				845AB2821B5F09D80076828E /* BNStaff.m in Sources */,
 				845AB27C1B5F09D80076828E /* BNRoom.m in Sources */,
 				845AB2811B5F09D80076828E /* BNPerson.m in Sources */,
-				845AB2801B5F09D80076828E /* BNManager.m in Sources */,
+				845AB2801B5F09D80076828E /* BNBoss.m in Sources */,
 				845AB27B1B5F09D80076828E /* BNCarwash.m in Sources */,
 				845AB2611B5F09B10076828E /* main.m in Sources */,
 				845AB27F1B5F09D80076828E /* BNClient.m in Sources */,
@@ -431,6 +431,7 @@
 				845AB24B1B5F07470076828E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		845AB2621B5F09B10076828E /* Build configuration list for PBXNativeTarget "Carwash_1.0" */ = {
 			isa = XCConfigurationList;
@@ -439,6 +440,7 @@
 				845AB2641B5F09B10076828E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -15,7 +15,7 @@
 
 - (void)washCarOfClient:(BNRoom *)location {
     BNClient *client = location.persons.lastObject;
-    NSAssert(nil != client, @"There is no car in the bay!");
+    NSAssert(nil != client, @"Something is wrong! There is no car in the bay!");
     [client setIsClean:YES];
 }
 

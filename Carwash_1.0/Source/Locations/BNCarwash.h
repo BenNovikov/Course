@@ -18,11 +18,11 @@
 @property (nonatomic, retain)   BNBuilding *building;
 @property (nonatomic, assign)   float price;
 
-+ (id)createWithManager:(BNStaff *)manager
++ (id)createWithBoss:(BNStaff *)Boss
          withAccountant:(BNStaff *)accountant
           withCarwasher:(BNStaff *)carwasher;
 
-- (instancetype)initWithManager:(BNStaff *)manager
+- (instancetype)initWithBoss:(BNStaff *)Boss
                  withAccountant:(BNStaff *)accountant
                   withCarwasher:(BNStaff *)carwasher;
 

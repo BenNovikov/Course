@@ -1,5 +1,5 @@
 //
-//  BNStaffManager.h
+//  BNStaffBoss.h
 //  SummerCourse
 //
 //  Created by Admin on 15/07/19/.
@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "BNStaff.h"
 
-@interface BNManager : BNStaff
+@interface BNBoss : BNStaff
 
 
 

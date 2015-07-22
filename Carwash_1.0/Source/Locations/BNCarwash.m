@@ -20,12 +20,12 @@
 
 #pragma mark -
 #pragma mark Class Methods
-+ (id)createWithManager:(BNStaff *)manager
++ (id)createWithBoss:(BNStaff *)Boss
           withAccountant:(BNStaff *)accountant
            withCarwasher:(BNStaff *)carwasher
 {
     
-    return [[[self alloc] initWithManager:(BNStaff *)manager
+    return [[[self alloc] initWithBoss:(BNStaff *)Boss
                             withAccountant:(BNStaff *)accountant
                              withCarwasher:(BNStaff *)carwasher] autorelease];
 }
@@ -41,10 +41,10 @@
 
 - (instancetype)init {
     
-    return [self initWithManager:nil withAccountant:nil withCarwasher:nil];
+    return [self initWithBoss:nil withAccountant:nil withCarwasher:nil];
 }
 
-- (instancetype)initWithManager:(BNStaff *)manager
+- (instancetype)initWithBoss:(BNStaff *)Boss
                  withAccountant:(BNStaff *)accountant
                   withCarwasher:(BNStaff *)carwasher
 {
@@ -52,7 +52,7 @@
     if(self){
         NSArray *bayStaff = [NSArray arrayWithObject:carwasher];
         BNRoom *bay = [BNRoom createRoomOfType:BNCarwashBay withPersons:bayStaff];
-        NSArray *officeStaff = [NSArray arrayWithObjects:accountant, manager, nil];
+        NSArray *officeStaff = [NSArray arrayWithObjects:accountant, Boss, nil];
         BNRoom *office = [BNRoom createRoomOfType:BNCarwashBay withPersons:officeStaff];
         BNBuilding *currentBuilding = [BNBuilding createWithOffice:office withBay:bay];        
         self.building = currentBuilding;
@@ -67,7 +67,7 @@
     if (nil != client && price <= [client money]) {
         BNRoom *bay = [building bay];
         BNStaff *carwasher = bay.persons.firstObject;
-        NSAssert(nil != carwasher, @"There is no carwasher!");
+        NSAssert(nil != carwasher, @"Something's wrong! There is no carwasher in the bay!");
 
         [bay addPerson:client];
         [carwasher performStaffSpecificOperation:bay];
@@ -86,15 +86,15 @@
         BNRoom *office = self.building.office;
         BNStaff *carwasher = bay.persons.firstObject;
         BNStaff *accountant = office.persons.firstObject;
-        BNStaff *manager = office.persons.lastObject;
+        BNStaff *Boss = office.persons.lastObject;
         
         [accountant receiveMoney:[carwasher giveMoney:[carwasher money]]];
         [accountant performStaffSpecificOperation:office];
         [self paySalaryTo:carwasher];
         [self paySalaryTo:accountant];
-        [manager   receiveMoney:[accountant giveMoney:([accountant  money] - [accountant salary])]];
+        [Boss   receiveMoney:[accountant giveMoney:([accountant  money] - [accountant salary])]];
         [accountant performStaffSpecificOperation:office];
-        [manager performStaffSpecificOperation:office];
+        [Boss performStaffSpecificOperation:office];
     }
 }
 
@@ -103,8 +103,13 @@
 
 - (void)paySalaryTo:(BNStaff *)staff {
     BNStaff *accountant = self.building.office.persons.firstObject;
-    [staff receiveMoney:[accountant giveMoney:([staff salary])]];
-    NSLog(@"The salary of $%3llu is paid to: %@\n", [staff salary], staff);
+    float salaryToPay = [staff salary];
+    if (salaryToPay > accountant.money) {
+        salaryToPay = accountant.money;
+        NSLog(@"Not enough money to pay salary to %@", staff);
+    }
+    [staff receiveMoney:[accountant giveMoney:(salaryToPay)]];
+    NSLog(@"The salary of $%6.02f is paid to: %@\n", salaryToPay, staff);
 }
 
 @end
