@@ -9,7 +9,7 @@
 #import "BNPerson.h"
 
 @implementation BNPerson
-@synthesize currentLocation;
+//@synthesize currentLocation;
 
 #pragma mark -
 #pragma mark Class Methods

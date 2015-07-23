@@ -8,14 +8,7 @@
 
 #import "BNCarwash.h"
 
-@interface BNCarwash()
-
-@end
-
 @implementation BNCarwash
-@synthesize building;
-@synthesize price;
-@synthesize nextBay;
 
 #pragma mark -
 #pragma mark Class Methods
@@ -75,7 +68,7 @@
         [self setBuilding:currentBuilding];
         [self setNextBay:0];
         
-        BNRoom *office  = [[self building] office];
+        BNRoom *office  = [self.building office];
         NSUInteger count = [[office persons] count];
         for (NSUInteger index = 0; index < count; index++){
             [office removePerson:[[office persons] firstObject]];
@@ -83,14 +76,13 @@
         [self.building.office addPerson:accountant];
         [self.building.office addPerson:boss];
         
-        NSArray *bays   = [[self building] bays];
+        NSArray *bays   = [self.building bays];
         for (BNRoom *bay in bays) {
             for (NSUInteger index = 0; index < [[bay persons] count]; index++){
-                [bay removePerson:[[bay persons] firstObject]];
+                [bay removePerson:[bay.persons firstObject]];
             }
         }
-        
-        count = ([bays count] <= [carwashers count]) ? [bays count] : [carwashers count];
+        count = MIN([bays count],[carwashers count]);
 //        self.activeBays = [NSMutableArray arrayWithCapacity:count];
         for (NSUInteger index = 0; index < count ; index++) {
             [[bays objectAtIndex:index] addPerson:[carwashers objectAtIndex:index]];
@@ -104,14 +96,14 @@
 #pragma mark Public Methods
 - (BOOL)washCarOf:(BNClient *)client {
     if (nil != client) {
-        if(price > [client money]) {
+        if(self.price > [client money]) {
             NSLog(@"%@ has just $%5.02f.Sorry, no credit here\n", client, [client money]);
         } else {
-            NSUInteger currentNextBay = nextBay;
-            NSUInteger maxIndex = [[[self building] bays] count] - 1;
+            NSUInteger currentNextBay = self.nextBay;
+            NSUInteger maxIndex = [self.building.bays count] - 1;
             do {
-                BNRoom *bay = [[building bays] objectAtIndex:currentNextBay];
-                BNStaff *carwasher = [[bay persons] firstObject];
+                BNRoom *bay = [[self.building bays] objectAtIndex:currentNextBay];
+                BNStaff *carwasher = [bay.persons firstObject];
                 
                 if(nil != carwasher && NO == [carwasher isBusy]) {
                     [bay addPerson:client];
@@ -123,7 +115,7 @@
                     NSLog(@"%@ is busy now. Select next bay...", carwasher);
                     currentNextBay = (maxIndex != currentNextBay) ? ++currentNextBay : 0;
                 }
-            } while (currentNextBay != nextBay);
+            } while (currentNextBay != self.nextBay);
             if (NO == [client isClean]) {
                 NSLog(@"Dear %@! We are sorry, but all the bays are busy now. Wait or come later please!", client);
             }
@@ -140,11 +132,11 @@
     if (nil != self) {
         NSLog(@"......It's late now! Sorry, but we gonna close for today!....");
         
-        BNRoom  *office     = [[self building] office];
+        BNRoom  *office     = [self.building office];
         BNStaff *accountant = [[office persons] firstObject];
         BNStaff *boss       = [[office persons] lastObject];
         
-        NSArray *bays   = [[self building] bays];
+        NSArray *bays   = [self.building bays];
         for (BNRoom *bay in bays) {
             for (NSUInteger index = 0; index < [[bay persons] count]; index++){
                 [[[bay persons] firstObject] performAfterOperationHoursDuties:self];

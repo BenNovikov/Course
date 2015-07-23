@@ -13,7 +13,6 @@ static uint64_t const kBNIniialSalary = 80;
 static float const kBNIniialExperience = 0;
 
 @implementation BNStaff
-@synthesize isBusy;
 
 #pragma mark -
 #pragma mark Class Methods

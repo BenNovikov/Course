@@ -11,7 +11,7 @@
 static uint64_t const kBNClientInitialMoney = 10000;
 
 @implementation BNClient
-@synthesize isClean;
+//@synthesize isClean;
 
 #pragma mark -
 #pragma mark Class Methods

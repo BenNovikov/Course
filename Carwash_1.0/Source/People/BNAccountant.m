@@ -14,7 +14,6 @@
 @interface BNAccountant()
 
 - (void)countMoney;
-
 - (void)paySalaryTo:(BNStaff *)staff;
 
 @end
