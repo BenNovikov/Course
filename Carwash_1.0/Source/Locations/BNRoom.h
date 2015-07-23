@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "BNPerson.h"
+@class BNPerson;
 
 typedef NS_ENUM(NSUInteger, BNCarwashStructure) {
     BNCarwashUndefined,
@@ -21,6 +21,7 @@ typedef NS_ENUM(NSUInteger, BNCarwashStructure) {
 @property (nonatomic, assign)   BNCarwashStructure  structure;
 @property (nonatomic, readonly) NSArray *persons;
 
++ (id)createRoomOfType:(BNCarwashStructure)structure;
 + (id)createRoomOfType:(BNCarwashStructure)structure withPersons:(NSArray *)persons;
 
 - (instancetype)init;

@@ -8,9 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+#import "BNRoom.h"
+
 @interface BNPerson : NSObject
 
 @property (nonatomic, assign)   float   money;
+@property (nonatomic, assign)   BNRoom  *currentLocation;
 
 + (id)createWith:(float)money;
 
@@ -19,6 +22,5 @@
 
 - (float)giveMoney:(float)amount;
 - (void)receiveMoney:(float)amount;
-
 
 @end

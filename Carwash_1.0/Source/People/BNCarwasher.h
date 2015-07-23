@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+
 #import "BNStaff.h"
 #import "BNClient.h"
 
-@interface BNCarwasher : BNStaff
+@class BNRoom;
 
-- (void)washCarOfClient:(BNRoom *)location;
+@interface BNCarwasher : BNStaff
 
 @end

@@ -10,24 +10,32 @@
 
 #import "BNBuilding.h"
 #import "BNRoom.h"
-#import "BNStaff.h"
 #import "BNClient.h"
+#import "BNAccountant.h"
+#import "BNCarwasher.h"
+#import "BNBoss.h"
 
 @interface BNCarwash : NSObject
 
-@property (nonatomic, retain)   BNBuilding *building;
-@property (nonatomic, assign)   float price;
+@property (nonatomic, retain)   BNBuilding  *building;
+@property (nonatomic, assign)   float       price;
+@property (nonatomic, assign)   NSUInteger  nextBay;
 
-+ (id)createWithBoss:(BNStaff *)Boss
-         withAccountant:(BNStaff *)accountant
-          withCarwasher:(BNStaff *)carwasher;
++ (id)createWithBuilding:(BNBuilding *)building;
++ (id)createWithBuilding:(BNBuilding *)building
+                withBoss:(BNBoss *)boss
+          withAccountant:(BNAccountant *)accountant
+          withCarwashers:(NSArray *)carwashers;
 
-- (instancetype)initWithBoss:(BNStaff *)Boss
-                 withAccountant:(BNStaff *)accountant
-                  withCarwasher:(BNStaff *)carwasher;
+- (instancetype)initWithBuilding:(BNBuilding *)building;
+- (instancetype)initWithBuilding:(BNBuilding *)building
+                        withBoss:(BNBoss *)boss
+                  withAccountant:(BNAccountant *)accountant
+                  withCarwashers:(NSArray *)carwashers;
+
+- (void)runOperationHours;
 
 - (BOOL)washCarOf:(BNClient *)client;
-
 - (void)closeDown;
 
 @end

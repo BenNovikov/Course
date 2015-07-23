@@ -16,17 +16,18 @@
 - (void)receiveProfit {
     float moneyReceived = [self money];
     if (0 < moneyReceived) {
-        NSLog(@"%@ is receiving money... Profit! $%8.02f", self, moneyReceived);
+        NSLog(@"%@ received some money... Profit! $%8.02f", self, moneyReceived);
     } else {
         NSLog(@"%@ received nothing... Losses fixed today!", self);
     }
-    
 }
 
-- (void)performStaffSpecificOperation:(BNRoom *)location {
+- (void)performAfterOperationHoursDuties:(BNCarwash *)object {
 
     [self receiveProfit];
-
+    [[self currentLocation] removePerson:self];
 }
+
+
 
 @end

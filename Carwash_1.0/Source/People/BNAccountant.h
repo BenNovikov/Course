@@ -7,10 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+
 #import "BNStaff.h"
 
 @interface BNAccountant : BNStaff
-
-- (void)countMoney;
 
 @end

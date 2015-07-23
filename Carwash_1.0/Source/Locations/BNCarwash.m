@@ -10,24 +10,31 @@
 
 @interface BNCarwash()
 
-- (void)paySalaryTo:(BNStaff *)staff;
-
 @end
 
 @implementation BNCarwash
 @synthesize building;
 @synthesize price;
+@synthesize nextBay;
 
 #pragma mark -
 #pragma mark Class Methods
-+ (id)createWithBoss:(BNStaff *)Boss
-          withAccountant:(BNStaff *)accountant
-           withCarwasher:(BNStaff *)carwasher
++ (id)createWithBuilding:(BNBuilding *)building
+                withBoss:(BNBoss *)boss
+          withAccountant:(BNAccountant *)accountant
+          withCarwashers:(NSArray *)carwashers
 {
     
-    return [[[self alloc] initWithBoss:(BNStaff *)Boss
-                            withAccountant:(BNStaff *)accountant
-                             withCarwasher:(BNStaff *)carwasher] autorelease];
+    return [[[self alloc] initWithBuilding:(BNBuilding *)building
+                                  withBoss:(BNBoss *)boss
+                            withAccountant:(BNAccountant *)accountant
+                            withCarwashers:(NSArray *)carwashers] autorelease];
+}
+
++ (id)createWithBuilding:(BNBuilding *)building
+{
+    
+    return [[[self alloc] initWithBuilding:(BNBuilding *)building] autorelease];
 }
 
 #pragma mark -
@@ -36,26 +43,58 @@
 - (void)dealloc {
     self.building = nil;
     
+//    self.activeBays = nil;
+    
     [super dealloc];
 }
 
 - (instancetype)init {
     
-    return [self initWithBoss:nil withAccountant:nil withCarwasher:nil];
+    return [self initWithBuilding:nil withBoss:nil withAccountant:nil withCarwashers:nil];
 }
 
-- (instancetype)initWithBoss:(BNStaff *)Boss
-                 withAccountant:(BNStaff *)accountant
-                  withCarwasher:(BNStaff *)carwasher
+- (instancetype)initWithBuilding:(BNBuilding *)currentBuilding
 {
     self = [super init];
     if(self){
-        NSArray *bayStaff = [NSArray arrayWithObject:carwasher];
-        BNRoom *bay = [BNRoom createRoomOfType:BNCarwashBay withPersons:bayStaff];
-        NSArray *officeStaff = [NSArray arrayWithObjects:accountant, Boss, nil];
-        BNRoom *office = [BNRoom createRoomOfType:BNCarwashBay withPersons:officeStaff];
-        BNBuilding *currentBuilding = [BNBuilding createWithOffice:office withBay:bay];        
-        self.building = currentBuilding;
+        [self setBuilding:currentBuilding];
+        [self setNextBay:0];
+//        self.activeBays = [NSMutableArray arrayWithArray:self.building.bays];
+    }
+    
+    return self;
+}
+
+- (instancetype)initWithBuilding:(BNBuilding *)currentBuilding
+                        withBoss:(BNBoss *)boss
+                  withAccountant:(BNAccountant *)accountant
+                  withCarwashers:(NSArray *)carwashers
+{
+    self = [super init];
+    if(self){
+        [self setBuilding:currentBuilding];
+        [self setNextBay:0];
+        
+        BNRoom *office  = [[self building] office];
+        NSUInteger count = [[office persons] count];
+        for (NSUInteger index = 0; index < count; index++){
+            [office removePerson:[[office persons] firstObject]];
+        }
+        [self.building.office addPerson:accountant];
+        [self.building.office addPerson:boss];
+        
+        NSArray *bays   = [[self building] bays];
+        for (BNRoom *bay in bays) {
+            for (NSUInteger index = 0; index < [[bay persons] count]; index++){
+                [bay removePerson:[[bay persons] firstObject]];
+            }
+        }
+        
+        count = ([bays count] <= [carwashers count]) ? [bays count] : [carwashers count];
+//        self.activeBays = [NSMutableArray arrayWithCapacity:count];
+        for (NSUInteger index = 0; index < count ; index++) {
+            [[bays objectAtIndex:index] addPerson:[carwashers objectAtIndex:index]];
+        }
     }
     
     return self;
@@ -64,52 +103,60 @@
 #pragma mark -
 #pragma mark Public Methods
 - (BOOL)washCarOf:(BNClient *)client {
-    if (nil != client && price <= [client money]) {
-        BNRoom *bay = [building bay];
-        BNStaff *carwasher = bay.persons.firstObject;
-        NSAssert(nil != carwasher, @"Something's wrong! There is no carwasher in the bay!");
-
-        [bay addPerson:client];
-        [carwasher performStaffSpecificOperation:bay];
-        if ([client isClean]) {
-            [carwasher receiveMoney:[client giveMoney:[self price]]];
+    if (nil != client) {
+        if(price > [client money]) {
+            NSLog(@"%@ has just $%5.02f.Sorry, no credit here\n", client, [client money]);
+        } else {
+            NSUInteger currentNextBay = nextBay;
+            NSUInteger maxIndex = [[[self building] bays] count] - 1;
+            do {
+                BNRoom *bay = [[building bays] objectAtIndex:currentNextBay];
+                BNStaff *carwasher = [[bay persons] firstObject];
+                
+                if(nil != carwasher && NO == [carwasher isBusy]) {
+                    [bay addPerson:client];
+                    [self setNextBay:(maxIndex != currentNextBay) ? 1 + currentNextBay : 0];
+                    [carwasher performOperationHoursDuties:self];
+                    
+                    break;
+                } else {
+                    NSLog(@"%@ is busy now. Select next bay...", carwasher);
+                    currentNextBay = (maxIndex != currentNextBay) ? ++currentNextBay : 0;
+                }
+            } while (currentNextBay != nextBay);
+            if (NO == [client isClean]) {
+                NSLog(@"Dear %@! We are sorry, but all the bays are busy now. Wait or come later please!", client);
+            }
         }
-        [bay removePerson:client];
     }
-    
     return [client isClean];
 }
 
+- (void)runOperationHours{
+    
+}
+
 - (void)closeDown {
-    if (nil != self) {       
-        BNRoom *bay = self.building.bay;
-        BNRoom *office = self.building.office;
-        BNStaff *carwasher = bay.persons.firstObject;
-        BNStaff *accountant = office.persons.firstObject;
-        BNStaff *Boss = office.persons.lastObject;
+    if (nil != self) {
+        NSLog(@"......It's late now! Sorry, but we gonna close for today!....");
         
-        [accountant receiveMoney:[carwasher giveMoney:[carwasher money]]];
-        [accountant performStaffSpecificOperation:office];
-        [self paySalaryTo:carwasher];
-        [self paySalaryTo:accountant];
-        [Boss   receiveMoney:[accountant giveMoney:([accountant  money] - [accountant salary])]];
-        [accountant performStaffSpecificOperation:office];
-        [Boss performStaffSpecificOperation:office];
+        BNRoom  *office     = [[self building] office];
+        BNStaff *accountant = [[office persons] firstObject];
+        BNStaff *boss       = [[office persons] lastObject];
+        
+        NSArray *bays   = [[self building] bays];
+        for (BNRoom *bay in bays) {
+            for (NSUInteger index = 0; index < [[bay persons] count]; index++){
+                [[[bay persons] firstObject] performAfterOperationHoursDuties:self];
+            }
+        }
+        
+        [accountant performAfterOperationHoursDuties:self];
+        [boss       performAfterOperationHoursDuties:self];
     }
 }
 
 #pragma mark -
 #pragma mark Private Methods
-
-- (void)paySalaryTo:(BNStaff *)staff {
-    BNStaff *accountant = self.building.office.persons.firstObject;
-    float salaryToPay = [staff salary];
-    if (salaryToPay > accountant.money) {
-        salaryToPay = accountant.money;
-        NSLog(@"Not enough money to pay salary to %@", staff);
-    }
-    [staff receiveMoney:[accountant giveMoney:(salaryToPay)]];
-    NSLog(@"The salary of $%6.02f is paid to: %@\n", salaryToPay, staff);
-}
 
 @end

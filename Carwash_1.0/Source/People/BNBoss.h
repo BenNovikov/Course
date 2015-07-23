@@ -9,9 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "BNStaff.h"
 
-@interface BNBoss : BNStaff
-
-
+@interface BNBoss:BNStaff
 
 - (void)receiveProfit;
 

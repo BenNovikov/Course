@@ -11,13 +11,17 @@
 #import "BNRoom.h"
 
 @interface BNBuilding : NSObject
-@property (nonatomic, retain) BNRoom *office;
-@property (nonatomic, retain) BNRoom *bay;
+@property (nonatomic, retain)   BNRoom  *office;
+@property (nonatomic, readonly) NSArray *bays;
 
-+ (id)createWithOffice:(BNRoom *)office withBay:(BNRoom *)bay;
++ (id)createWithOffice:(BNRoom *)office withBays:(NSArray *)bays;
 
 - (instancetype)init;
+- (instancetype)initWithOffice:(BNRoom *)office withBays:(NSArray *)bays;
 
-- (instancetype)initWithOffice:(BNRoom *)office withBay:(BNRoom *)bay;
+- (NSArray *)bays;
+
+- (void)addBay:(BNRoom *)bay;
+- (void)removeBay:(BNRoom *)bay;
 
 @end

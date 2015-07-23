@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		843F1D881B60405D0001016B /* SuperPooperMegaWasherTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 843F1D871B60405D0001016B /* SuperPooperMegaWasherTest.m */; };
 		845AB2481B5F07470076828E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AB2471B5F07470076828E /* main.m */; };
 		845AB2551B5F076F0076828E /* BNCreature.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AB24E1B5F076F0076828E /* BNCreature.m */; };
 		845AB2561B5F076F0076828E /* BNFemaleCreature.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AB2501B5F076F0076828E /* BNFemaleCreature.m */; };
@@ -46,6 +47,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		843F1D861B60405D0001016B /* SuperPooperMegaWasherTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SuperPooperMegaWasherTest.h; path = Tests/SuperPooperMegaWasherTest.h; sourceTree = "<group>"; };
+		843F1D871B60405D0001016B /* SuperPooperMegaWasherTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SuperPooperMegaWasherTest.m; path = Tests/SuperPooperMegaWasherTest.m; sourceTree = "<group>"; };
 		845AB2451B5F07470076828E /* Creature */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Creature; sourceTree = BUILT_PRODUCTS_DIR; };
 		845AB2471B5F07470076828E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		845AB24D1B5F076F0076828E /* BNCreature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNCreature.h; sourceTree = "<group>"; };
@@ -97,6 +100,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		843F1D891B6040660001016B /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				843F1D861B60405D0001016B /* SuperPooperMegaWasherTest.h */,
+				843F1D871B60405D0001016B /* SuperPooperMegaWasherTest.m */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
 		845AB2051B5F05450076828E = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +157,7 @@
 			children = (
 				845AB2651B5F09D80076828E /* Source */,
 				845AB2601B5F09B10076828E /* main.m */,
+				843F1D891B6040660001016B /* Tests */,
 			);
 			path = Carwash_1.0;
 			sourceTree = "<group>";
@@ -288,6 +301,7 @@
 				845AB27F1B5F09D80076828E /* BNClient.m in Sources */,
 				845AB27D1B5F09D80076828E /* BNAccountant.m in Sources */,
 				845AB27E1B5F09D80076828E /* BNCarwasher.m in Sources */,
+				843F1D881B60405D0001016B /* SuperPooperMegaWasherTest.m in Sources */,
 				845AB27A1B5F09D80076828E /* BNBuilding.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
