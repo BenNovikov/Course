@@ -1,6 +1,6 @@
 //
 //  BNStaff.m
-//  SummerCourse
+//  Course
 //
 //  Created by Admin on 7/15/15.
 //  Copyright © 2015 ___IDAP College___. All rights reserved.
@@ -37,10 +37,10 @@ static float const kBNIniialExperience = 0;
 - (instancetype)initWithSalary:(uint64_t)salary withExperience:(float)experience {
 
     if(self){
-        self.salary     = salary;
-        self.experience = experience;
-        self.money      = 0;
-        self.isBusy     = NO;
+        [self setSalary:salary];
+        [self setExperience:experience];
+        [self setMoney:0];
+        [self setBusy:NO];
     }
     
     return self;

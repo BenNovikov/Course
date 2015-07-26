@@ -76,9 +76,9 @@ static float const kBNCarwashClientMaxMoney         = 100;
 
     [carWash setPrice:kBNCarwashServicePrice];
     
-    [[carwashers objectAtIndex:0] setIsBusy:NO];
-    [[carwashers objectAtIndex:1] setIsBusy:NO];
-    [[carwashers objectAtIndex:2] setIsBusy:YES];
+    [[carwashers objectAtIndex:0] setBusy:NO];
+    [[carwashers objectAtIndex:1] setBusy:NO];
+    [[carwashers objectAtIndex:2] setBusy:YES];
     
 //
 //    Carwash Operations Simulation
@@ -88,7 +88,7 @@ static float const kBNCarwashClientMaxMoney         = 100;
         client = [BNClient createClientWithCleanCar:NO withMoney:arc4random_uniform(kBNCarwashClientMaxMoney)];
         [carWash washCarOf:client];
     }
-    
+    NSLog(@"..........It's late now! Sorry, but we gonna close!.........\n");
     [carWash closeDown];
 }
 

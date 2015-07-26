@@ -1,6 +1,6 @@
 //
 //  BNAccountant.m
-//  SummerCourse
+//  Course
 //
 //  Created by Admin on 15/07/19/.
 //  Copyright © 2015 ___IDAP College___. All rights reserved.
@@ -10,6 +10,10 @@
 #import "BNCarwash.h"
 
 @class BNBoss;
+
+static NSString const *kBNAccountantMessageCountMoney = @"%@ is counting money... It's $%.02f";
+static NSString const *kBNAccountantMessageNoMoneyToPaySalary = @"Not enough money to pay salary to %@";
+static NSString const *kBNAccountantMessageSalaryPaid = @"The salary of $%6.02f is paid to: %@\n";
 
 @interface BNAccountant()
 
@@ -39,7 +43,7 @@
     }
     
     [self countMoney];
-    [[[office persons] lastObject] receiveMoney:[self giveMoney:[self money] - [self salary]]];
+    [[[office persons] lastObject] receiveMoney:[self giveMoney:self.money - self.salary]];
     [self paySalaryTo:self];
     
     [self countMoney];
@@ -50,17 +54,17 @@
 #pragma mark Private Methods
 
 - (void)countMoney {
-    NSLog(@"%@ is counting money... It's $%.02f", self, self.money);
+    NSLog(kBNAccountantMessageCountMoney, self, [self money]);
 }
 
 - (void)paySalaryTo:(BNStaff *)staff {
-    float salaryToPay = [staff salary];
+    float salaryToPay = staff.salary;
     if (salaryToPay > self.money) {
         salaryToPay = self.money;
-        NSLog(@"Not enough money to pay salary to %@", staff);
+        NSLog(kBNAccountantMessageNoMoneyToPaySalary, staff);
     }
-    [staff receiveMoney:[self giveMoney:(salaryToPay)]];
-    NSLog(@"The salary of $%6.02f is paid to: %@\n", salaryToPay, staff);
+    [staff receiveMoney:[self giveMoney:salaryToPay]];
+    NSLog(kBNAccountantMessageSalaryPaid, salaryToPay, staff);
 }
 
 @end

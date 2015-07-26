@@ -1,6 +1,6 @@
 //
 //  BNBuilding.m
-//  Human
+//  Course
 //
 //  Created by Admin on 7/15/15.
 //  Copyright © 2015 ___IDAP College___. All rights reserved.
@@ -14,7 +14,6 @@
 @end
 
 @implementation BNBuilding
-@synthesize office;
 @dynamic bays;
 
 #pragma mark -

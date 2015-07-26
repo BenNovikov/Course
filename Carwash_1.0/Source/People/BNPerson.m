@@ -1,6 +1,6 @@
 //
 //  BNPerson.m
-//  SummerCourse
+//  Course
 //
 //  Created by Admin on 157/19/.
 //  Copyright © 2015 ___IDAP College___. All rights reserved.
@@ -9,7 +9,6 @@
 #import "BNPerson.h"
 
 @implementation BNPerson
-//@synthesize currentLocation;
 
 #pragma mark -
 #pragma mark Class Methods
@@ -35,7 +34,7 @@
     self = [super init];
     
     if(self){
-        self.money  = money;
+        [self setMoney:money];
     }
     
     return self;
@@ -46,13 +45,13 @@
 
 - (float)giveMoney:(float)amount {
     if (nil != self && 0 < amount) {
-        float hasMoney = self.money;
-        if (hasMoney > 0) {
-            if (hasMoney < amount) {
-                amount = hasMoney;
-                self.money = 0;
+        float cash = self.money;
+        if (cash > 0) {
+            if (cash < amount) {
+                amount = cash;
+                [self setMoney:0];
             } else {
-                self.money -= amount;
+                [self setMoney:self.money - amount];
             }
             
             return amount;
@@ -64,7 +63,7 @@
 
 - (void)receiveMoney:(float)amount {
     if (nil != self && 0 != amount) {
-        self.money += amount;
+        [self setMoney:self.money + amount];
     }
 }
 

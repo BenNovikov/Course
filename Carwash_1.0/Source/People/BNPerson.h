@@ -1,6 +1,6 @@
 //
 //  BNPerson.h
-//  SummerCourse
+//  Course
 //
 //  Created by Admin on 157/19/.
 //  Copyright © 2015 ___IDAP College___. All rights reserved.

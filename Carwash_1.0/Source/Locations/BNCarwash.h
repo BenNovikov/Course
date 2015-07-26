@@ -1,6 +1,6 @@
 //
 //  BNCarwash.h
-//  Human
+//  Course
 //
 //  Created by Admin on 7/15/15.
 //  Copyright © 2015 ___IDAP College___. All rights reserved.
@@ -32,8 +32,6 @@
                         withBoss:(BNBoss *)boss
                   withAccountant:(BNAccountant *)accountant
                   withCarwashers:(NSArray *)carwashers;
-
-- (void)runOperationHours;
 
 - (BOOL)washCarOf:(BNClient *)client;
 - (void)closeDown;

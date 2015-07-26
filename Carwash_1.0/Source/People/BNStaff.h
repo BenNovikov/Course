@@ -1,6 +1,6 @@
 //
 //  BNStaff.h
-//  SummerCourse
+//  Course
 //
 //  Created by Admin on 7/15/15.
 //  Copyright © 2015 ___IDAP College___. All rights reserved.
@@ -12,9 +12,9 @@
 @class BNCarwash;
 
 @interface BNStaff : BNPerson
-@property (nonatomic, assign)   uint64_t    salary;
-@property (nonatomic, assign)   float       experience;
-@property (nonatomic, assign)   BOOL        isBusy;
+@property (nonatomic, assign)                   uint64_t    salary;
+@property (nonatomic, assign)                   float       experience;
+@property (nonatomic, assign, getter = isBusy)  BOOL        busy;
 
 + (id)hireWithSalary:(uint64_t)salary withExperience:(float)experience;
 

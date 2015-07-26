@@ -1,6 +1,6 @@
 //
 //  BNClient.h
-//  Human
+//  Course
 //
 //  Created by Admin on 7/15/15.
 //  Copyright © 2015 ___IDAP College___. All rights reserved.
@@ -12,10 +12,10 @@
 
 @interface BNClient : BNPerson
 
-@property (nonatomic, assign) BOOL isClean;
+@property (nonatomic, assign, getter = isClean) BOOL Clean;
 
-+ (id)createClientWithCleanCar:(BOOL)isClean withMoney:(float)money;
++ (id)createClientWithCleanCar:(BOOL)Clean withMoney:(float)money;
 
-- (instancetype)initClientWithCleanCar:(BOOL)isClean withMoney:(float)money;
+- (instancetype)initClientWithCleanCar:(BOOL)Clean withMoney:(float)money;
 
 @end

@@ -1,12 +1,16 @@
 //
 //  BNCarwash.m
-//  Human
+//  Course
 //
 //  Created by Admin on 7/15/15.
 //  Copyright © 2015 ___IDAP College___. All rights reserved.
 //
 
 #import "BNCarwash.h"
+
+static NSString const *kBNCarwashMessageNoMoneyToPay = @"%@ has just $%5.02f.Sorry, no credit here\n";
+static NSString const *kBNCarwashMessageLookingForBay = @"%@ is busy now. Select next bay...";
+static NSString const *kBNCarwashMessageBusyCarwash = @"Dear %@! We are sorry, but all the bays are busy now. Wait or come later please!";
 
 @implementation BNCarwash
 
@@ -35,7 +39,6 @@
 
 - (void)dealloc {
     self.building = nil;
-    
 //    self.activeBays = nil;
     
     [super dealloc];
@@ -69,9 +72,9 @@
         [self setNextBay:0];
         
         BNRoom *office  = [self.building office];
-        NSUInteger count = [[office persons] count];
+        NSUInteger count = [office.persons count];
         for (NSUInteger index = 0; index < count; index++){
-            [office removePerson:[[office persons] firstObject]];
+            [office removePerson:[office.persons firstObject]];
         }
         [self.building.office addPerson:accountant];
         [self.building.office addPerson:boss];
@@ -79,7 +82,7 @@
         NSArray *bays   = [self.building bays];
         for (BNRoom *bay in bays) {
             for (NSUInteger index = 0; index < [[bay persons] count]; index++){
-                [bay removePerson:[bay.persons firstObject]];
+                [bay removePerson:[[bay persons] firstObject]];
             }
         }
         count = MIN([bays count],[carwashers count]);
@@ -97,49 +100,43 @@
 - (BOOL)washCarOf:(BNClient *)client {
     if (nil != client) {
         if(self.price > [client money]) {
-            NSLog(@"%@ has just $%5.02f.Sorry, no credit here\n", client, [client money]);
+            NSLog(kBNCarwashMessageNoMoneyToPay, client, [client money]);
         } else {
             NSUInteger currentNextBay = self.nextBay;
             NSUInteger maxIndex = [self.building.bays count] - 1;
             do {
-                BNRoom *bay = [[self.building bays] objectAtIndex:currentNextBay];
-                BNStaff *carwasher = [bay.persons firstObject];
+                BNRoom *bay = [self.building.bays objectAtIndex:currentNextBay];
+                BNStaff *carwasher = [[bay persons] firstObject];
                 
                 if(nil != carwasher && NO == [carwasher isBusy]) {
                     [bay addPerson:client];
-                    [self setNextBay:(maxIndex != currentNextBay) ? 1 + currentNextBay : 0];
+                    self.nextBay = (maxIndex != currentNextBay) ? ++ currentNextBay : 0;
                     [carwasher performOperationHoursDuties:self];
                     
                     break;
                 } else {
-                    NSLog(@"%@ is busy now. Select next bay...", carwasher);
+                    NSLog(kBNCarwashMessageLookingForBay, carwasher);
                     currentNextBay = (maxIndex != currentNextBay) ? ++currentNextBay : 0;
                 }
             } while (currentNextBay != self.nextBay);
             if (NO == [client isClean]) {
-                NSLog(@"Dear %@! We are sorry, but all the bays are busy now. Wait or come later please!", client);
+                NSLog(kBNCarwashMessageBusyCarwash, client);
             }
         }
     }
     return [client isClean];
 }
 
-- (void)runOperationHours{
-    
-}
-
 - (void)closeDown {
     if (nil != self) {
-        NSLog(@"......It's late now! Sorry, but we gonna close for today!....");
-        
         BNRoom  *office     = [self.building office];
-        BNStaff *accountant = [[office persons] firstObject];
-        BNStaff *boss       = [[office persons] lastObject];
+        BNStaff *accountant = [office.persons firstObject];
+        BNStaff *boss       = [office.persons lastObject];
         
         NSArray *bays   = [self.building bays];
         for (BNRoom *bay in bays) {
-            for (NSUInteger index = 0; index < [[bay persons] count]; index++){
-                [[[bay persons] firstObject] performAfterOperationHoursDuties:self];
+            for (NSUInteger index = 0; index < [bay.persons count]; index++){
+                [[bay.persons firstObject] performAfterOperationHoursDuties:self];
             }
         }
         

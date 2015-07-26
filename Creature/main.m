@@ -1,6 +1,6 @@
 //
 //  main.m
-//  Creature
+//  Course
 //
 //  Created by BenNovikov on 7/7/15.
 //  Copyright (c) 2015 ___BasicNotation___. All rights reserved.
