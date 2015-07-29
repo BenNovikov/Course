@@ -8,31 +8,84 @@
 
 #import "NSString+BNExtensions.h"
 
-@interface NSString_BNExtensions ()
+//@interface NSString (NSString_BNExtensions)
 //@property (nonatomic, retain)   NSMutableString     *mutableString;
 //@property (nonatomic, copy)     NSString            *someString;
 //
-//- (NSString)BN_getString;
-//- (void)BN_privateMethodWithString:(NSString *)string toAppendWith:(NSString *)appending;
+//- (NSString)getString;
+//- (void)privateMethodWithString:(NSString *)string toAppendWith:(NSString *)appending;
+//
+//@end
 
-@end
-
-@implementation NSString_BNExtensions
+@implementation NSString (NSString_BNExtensions)
 
 #pragma mark -
 #pragma mark Class Methods
 
-+ (NSString *)BN_JSONString:(id)anArrayOrDictionary withOptions:(NSUInteger)optionsPrettyPrint {
-    NSError *error;
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:anArrayOrDictionary
-                                                       options:optionsPrettyPrint
-                                                         error:&error];
-    if (!jsonData) {
-        NSLog(@"An error ocurred: %@", error);
-    } else {
++ (NSString *)downloadJSONfromURL:(NSString *)url;
+{
+    NSError *error = nil;
+    NSString *message = kBNErrorNoParameter;
+    if (nil != url)
+    {
+        NSString *dataURL = [NSString stringWithFormat:@"%@", url];
+        NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:dataURL]];
+        NSData *response = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
         
-        return [[[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding] autorelease];
+        if (nil != response) {
+            NSString *jsonString = [[[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding] autorelease];
+            
+            return jsonString;
+        }
+        message = kBNErrorReadJSON;
     }
+    NSLog(@"%@:%@", message, error);
+    
+    return nil;
+}
+
++ (NSString *)JSONStringFromDictionary:(NSDictionary *)dictionary
+{
+    NSError *error = nil;
+    NSString *message = kBNErrorNoParameter;
+    if (nil != dictionary)
+    {
+        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dictionary
+                                                           options:NSJSONWritingPrettyPrinted
+                                                             error:&error];
+        NSString *jsonString = [[[NSString alloc] initWithData:jsonData
+                                                      encoding:NSUTF8StringEncoding] autorelease];
+        if (nil == error) {
+            
+            return jsonString;
+        }
+        message = kBNErrorConvertToString;
+    }
+    NSLog(@"%@:%@", message, error);
+    
+    return nil;
+}
+
++ (NSDictionary *)dictionaryFromJSONString:(NSString *)jsonString withOptions:(NSUInteger)optionsPrettyPrint
+{
+    NSError *error = nil;
+    NSString *message = kBNErrorNoParameter;
+    if (nil != jsonString)
+    {
+        NSData *data = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+        
+        NSError *error;
+        NSDictionary *jsonDictionary = [[self new] autorelease];
+        jsonDictionary  = [NSJSONSerialization JSONObjectWithData:data
+                                                          options:optionsPrettyPrint
+                                                            error:&error];
+
+        if (nil == error && [NSJSONSerialization isValidJSONObject:jsonDictionary]) {
+            return jsonDictionary;
+        }
+        message = kBNErrorConvertToDictionary;
+    }
+    NSLog(@"%@:%@", message, error);
     
     return nil;
 }
@@ -43,11 +96,11 @@
 #pragma mark -
 #pragma mark Private Methods
 //
-//- (NSString)BN_getString {
+//- (NSString)getString {
 //    
 //}
 //
-//- (void)BN_privateMethodWithString:(NSString *)string toAppendWith:(NSString *)appending {
+//- (void)privateMethodWithString:(NSString *)string toAppendWith:(NSString *)appending {
 //    
 //    return string = [self appendString:appending];
 //}

@@ -8,8 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSString_BNExtensions : NSString
+#define NS_STRING_KEY(key, value) static NSString *const key = value
 
-+ (NSString *)BN_JSONString:(id)anArrayOrDictionary withOptions:(NSUInteger)optionsPrettyPrint;
+NS_STRING_KEY(kBNErrorNoParameter, @"Parameter must not be null!");
+NS_STRING_KEY(kBNErrorReadJSON, @"An error reading JSON");
+NS_STRING_KEY(kBNErrorConvertToString, @"An error converting to string");
+NS_STRING_KEY(kBNErrorConvertToDictionary, @"An error converting to dictionary");
+
+@interface NSString (NSString_BNExtensions)
+
++ (NSString *)downloadJSONfromURL:(NSString *)url;
++ (NSString *)JSONStringFromDictionary:(NSDictionary *)dictionary;
++ (NSDictionary *)dictionaryFromJSONString:(NSString *)stringJson
+                               withOptions:(NSUInteger)optionsPrettyPrint;
 
 @end
