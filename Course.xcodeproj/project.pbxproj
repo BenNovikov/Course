@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E7187481B6A2ACD0008B805 /* NSString+BNExtensionsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7187471B6A2ACD0008B805 /* NSString+BNExtensionsTest.m */; };
 		843F1D881B60405D0001016B /* SuperPooperMegaWasherTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 843F1D871B60405D0001016B /* SuperPooperMegaWasherTest.m */; };
 		845518C21B6576AA00D21CFA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 845518C11B6576AA00D21CFA /* main.m */; };
 		845518C81B65772E00D21CFA /* NSString+BNExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 845518C71B65772E00D21CFA /* NSString+BNExtensions.m */; };
@@ -58,6 +59,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5E7187471B6A2ACD0008B805 /* NSString+BNExtensionsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+BNExtensionsTest.m"; path = "Test/NSString+BNExtensionsTest.m"; sourceTree = "<group>"; };
 		843F1D861B60405D0001016B /* SuperPooperMegaWasherTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SuperPooperMegaWasherTest.h; path = Tests/SuperPooperMegaWasherTest.h; sourceTree = "<group>"; };
 		843F1D871B60405D0001016B /* SuperPooperMegaWasherTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SuperPooperMegaWasherTest.m; path = Tests/SuperPooperMegaWasherTest.m; sourceTree = "<group>"; };
 		845518BF1B6576AA00D21CFA /* StringExtension */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = StringExtension; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,6 +136,7 @@
 		845518C01B6576AA00D21CFA /* StringExtension */ = {
 			isa = PBXGroup;
 			children = (
+				5E7187471B6A2ACD0008B805 /* NSString+BNExtensionsTest.m */,
 				845518C11B6576AA00D21CFA /* main.m */,
 				845518C61B65772E00D21CFA /* NSString+BNExtensions.h */,
 				845518C71B65772E00D21CFA /* NSString+BNExtensions.m */,
@@ -335,6 +338,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E7187481B6A2ACD0008B805 /* NSString+BNExtensionsTest.m in Sources */,
 				845518C21B6576AA00D21CFA /* main.m in Sources */,
 				845518C81B65772E00D21CFA /* NSString+BNExtensions.m in Sources */,
 			);
@@ -520,6 +524,7 @@
 				845518C41B6576AA00D21CFA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		845AB2091B5F05450076828E /* Build configuration list for PBXProject "Course" */ = {
 			isa = XCConfigurationList;
