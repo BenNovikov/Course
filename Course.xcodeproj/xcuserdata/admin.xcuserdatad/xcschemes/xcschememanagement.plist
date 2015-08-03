@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>Carwash_1.1.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 		<key>Creature.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -25,6 +30,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>845518BE1B6576AA00D21CFA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>845518CC1B6EC9B700D21CFA</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -14,8 +14,8 @@
 
 @property (nonatomic, assign, getter = isClean) BOOL Clean;
 
-+ (id)createClientWithCleanCar:(BOOL)Clean withMoney:(float)money;
++ (id)clientWithCar:(BOOL)Clean money:(float)money;
 
-- (instancetype)initClientWithCleanCar:(BOOL)Clean withMoney:(float)money;
+- (instancetype)initClientWithCar:(BOOL)Clean money:(float)money;
 
 @end

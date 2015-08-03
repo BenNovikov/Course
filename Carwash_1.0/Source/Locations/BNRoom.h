@@ -22,10 +22,10 @@ typedef NS_ENUM(NSUInteger, BNCarwashStructure) {
 @property (nonatomic, readonly) NSArray *persons;
 
 + (id)createRoomOfType:(BNCarwashStructure)structure;
-+ (id)createRoomOfType:(BNCarwashStructure)structure withPersons:(NSArray *)persons;
++ (id)createRoomOfType:(BNCarwashStructure)structure persons:(NSArray *)persons;
 
 - (instancetype)init;
-- (instancetype)initWithType:(BNCarwashStructure)structure withPersons:(NSArray *)persons;
+- (instancetype)initWithType:(BNCarwashStructure)structure persons:(NSArray *)persons;
 
 - (NSArray *)persons;
 

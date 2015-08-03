@@ -23,15 +23,15 @@
 
 + (id)createWithBuilding:(BNBuilding *)building;
 + (id)createWithBuilding:(BNBuilding *)building
-                withBoss:(BNBoss *)boss
-          withAccountant:(BNAccountant *)accountant
-          withCarwashers:(NSArray *)carwashers;
+                    boss:(BNBoss *)boss
+              accountant:(BNAccountant *)accountant
+              carwashers:(NSArray *)carwashers;
 
 - (instancetype)initWithBuilding:(BNBuilding *)building;
 - (instancetype)initWithBuilding:(BNBuilding *)building
-                        withBoss:(BNBoss *)boss
-                  withAccountant:(BNAccountant *)accountant
-                  withCarwashers:(NSArray *)carwashers;
+                            boss:(BNBoss *)boss
+                      accountant:(BNAccountant *)accountant
+                      carwashers:(NSArray *)carwashers;
 
 - (BOOL)washCarOf:(BNClient *)client;
 - (void)closeDown;

@@ -16,10 +16,10 @@
 @property (nonatomic, assign)                   float       experience;
 @property (nonatomic, assign, getter = isBusy)  BOOL        busy;
 
-+ (id)hireWithSalary:(uint64_t)salary withExperience:(float)experience;
++ (id)createWithSalary:(uint64_t)salary experience:(float)experience;
 
 - (instancetype)init;
-- (instancetype)initWithSalary:(uint64_t)salary withExperience:(float)experience;
+- (instancetype)initWithSalary:(uint64_t)salary experience:(float)experience;
 
 - (void)performOperationHoursDuties:(BNCarwash *)object;
 - (void)performAfterOperationHoursDuties:(BNCarwash *)object;

@@ -19,9 +19,9 @@
 #pragma mark -
 #pragma mark Class Methods
 
-+ (id)createWithOffice:(BNRoom *)currentOffice withBays:(NSArray *)bays {
++ (id)createWithOffice:(BNRoom *)currentOffice bays:(NSArray *)bays {
     
-    return [[[self alloc] initWithOffice:(BNRoom *)currentOffice withBays:(NSArray *)bays] autorelease];
+    return [[[self alloc] initWithOffice:(BNRoom *)currentOffice bays:(NSArray *)bays] autorelease];
 }
 
 #pragma mark -
@@ -36,10 +36,10 @@
 
 - (instancetype)init {
     
-    return [self initWithOffice:nil withBays:nil];
+    return [self initWithOffice:nil bays:nil];
 }
 
-- (instancetype)initWithOffice:(BNRoom *)currentOffice withBays:(NSArray *)bays {
+- (instancetype)initWithOffice:(BNRoom *)currentOffice bays:(NSArray *)bays {
     self = [super init];
     
     if(self){

@@ -13,7 +13,7 @@
 #pragma mark -
 #pragma mark Class Methods
 
-+ (id)createWith:(float)money {
++ (id)createWithMoney:(float)money {
     return [[[self alloc] initWith:(float)money] autorelease];
 }
 
@@ -27,7 +27,7 @@
 
 - (instancetype)init {
     
-    return [BNPerson createWith:0.0];
+    return [BNPerson createWithMoney:0.0];
 }
 
 - (instancetype)initWith:(float)money {

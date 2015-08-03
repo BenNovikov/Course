@@ -14,10 +14,10 @@
 @property (nonatomic, retain)   BNRoom  *office;
 @property (nonatomic, readonly) NSArray *bays;
 
-+ (id)createWithOffice:(BNRoom *)office withBays:(NSArray *)bays;
++ (id)createWithOffice:(BNRoom *)office bays:(NSArray *)bays;
 
 - (instancetype)init;
-- (instancetype)initWithOffice:(BNRoom *)office withBays:(NSArray *)bays;
+- (instancetype)initWithOffice:(BNRoom *)office bays:(NSArray *)bays;
 
 - (NSArray *)bays;
 

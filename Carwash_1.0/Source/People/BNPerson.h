@@ -15,7 +15,7 @@
 @property (nonatomic, assign)   float   money;
 @property (nonatomic, assign)   BNRoom  *currentLocation;
 
-+ (id)createWith:(float)money;
++ (id)createWithMoney:(float)money;
 
 - (instancetype)init;
 - (instancetype)initWith:(float)money;

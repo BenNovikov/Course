@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		843F1D881B60405D0001016B /* SuperPooperMegaWasherTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 843F1D871B60405D0001016B /* SuperPooperMegaWasherTest.m */; };
+		8443A6A61B6ED78B00FF9B09 /* BNAlphabet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8443A6A51B6ED78B00FF9B09 /* BNAlphabet.m */; };
+		8443A6AC1B6ED7B600FF9B09 /* BNRangeAlphabet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8443A6AB1B6ED7B600FF9B09 /* BNRangeAlphabet.m */; };
+		8443A6AF1B6ED7DC00FF9B09 /* BNArrayAlphabet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8443A6AE1B6ED7DC00FF9B09 /* BNArrayAlphabet.m */; };
+		8443A6B21B6ED7F000FF9B09 /* BNStringsAlphabet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8443A6B11B6ED7F000FF9B09 /* BNStringsAlphabet.m */; };
+		8443A6B51B6EE40100FF9B09 /* BNDictionaryAlphabet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8443A6B41B6EE40100FF9B09 /* BNDictionaryAlphabet.m */; };
+		8443A6B71B6FB59E00FF9B09 /* BNStringExtensionsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8443A6B61B6FB59E00FF9B09 /* BNStringExtensionsTest.m */; };
 		845518C21B6576AA00D21CFA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 845518C11B6576AA00D21CFA /* main.m */; };
 		845518C81B65772E00D21CFA /* NSString+BNExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 845518C71B65772E00D21CFA /* NSString+BNExtensions.m */; };
 		845AB2481B5F07470076828E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AB2471B5F07470076828E /* main.m */; };
@@ -60,6 +66,18 @@
 /* Begin PBXFileReference section */
 		843F1D861B60405D0001016B /* SuperPooperMegaWasherTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SuperPooperMegaWasherTest.h; path = Tests/SuperPooperMegaWasherTest.h; sourceTree = "<group>"; };
 		843F1D871B60405D0001016B /* SuperPooperMegaWasherTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SuperPooperMegaWasherTest.m; path = Tests/SuperPooperMegaWasherTest.m; sourceTree = "<group>"; };
+		8443A6A41B6ED78B00FF9B09 /* BNAlphabet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BNAlphabet.h; path = Alphabet/Source/BNAlphabet.h; sourceTree = SOURCE_ROOT; };
+		8443A6A51B6ED78B00FF9B09 /* BNAlphabet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BNAlphabet.m; path = Alphabet/Source/BNAlphabet.m; sourceTree = SOURCE_ROOT; };
+		8443A6AA1B6ED7B600FF9B09 /* BNRangeAlphabet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRangeAlphabet.h; sourceTree = "<group>"; };
+		8443A6AB1B6ED7B600FF9B09 /* BNRangeAlphabet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRangeAlphabet.m; sourceTree = "<group>"; };
+		8443A6AD1B6ED7DC00FF9B09 /* BNArrayAlphabet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNArrayAlphabet.h; sourceTree = "<group>"; };
+		8443A6AE1B6ED7DC00FF9B09 /* BNArrayAlphabet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNArrayAlphabet.m; sourceTree = "<group>"; };
+		8443A6B01B6ED7F000FF9B09 /* BNStringsAlphabet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNStringsAlphabet.h; sourceTree = "<group>"; };
+		8443A6B11B6ED7F000FF9B09 /* BNStringsAlphabet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNStringsAlphabet.m; sourceTree = "<group>"; };
+		8443A6B31B6EE40100FF9B09 /* BNDictionaryAlphabet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNDictionaryAlphabet.h; sourceTree = "<group>"; };
+		8443A6B41B6EE40100FF9B09 /* BNDictionaryAlphabet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNDictionaryAlphabet.m; sourceTree = "<group>"; };
+		8443A6B61B6FB59E00FF9B09 /* BNStringExtensionsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BNStringExtensionsTest.m; path = Tests/BNStringExtensionsTest.m; sourceTree = "<group>"; };
+		8443A6B91B6FB5FB00FF9B09 /* BNStringExtensionsTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNStringExtensionsTest.h; sourceTree = "<group>"; };
 		845518BF1B6576AA00D21CFA /* StringExtension */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = StringExtension; sourceTree = BUILT_PRODUCTS_DIR; };
 		845518C11B6576AA00D21CFA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		845518C61B65772E00D21CFA /* NSString+BNExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+BNExtensions.h"; path = "Source/NSString+BNExtensions.h"; sourceTree = "<group>"; };
@@ -131,12 +149,57 @@
 			name = Tests;
 			sourceTree = "<group>";
 		};
-		845518C01B6576AA00D21CFA /* StringExtension */ = {
+		8443A6A71B6ED79300FF9B09 /* Alphabet */ = {
+			isa = PBXGroup;
+			children = (
+				8443A6A81B6ED7A000FF9B09 /* Source */,
+				8443A6B81B6FB5A700FF9B09 /* Tests */,
+			);
+			name = Alphabet;
+			sourceTree = "<group>";
+		};
+		8443A6A81B6ED7A000FF9B09 /* Source */ = {
 			isa = PBXGroup;
 			children = (
 				845518C11B6576AA00D21CFA /* main.m */,
+				8443A6A41B6ED78B00FF9B09 /* BNAlphabet.h */,
+				8443A6A51B6ED78B00FF9B09 /* BNAlphabet.m */,
 				845518C61B65772E00D21CFA /* NSString+BNExtensions.h */,
 				845518C71B65772E00D21CFA /* NSString+BNExtensions.m */,
+				8443A6A91B6ED7B600FF9B09 /* Private */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		8443A6A91B6ED7B600FF9B09 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				8443A6AA1B6ED7B600FF9B09 /* BNRangeAlphabet.h */,
+				8443A6AB1B6ED7B600FF9B09 /* BNRangeAlphabet.m */,
+				8443A6B01B6ED7F000FF9B09 /* BNStringsAlphabet.h */,
+				8443A6B11B6ED7F000FF9B09 /* BNStringsAlphabet.m */,
+				8443A6AD1B6ED7DC00FF9B09 /* BNArrayAlphabet.h */,
+				8443A6AE1B6ED7DC00FF9B09 /* BNArrayAlphabet.m */,
+				8443A6B31B6EE40100FF9B09 /* BNDictionaryAlphabet.h */,
+				8443A6B41B6EE40100FF9B09 /* BNDictionaryAlphabet.m */,
+			);
+			name = Private;
+			path = Alphabet/Source/Private;
+			sourceTree = SOURCE_ROOT;
+		};
+		8443A6B81B6FB5A700FF9B09 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				8443A6B61B6FB59E00FF9B09 /* BNStringExtensionsTest.m */,
+				8443A6B91B6FB5FB00FF9B09 /* BNStringExtensionsTest.h */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+		845518C01B6576AA00D21CFA /* StringExtension */ = {
+			isa = PBXGroup;
+			children = (
+				8443A6A71B6ED79300FF9B09 /* Alphabet */,
 			);
 			path = StringExtension;
 			sourceTree = "<group>";
@@ -335,8 +398,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8443A6AF1B6ED7DC00FF9B09 /* BNArrayAlphabet.m in Sources */,
 				845518C21B6576AA00D21CFA /* main.m in Sources */,
+				8443A6B71B6FB59E00FF9B09 /* BNStringExtensionsTest.m in Sources */,
 				845518C81B65772E00D21CFA /* NSString+BNExtensions.m in Sources */,
+				8443A6B21B6ED7F000FF9B09 /* BNStringsAlphabet.m in Sources */,
+				8443A6AC1B6ED7B600FF9B09 /* BNRangeAlphabet.m in Sources */,
+				8443A6B51B6EE40100FF9B09 /* BNDictionaryAlphabet.m in Sources */,
+				8443A6A61B6ED78B00FF9B09 /* BNAlphabet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,6 +589,7 @@
 				845518C41B6576AA00D21CFA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		845AB2091B5F05450076828E /* Build configuration list for PBXProject "Course" */ = {
 			isa = XCConfigurationList;

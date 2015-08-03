@@ -17,15 +17,15 @@ static NSString const *kBNCarwashMessageBusyCarwash = @"Dear %@! We are sorry, b
 #pragma mark -
 #pragma mark Class Methods
 + (id)createWithBuilding:(BNBuilding *)building
-                withBoss:(BNBoss *)boss
-          withAccountant:(BNAccountant *)accountant
-          withCarwashers:(NSArray *)carwashers
+                boss:(BNBoss *)boss
+          accountant:(BNAccountant *)accountant
+          carwashers:(NSArray *)carwashers
 {
     
     return [[[self alloc] initWithBuilding:(BNBuilding *)building
-                                  withBoss:(BNBoss *)boss
-                            withAccountant:(BNAccountant *)accountant
-                            withCarwashers:(NSArray *)carwashers] autorelease];
+                                  boss:(BNBoss *)boss
+                            accountant:(BNAccountant *)accountant
+                            carwashers:(NSArray *)carwashers] autorelease];
 }
 
 + (id)createWithBuilding:(BNBuilding *)building
@@ -46,7 +46,7 @@ static NSString const *kBNCarwashMessageBusyCarwash = @"Dear %@! We are sorry, b
 
 - (instancetype)init {
     
-    return [self initWithBuilding:nil withBoss:nil withAccountant:nil withCarwashers:nil];
+    return [self initWithBuilding:nil boss:nil accountant:nil carwashers:nil];
 }
 
 - (instancetype)initWithBuilding:(BNBuilding *)currentBuilding
@@ -62,9 +62,9 @@ static NSString const *kBNCarwashMessageBusyCarwash = @"Dear %@! We are sorry, b
 }
 
 - (instancetype)initWithBuilding:(BNBuilding *)currentBuilding
-                        withBoss:(BNBoss *)boss
-                  withAccountant:(BNAccountant *)accountant
-                  withCarwashers:(NSArray *)carwashers
+                        boss:(BNBoss *)boss
+                  accountant:(BNAccountant *)accountant
+                  carwashers:(NSArray *)carwashers
 {
     self = [super init];
     if(self){
@@ -99,8 +99,8 @@ static NSString const *kBNCarwashMessageBusyCarwash = @"Dear %@! We are sorry, b
 #pragma mark Public Methods
 - (BOOL)washCarOf:(BNClient *)client {
     if (nil != client) {
-        if(self.price > [client money]) {
-            NSLog(kBNCarwashMessageNoMoneyToPay, client, [client money]);
+        if(self.price > client.money) {
+            NSLog(kBNCarwashMessageNoMoneyToPay, client, client.money);
         } else {
             NSUInteger currentNextBay = self.nextBay;
             NSUInteger maxIndex = [self.building.bays count] - 1;
@@ -119,12 +119,12 @@ static NSString const *kBNCarwashMessageBusyCarwash = @"Dear %@! We are sorry, b
                     currentNextBay = (maxIndex != currentNextBay) ? ++currentNextBay : 0;
                 }
             } while (currentNextBay != self.nextBay);
-            if (NO == [client isClean]) {
+            if (NO == client.isClean) {
                 NSLog(kBNCarwashMessageBusyCarwash, client);
             }
         }
     }
-    return [client isClean];
+    return client.isClean;
 }
 
 - (void)closeDown {

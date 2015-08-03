@@ -22,11 +22,11 @@
 #pragma mark Class Methods
 
 + (id)createRoomOfType:(BNCarwashStructure)structure {
-    return [[[self alloc] initWithType:structure withPersons:[NSArray array]] autorelease];
+    return [[[self alloc] initWithType:structure persons:[NSArray array]] autorelease];
 }
 
-+ (id)createRoomOfType:(BNCarwashStructure)structure withPersons:(NSArray *)persons {
-    return [[[self alloc] initWithType:structure withPersons:persons] autorelease];
++ (id)createRoomOfType:(BNCarwashStructure)structure persons:(NSArray *)persons {
+    return [[[self alloc] initWithType:structure persons:persons] autorelease];
 }
 
 #pragma mark -
@@ -40,7 +40,7 @@
 
 - (instancetype)init {
     
-    return [self initWithType:BNCarwashUndefined withPersons:nil];
+    return [self initWithType:BNCarwashUndefined persons:nil];
 }
 
 - (instancetype)initWithType:(BNCarwashStructure)structure {
@@ -54,7 +54,7 @@
     return self;
 }
 
-- (instancetype)initWithType:(BNCarwashStructure)structure withPersons:(NSArray *)persons {
+- (instancetype)initWithType:(BNCarwashStructure)structure persons:(NSArray *)persons {
     self = [super init];
     
     if(self){

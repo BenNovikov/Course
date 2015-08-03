@@ -8,15 +8,6 @@
 
 #import "NSString+BNExtensions.h"
 
-//@interface NSString (NSString_BNExtensions)
-//@property (nonatomic, retain)   NSMutableString     *mutableString;
-//@property (nonatomic, copy)     NSString            *someString;
-//
-//- (NSString)getString;
-//- (void)privateMethodWithString:(NSString *)string toAppendWith:(NSString *)appending;
-//
-//@end
-
 @implementation NSString (NSString_BNExtensions)
 
 #pragma mark -
@@ -66,10 +57,11 @@
     return nil;
 }
 
-+ (NSDictionary *)dictionaryFromJSONString:(NSString *)jsonString withOptions:(NSUInteger)optionsPrettyPrint
++ (NSDictionary *)dictionaryFromJSONString:(NSString *)jsonString options:(NSUInteger)optionsPrettyPrint
 {
     NSError *error = nil;
     NSString *message = kBNErrorNoParameter;
+    
     if (nil != jsonString)
     {
         NSData *data = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
@@ -80,7 +72,7 @@
                                                           options:optionsPrettyPrint
                                                             error:&error];
 
-        if (nil == error && [NSJSONSerialization isValidJSONObject:jsonDictionary]) {
+        if ([NSJSONSerialization isValidJSONObject:jsonDictionary]) {
             return jsonDictionary;
         }
         message = kBNErrorConvertToDictionary;
@@ -90,19 +82,63 @@
     return nil;
 }
 
-#pragma mark -
-#pragma mark Public Methods
++ (NSString *)alphabetAlphanumeric {
+    return [[NSString alphabetNumeric] stringByAppendingString:[NSString alphabetLiteral]];
+}
++ (NSString *)alphabetNumeric {
+    return [NSString alphabetWithUnicodeRange:NSMakeRange('0', '9' - '0' + 1)];
+}
 
-#pragma mark -
-#pragma mark Private Methods
-//
-//- (NSString)getString {
-//    
-//}
-//
-//- (void)privateMethodWithString:(NSString *)string toAppendWith:(NSString *)appending {
-//    
-//    return string = [self appendString:appending];
-//}
++ (NSString *)alphabetLiteral {
+    return [[NSString alphabetCapitalized] stringByAppendingString:[NSString alphabetLowercase]];
+}
+
++ (NSString *)alphabetLowercase {
+    return [NSString alphabetWithUnicodeRange:NSMakeRange('a', 'z' - 'a' + 1)];
+}
+
++ (NSString *)alphabetCapitalized {
+    return [NSString alphabetWithUnicodeRange:NSMakeRange('A', 'Z' - 'A' + 1)];
+}
+
++ (NSString *)alphabetWithUnicodeRange:(NSRange)range {
+    NSMutableString *string = [NSMutableString string];
+    for (unichar character = range.location; character < NSMaxRange(range); character++) {
+        [string appendFormat:@"%C", character];
+    }
+    
+    return string;
+}
+
++ (NSString *)randomUnicodeString {
+    return [NSString randomUnicodeStringWithLength:kBNDefaultRangeLength
+                                      range:NSMakeRange(kBNDefaultRangeLocation, kBNDefaultRangeLength)];
+}
+
++ (NSString *)randomUnicodeStringWithLength:(NSUInteger)length {
+    return [NSString randomUnicodeStringWithLength:length range:NSMakeRange(kBNDefaultRangeLocation, kBNDefaultRangeLength)];
+}
+
++ (NSString *)randomUnicodeStringWithLength:(NSUInteger)length range:(NSRange)range {
+    NSMutableString *string = [NSMutableString stringWithCapacity:length];
+    NSString *alphabet = [NSString alphabetWithUnicodeRange:range];
+    
+    for (NSUInteger counter = 0; counter < length; counter++) {
+        [string appendFormat:@"%C", [alphabet characterAtIndex:arc4random_uniform((u_int32_t)range.length)]];
+    }
+    
+    return [[[string copy] init] autorelease];
+}
+
++ (NSString *)randomStringWithLength:(NSUInteger)length string:(NSString *)alphabet {
+    NSMutableString *string = [NSMutableString stringWithCapacity:length];
+    NSUInteger alphabetLength = [alphabet length];
+    
+    for (NSUInteger counter = 0; counter < length; counter++) {
+        [string appendFormat:@"%C", [alphabet characterAtIndex:arc4random_uniform((u_int32_t)alphabetLength)]];
+    }
+    
+    return [[[string copy] init] autorelease];
+}
 
 @end

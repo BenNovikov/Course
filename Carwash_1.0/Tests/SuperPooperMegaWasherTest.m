@@ -41,20 +41,20 @@ static float const kBNCarwashClientMaxMoney         = 100;
 //
 //    Staff Initialization
 //
-    BNBoss *boss                = [BNBoss hireWithSalary:kBNStaffBossSalary
-                                          withExperience:kBNStaffBossExperience];
-    BNAccountant *accountant    = [BNAccountant hireWithSalary:kBNStaffAccountantSalary
-                                                withExperience:kBNStaffAccountantExperience];
+    BNBoss *boss                = [BNBoss createWithSalary:kBNStaffBossSalary
+                                          experience:kBNStaffBossExperience];
+    BNAccountant *accountant    = [BNAccountant createWithSalary:kBNStaffAccountantSalary
+                                                experience:kBNStaffAccountantExperience];
     NSArray *officeStaff = @[accountant, boss];
     
     NSMutableArray *carwashers  = [NSMutableArray arrayWithCapacity:kBNWashBays];
     NSMutableArray *bays        = [NSMutableArray arrayWithCapacity:kBNWashBays];
     
     for (NSUInteger index = 0; index < kBNWashBays; index++) {
-        BNCarwasher *carwasher  = [BNCarwasher hireWithSalary:kBNStaffCarwasherSalary
-                                               withExperience:kBNStaffCarwasherExperience];
+        BNCarwasher *carwasher  = [BNCarwasher createWithSalary:kBNStaffCarwasherSalary
+                                               experience:kBNStaffCarwasherExperience];
         [carwashers insertObject:carwasher atIndex:index];
-        BNRoom *bay = [BNRoom createRoomOfType:BNCarwashBay withPersons:[NSArray arrayWithObject:carwasher]];
+        BNRoom *bay = [BNRoom createRoomOfType:BNCarwashBay persons:[NSArray arrayWithObject:carwasher]];
         [bays insertObject:bay atIndex:index];
     }
     
@@ -63,15 +63,15 @@ static float const kBNCarwashClientMaxMoney         = 100;
 //
 //    Building Setup
 //   
-    BNRoom *currentOffice   = [BNRoom createRoomOfType:BNCarwashOffice withPersons:officeStaff];
-    BNBuilding *building    = [BNBuilding createWithOffice:currentOffice withBays:bays];
+    BNRoom *currentOffice   = [BNRoom createRoomOfType:BNCarwashOffice persons:officeStaff];
+    BNBuilding *building    = [BNBuilding createWithOffice:currentOffice bays:bays];
     
     BNCarwash *carWash      = [BNCarwash createWithBuilding:building];
     
     carWash = [BNCarwash createWithBuilding:building
-                                   withBoss:boss
-                             withAccountant:accountant
-                             withCarwashers:carwashers];
+                                   boss:boss
+                             accountant:accountant
+                             carwashers:carwashers];
     
 
     [carWash setPrice:kBNCarwashServicePrice];
@@ -85,7 +85,7 @@ static float const kBNCarwashClientMaxMoney         = 100;
 //
     uint64_t clientsToday = arc4random_uniform(kBNCarwashClientsMax - kBNCarwashClientsMin) + kBNCarwashClientsMin;
     for (uint64_t index = 0; index < clientsToday; index++) {
-        client = [BNClient createClientWithCleanCar:NO withMoney:arc4random_uniform(kBNCarwashClientMaxMoney)];
+        client = [BNClient clientWithCar:NO money:arc4random_uniform(kBNCarwashClientMaxMoney)];
         [carWash washCarOf:client];
     }
     NSLog(@"..........It's late now! Sorry, but we gonna close!.........\n");

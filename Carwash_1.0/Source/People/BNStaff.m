@@ -17,8 +17,8 @@ static float const kBNIniialExperience = 0;
 #pragma mark -
 #pragma mark Class Methods
 
-+ (id)hireWithSalary:(uint64_t)salary withExperience:(float)experience {
-    return [[[self alloc] initWithSalary:salary withExperience:experience] autorelease];
++ (id)createWithSalary:(uint64_t)salary experience:(float)experience {
+    return [[[self alloc] initWithSalary:salary experience:experience] autorelease];
 }
 
 #pragma mark -
@@ -31,10 +31,10 @@ static float const kBNIniialExperience = 0;
 
 - (instancetype)init {
 
-    return [BNStaff hireWithSalary:kBNIniialSalary withExperience:kBNIniialExperience];
+    return [BNStaff createWithSalary:kBNIniialSalary experience:kBNIniialExperience];
 }
 
-- (instancetype)initWithSalary:(uint64_t)salary withExperience:(float)experience {
+- (instancetype)initWithSalary:(uint64_t)salary experience:(float)experience {
 
     if(self){
         [self setSalary:salary];

@@ -15,8 +15,8 @@ static uint64_t const kBNClientInitialMoney = 10000;
 #pragma mark -
 #pragma mark Class Methods
 
-+ (id)createClientWithCleanCar:(BOOL)Clean withMoney:(float)money {
-    return [[[self alloc] initClientWithCleanCar:(BOOL)Clean withMoney:(float)money] autorelease];
++ (id)clientWithCar:(BOOL)Clean money:(float)money {
+    return [[[self alloc] initClientWithCar:(BOOL)Clean money:(float)money] autorelease];
 }
 
 #pragma mark -
@@ -29,10 +29,10 @@ static uint64_t const kBNClientInitialMoney = 10000;
 
 - (instancetype)init  {
     
-    return [self initClientWithCleanCar:NO withMoney:kBNClientInitialMoney];
+    return [self initClientWithCar:NO money:kBNClientInitialMoney];
 }
 
-- (instancetype)initClientWithCleanCar:(BOOL)isClean withMoney:(float)money {
+- (instancetype)initClientWithCar:(BOOL)isClean money:(float)money {
 
     if(self){
         [self setClean:NO];
