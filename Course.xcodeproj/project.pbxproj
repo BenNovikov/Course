@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E7187521B6A3E9C0008B805 /* TestTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7187511B6A3E9C0008B805 /* TestTarget.m */; };
+		5E7187561B6A3ED10008B805 /* NSString+BNExtensionsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7187471B6A2ACD0008B805 /* NSString+BNExtensionsTest.m */; };
+		5E7187571B6A3EE90008B805 /* NSString+BNExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 845518C71B65772E00D21CFA /* NSString+BNExtensions.m */; };
 		843F1D881B60405D0001016B /* SuperPooperMegaWasherTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 843F1D871B60405D0001016B /* SuperPooperMegaWasherTest.m */; };
 		8443A6A61B6ED78B00FF9B09 /* BNAlphabet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8443A6A51B6ED78B00FF9B09 /* BNAlphabet.m */; };
 		8443A6AC1B6ED7B600FF9B09 /* BNRangeAlphabet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8443A6AB1B6ED7B600FF9B09 /* BNRangeAlphabet.m */; };
@@ -64,6 +67,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5E7187471B6A2ACD0008B805 /* NSString+BNExtensionsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+BNExtensionsTest.m"; path = "Test/NSString+BNExtensionsTest.m"; sourceTree = "<group>"; };
+		5E71874D1B6A3E9C0008B805 /* TestTarget.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestTarget.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E7187501B6A3E9C0008B805 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E7187511B6A3E9C0008B805 /* TestTarget.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTarget.m; sourceTree = "<group>"; };
 		843F1D861B60405D0001016B /* SuperPooperMegaWasherTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SuperPooperMegaWasherTest.h; path = Tests/SuperPooperMegaWasherTest.h; sourceTree = "<group>"; };
 		843F1D871B60405D0001016B /* SuperPooperMegaWasherTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SuperPooperMegaWasherTest.m; path = Tests/SuperPooperMegaWasherTest.m; sourceTree = "<group>"; };
 		8443A6A41B6ED78B00FF9B09 /* BNAlphabet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BNAlphabet.h; path = Alphabet/Source/BNAlphabet.h; sourceTree = SOURCE_ROOT; };
@@ -116,6 +123,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5E71874A1B6A3E9C0008B805 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		845518BC1B6576AA00D21CFA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -140,6 +154,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E71874E1B6A3E9C0008B805 /* TestTarget */ = {
+			isa = PBXGroup;
+			children = (
+				5E7187511B6A3E9C0008B805 /* TestTarget.m */,
+				5E71874F1B6A3E9C0008B805 /* Supporting Files */,
+			);
+			path = TestTarget;
+			sourceTree = "<group>";
+		};
+		5E71874F1B6A3E9C0008B805 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5E7187501B6A3E9C0008B805 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		843F1D891B6040660001016B /* Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +192,7 @@
 		8443A6A81B6ED7A000FF9B09 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				5E7187471B6A2ACD0008B805 /* NSString+BNExtensionsTest.m */,
 				845518C11B6576AA00D21CFA /* main.m */,
 				8443A6A41B6ED78B00FF9B09 /* BNAlphabet.h */,
 				8443A6A51B6ED78B00FF9B09 /* BNAlphabet.m */,
@@ -211,6 +243,7 @@
 				845AB2461B5F07470076828E /* Creature */,
 				845AB25F1B5F09B10076828E /* Carwash_1.0 */,
 				845518C01B6576AA00D21CFA /* StringExtension */,
+				5E71874E1B6A3E9C0008B805 /* TestTarget */,
 				845AB20F1B5F05450076828E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -221,6 +254,7 @@
 				845AB2451B5F07470076828E /* Creature */,
 				845AB25E1B5F09B00076828E /* Carwash_1.0 */,
 				845518BF1B6576AA00D21CFA /* StringExtension */,
+				5E71874D1B6A3E9C0008B805 /* TestTarget.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -303,6 +337,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		5E71874C1B6A3E9C0008B805 /* TestTarget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E7187531B6A3E9C0008B805 /* Build configuration list for PBXNativeTarget "TestTarget" */;
+			buildPhases = (
+				5E7187491B6A3E9C0008B805 /* Sources */,
+				5E71874A1B6A3E9C0008B805 /* Frameworks */,
+				5E71874B1B6A3E9C0008B805 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TestTarget;
+			productName = TestTarget;
+			productReference = 5E71874D1B6A3E9C0008B805 /* TestTarget.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		845518BE1B6576AA00D21CFA /* StringExtension */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 845518C51B6576AB00D21CFA /* Build configuration list for PBXNativeTarget "StringExtension" */;
@@ -363,6 +414,9 @@
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = BenNovikov;
 				TargetAttributes = {
+					5E71874C1B6A3E9C0008B805 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
 					845518BE1B6576AA00D21CFA = {
 						CreatedOnToolsVersion = 6.4;
 					};
@@ -389,11 +443,32 @@
 				845AB2441B5F07470076828E /* Creature */,
 				845AB25D1B5F09B00076828E /* Carwash_1.0 */,
 				845518BE1B6576AA00D21CFA /* StringExtension */,
+				5E71874C1B6A3E9C0008B805 /* TestTarget */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		5E71874B1B6A3E9C0008B805 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		5E7187491B6A3E9C0008B805 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E7187571B6A3EE90008B805 /* NSString+BNExtensions.m in Sources */,
+				5E7187521B6A3E9C0008B805 /* TestTarget.m in Sources */,
+				5E7187561B6A3ED10008B805 /* NSString+BNExtensionsTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		845518BB1B6576AA00D21CFA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -442,6 +517,41 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		5E7187541B6A3E9C0008B805 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TestTarget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5E7187551B6A3E9C0008B805 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TestTarget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		845518C31B6576AA00D21CFA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -582,6 +692,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5E7187531B6A3E9C0008B805 /* Build configuration list for PBXNativeTarget "TestTarget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E7187541B6A3E9C0008B805 /* Debug */,
+				5E7187551B6A3E9C0008B805 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		845518C51B6576AB00D21CFA /* Build configuration list for PBXNativeTarget "StringExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
