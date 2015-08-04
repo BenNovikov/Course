@@ -41,9 +41,7 @@
 }
 
 - (NSString *)stringAtIndex:(NSUInteger)index {
-    NSUInteger count = [self count];
-    
-    NSAssert(index < count, NSRangeException);
+    NSAssert(index < [self count], NSRangeException);
  
     return self.myArray[index];
 }

@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface SuperPooperMegaWasherTest : NSObject
-
 + (void)performTest;
 
 @end

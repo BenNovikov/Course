@@ -35,7 +35,6 @@
 #pragma mark Public
 
 - (NSUInteger)count {
-//    NSUInteger count = [self countWithDictionary:self.dictionary];
     NSUInteger count = 1;
     
     return count;

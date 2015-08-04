@@ -30,6 +30,4 @@ static NSString const *kBNBossMessageLoss = @"%@ received nothing... Losses fixe
     [self.currentLocation removePerson:self];
 }
 
-
-
 @end

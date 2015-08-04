@@ -13,7 +13,6 @@ static NSString const *kBNCarwasherMessageCarIsCleaned = @"%@ car is clean now. 
 static NSString const *kBNCarwasherMessageWashingCar = @"%@ is washing the car of:%@\n";
 
 @interface BNCarwasher()
-
 - (void)washCarOfClient:(BNClient *)client;
 
 @end
@@ -24,7 +23,7 @@ static NSString const *kBNCarwasherMessageWashingCar = @"%@ is washing the car o
 #pragma mark Public Methods
 
 - (void)performOperationHoursDuties:(BNCarwash *)object {
-    BNClient    *client = [self.currentLocation.persons lastObject];
+    BNClient *client = [self.currentLocation.persons lastObject];
     [self washCarOfClient:client];
     
     if ([client isClean]) {

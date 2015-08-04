@@ -39,12 +39,12 @@ static float const kBNCarwashClientMaxMoney         = 100;
     NSLog(@"*************************************************************");
 
 //
-//    Staff Initialization
-//
+    //    Staff Initialization
+    //
     BNBoss *boss                = [BNBoss createWithSalary:kBNStaffBossSalary
-                                          experience:kBNStaffBossExperience];
+                                                experience:kBNStaffBossExperience];
     BNAccountant *accountant    = [BNAccountant createWithSalary:kBNStaffAccountantSalary
-                                                experience:kBNStaffAccountantExperience];
+                                                      experience:kBNStaffAccountantExperience];
     NSArray *officeStaff = @[accountant, boss];
     
     NSMutableArray *carwashers  = [NSMutableArray arrayWithCapacity:kBNWashBays];
@@ -52,7 +52,7 @@ static float const kBNCarwashClientMaxMoney         = 100;
     
     for (NSUInteger index = 0; index < kBNWashBays; index++) {
         BNCarwasher *carwasher  = [BNCarwasher createWithSalary:kBNStaffCarwasherSalary
-                                               experience:kBNStaffCarwasherExperience];
+                                                     experience:kBNStaffCarwasherExperience];
         [carwashers insertObject:carwasher atIndex:index];
         BNRoom *bay = [BNRoom createRoomOfType:BNCarwashBay persons:[NSArray arrayWithObject:carwasher]];
         [bays insertObject:bay atIndex:index];
@@ -60,9 +60,9 @@ static float const kBNCarwashClientMaxMoney         = 100;
     
     BNClient *client;
     
-//
-//    Building Setup
-//   
+    //
+    //    Building Setup
+    //
     BNRoom *currentOffice   = [BNRoom createRoomOfType:BNCarwashOffice persons:officeStaff];
     BNBuilding *building    = [BNBuilding createWithOffice:currentOffice bays:bays];
     

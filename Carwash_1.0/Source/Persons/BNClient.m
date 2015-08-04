@@ -22,18 +22,17 @@ static uint64_t const kBNClientInitialMoney = 10000;
 #pragma mark -
 #pragma mark Init and Declare
 
-- (void)dealloc {
-    
-    [super dealloc];
-}
+//- (void)dealloc {
+//    
+//    [super dealloc];
+//}
 
-- (instancetype)init  {
-    
+- (instancetype)init  {    
     return [self initClientWithCar:NO money:kBNClientInitialMoney];
 }
 
 - (instancetype)initClientWithCar:(BOOL)isClean money:(float)money {
-
+//    self = [super init];
     if(self){
         [self setClean:NO];
         [self setMoney:money];

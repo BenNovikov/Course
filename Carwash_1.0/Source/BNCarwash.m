@@ -8,29 +8,26 @@
 
 #import "BNCarwash.h"
 
-static NSString const *kBNCarwashMessageNoMoneyToPay = @"%@ has just $%5.02f.Sorry, no credit here\n";
-static NSString const *kBNCarwashMessageLookingForBay = @"%@ is busy now. Select next bay...";
-static NSString const *kBNCarwashMessageBusyCarwash = @"Dear %@! We are sorry, but all the bays are busy now. Wait or come later please!";
+static NSString const *kBNCarwashMessageNoMoneyToPay    = @"%@ has just $%5.02f.Sorry, no credit here\n";
+static NSString const *kBNCarwashMessageLookingForBay   = @"%@ is busy now. Select next bay...";
+static NSString const *kBNCarwashMessageBusyCarwash     = @"Dear %@! We are sorry, but all the bays are busy now. Wait or come later please!";
 
 @implementation BNCarwash
 
 #pragma mark -
 #pragma mark Class Methods
 + (id)createWithBuilding:(BNBuilding *)building
-                boss:(BNBoss *)boss
-          accountant:(BNAccountant *)accountant
-          carwashers:(NSArray *)carwashers
+                    boss:(BNBoss *)boss
+              accountant:(BNAccountant *)accountant
+              carwashers:(NSArray *)carwashers
 {
-    
     return [[[self alloc] initWithBuilding:(BNBuilding *)building
-                                  boss:(BNBoss *)boss
-                            accountant:(BNAccountant *)accountant
-                            carwashers:(NSArray *)carwashers] autorelease];
+                                      boss:(BNBoss *)boss
+                                accountant:(BNAccountant *)accountant
+                                carwashers:(NSArray *)carwashers] autorelease];
 }
 
-+ (id)createWithBuilding:(BNBuilding *)building
-{
-    
++ (id)createWithBuilding:(BNBuilding *)building {
     return [[[self alloc] initWithBuilding:(BNBuilding *)building] autorelease];
 }
 
@@ -39,23 +36,19 @@ static NSString const *kBNCarwashMessageBusyCarwash = @"Dear %@! We are sorry, b
 
 - (void)dealloc {
     self.building = nil;
-//    self.activeBays = nil;
     
     [super dealloc];
 }
 
 - (instancetype)init {
-    
     return [self initWithBuilding:nil boss:nil accountant:nil carwashers:nil];
 }
 
-- (instancetype)initWithBuilding:(BNBuilding *)currentBuilding
-{
+- (instancetype)initWithBuilding:(BNBuilding *)currentBuilding {
     self = [super init];
     if(self){
         [self setBuilding:currentBuilding];
         [self setNextBay:0];
-//        self.activeBays = [NSMutableArray arrayWithArray:self.building.bays];
     }
     
     return self;
@@ -77,16 +70,16 @@ static NSString const *kBNCarwashMessageBusyCarwash = @"Dear %@! We are sorry, b
             [office removePerson:[office.persons firstObject]];
         }
         [self.building.office addPerson:accountant];
-        [self.building.office addPerson:boss];
-        
+        [self.building.office addPerson:boss];        
         NSArray *bays   = [self.building bays];
+        
         for (BNRoom *bay in bays) {
             for (NSUInteger index = 0; index < [[bay persons] count]; index++){
                 [bay removePerson:[[bay persons] firstObject]];
             }
         }
         count = MIN([bays count],[carwashers count]);
-//        self.activeBays = [NSMutableArray arrayWithCapacity:count];
+        
         for (NSUInteger index = 0; index < count ; index++) {
             [[bays objectAtIndex:index] addPerson:[carwashers objectAtIndex:index]];
         }
@@ -124,6 +117,7 @@ static NSString const *kBNCarwashMessageBusyCarwash = @"Dear %@! We are sorry, b
             }
         }
     }
+    
     return client.isClean;
 }
 

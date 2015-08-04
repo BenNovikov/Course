@@ -24,23 +24,20 @@ static float const kBNIniialExperience = 0;
 #pragma mark -
 #pragma mark Init and Declare
 
-- (void)dealloc {
-    
-    [super dealloc];
-}
+//- (void)dealloc {
+//    
+//    [super dealloc];
+//}
 
 - (instancetype)init {
-
     return [BNStaff createWithSalary:kBNIniialSalary experience:kBNIniialExperience];
 }
 
 - (instancetype)initWithSalary:(uint64_t)salary experience:(float)experience {
-
+//    self = [super init];
     if(self){
-        [self setSalary:salary];
-        [self setExperience:experience];
-        [self setMoney:0];
-        [self setBusy:NO];
+        self.salary = salary;
+        self.experience = experience;
     }
     
     return self;
@@ -48,7 +45,6 @@ static float const kBNIniialExperience = 0;
 
 #pragma mark -
 #pragma mark Public Methods
-
 - (void)performOperationHoursDuties:(BNCarwash *)object {
     
 }

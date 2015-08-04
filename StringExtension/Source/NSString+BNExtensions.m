@@ -129,23 +129,25 @@
 + (NSString *)randomUnicodeStringWithLength:(NSUInteger)length range:(NSRange)range {
     NSMutableString *string = [NSMutableString stringWithCapacity:length];
     NSString *alphabet = [NSString alphabetWithUnicodeRange:range];
+    u_int32_t countLength = (u_int32_t)range.length;
     
     for (NSUInteger counter = 0; counter < length; counter++) {
-        [string appendFormat:@"%C", [alphabet characterAtIndex:arc4random_uniform((u_int32_t)range.length)]];
+        [string appendFormat:@"%C", [alphabet characterAtIndex:arc4random_uniform(countLength)]];
     }
     
-    return [[[string copy] init] autorelease];
+    return [[string copy] autorelease];
 }
 
 + (NSString *)randomStringWithLength:(NSUInteger)length string:(NSString *)alphabet {
     NSMutableString *string = [NSMutableString stringWithCapacity:length];
     NSUInteger alphabetLength = [alphabet length];
+    u_int32_t countLength = (u_int32_t)alphabetLength;
     
     for (NSUInteger counter = 0; counter < length; counter++) {
-        [string appendFormat:@"%C", [alphabet characterAtIndex:arc4random_uniform((u_int32_t)alphabetLength)]];
+        [string appendFormat:@"%C", [alphabet characterAtIndex:arc4random_uniform(countLength)]];
     }
     
-    return [[[string copy] init] autorelease];
+    return [[string copy] autorelease];
 }
 
 @end

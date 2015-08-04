@@ -11,12 +11,11 @@
 
 @class BNBoss;
 
-static NSString const *kBNAccountantMessageCountMoney = @"%@ is counting money... It's $%.02f";
-static NSString const *kBNAccountantMessageNoMoneyToPaySalary = @"Not enough money to pay salary to %@";
-static NSString const *kBNAccountantMessageSalaryPaid = @"The salary of $%6.02f is paid to: %@\n";
+static NSString const *kBNAccountantMessageCountMoney           = @"%@ is counting money... It's $%.02f";
+static NSString const *kBNAccountantMessageNoMoneyToPaySalary   = @"Not enough money to pay salary to %@";
+static NSString const *kBNAccountantMessageSalaryPaid           = @"The salary of $%6.02f is paid to: %@\n";
 
 @interface BNAccountant()
-
 - (void)countMoney;
 - (void)paySalaryTo:(BNStaff *)staff;
 
@@ -54,11 +53,12 @@ static NSString const *kBNAccountantMessageSalaryPaid = @"The salary of $%6.02f 
 #pragma mark Private Methods
 
 - (void)countMoney {
-    NSLog(kBNAccountantMessageCountMoney, self, [self money]);
+    NSLog(kBNAccountantMessageCountMoney, self, self.money);
 }
 
 - (void)paySalaryTo:(BNStaff *)staff {
     float salaryToPay = staff.salary;
+    
     if (salaryToPay > self.money) {
         salaryToPay = self.money;
         NSLog(kBNAccountantMessageNoMoneyToPaySalary, staff);

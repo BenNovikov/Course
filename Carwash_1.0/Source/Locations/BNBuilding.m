@@ -34,8 +34,7 @@
     [super dealloc];
 }
 
-- (instancetype)init {
-    
+- (instancetype)init {    
     return [self initWithOffice:nil bays:nil];
 }
 
@@ -54,7 +53,6 @@
 #pragma mark Public Methods
 
 - (NSArray *)bays {
-    
     return [[self.mutableBays copy] autorelease];
 }
 
