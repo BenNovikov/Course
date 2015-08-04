@@ -14,6 +14,7 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         [BNStringExtensionsTest performJSONStringTest];
         [BNStringExtensionsTest performRandomStringTest];
+        [BNStringExtensionsTest performAlphabetTest];
     }
     
     return 0;

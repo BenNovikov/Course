@@ -8,28 +8,41 @@
 
 #import "BNRangeAlphabet.h"
 
+@interface BNRangeAlphabet()
+@property (nonatomic, assign)   NSRange range;
+
+@end
+
 @implementation BNRangeAlphabet
 
-+ (instancetype)alphabetWithRange:(NSRange *)range {
+- (instancetype)alphabetWithRange:(NSRange)range {
     
-    return nil;
+    return [self initWithRange:range];
 }
 
-- (instancetype)initWithRange:(NSRange *)range {
+- (instancetype)initWithRange:(NSRange)range {
+    self = [super init];
+    if (nil != self) {
+        self.range = range;
+    }
     
-    return nil;
+    return self;
+}
+
+- (NSUInteger)count {
+    return self.range.length;
+}
+
+- (NSString *)stringAtIndex:(NSUInteger)index {
+    return (index < self.range.length) ? [NSString stringWithFormat:@"%C", (unichar)(self.range.length + index)] : nil;
 }
 
 #pragma mark -
 #pragma mark Enumeration
 
-- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state
-                                  objects:(id [])buffer
-                                    count:(NSUInteger)len
+- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id [])buffer count:(NSUInteger)len
 {
-    return [super countByEnumeratingWithState:state
-                                      objects:buffer
-                                        count:len];
+    return [super countByEnumeratingWithState:state objects:buffer count:len];
 }
 
 @end

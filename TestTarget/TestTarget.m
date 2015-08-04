@@ -9,6 +9,13 @@
 #import <Cocoa/Cocoa.h>
 #import <XCTest/XCTest.h>
 
+#import "BNAlphabet.h"
+#import "BNRangeAlphabet.h"
+#import "BNArrayAlphabet.h"
+#import "BNStringAlphabet.h"
+#import "BNDictionaryAlphabet.h"
+#import "NSString+BNExtensions.h"
+
 @interface TestTarget : XCTestCase
 
 @end
@@ -27,7 +34,12 @@
 
 - (void)testExample {
     // This is an example of a functional test case.
-    XCTAssert(YES, @"Pass");
+    
+    BNAlphabet *alphabet = [BNAlphabet alphabetWithRange:NSMakeRange('A', 'Z' - 'A' + 1)];
+    BOOL testResult = [alphabet isKindOfClass:[BNRangeAlphabet class]];
+    NSAssert(testResult, @"Class mismatch");
+    
+    XCTAssert(testResult, @"Pass");
 }
 
 - (void)testPerformanceExample {

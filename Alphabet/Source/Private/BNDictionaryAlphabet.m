@@ -9,12 +9,27 @@
 #import "BNDictionaryAlphabet.h"
 
 @interface BNDictionaryAlphabet()
+@property (nonatomic, retain) NSMutableDictionary *mutableDictionary;
 
-//- (NSUInteger)countWithDictionary:(NSDictionary *)myDictionary;
+- (NSUInteger)countWithDictionary:(NSDictionary *)dictionary;
 
 @end
 
 @implementation BNDictionaryAlphabet
+
+- (instancetype)alphabetWithDictionary:(NSDictionary *)dictionary {
+    
+    return [self initWithDictionary:dictionary];
+}
+
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary {
+    self = [super init];
+    if (nil != self) {
+        [self.mutableDictionary addEntriesFromDictionary:dictionary];
+    }
+    
+    return self;
+}
 
 #pragma mark -
 #pragma mark Public
@@ -34,16 +49,16 @@
 
 #pragma mark -
 #pragma mark Private
-//
-//- (NSUInteger)countWithDictionary:myDictionary {
-//    NSUInteger count = 0;
-//    
-//    for (BNAlphabet *alphabet in myDictionary.allKeys) {
-//        count += [alphabet count];
-//    }
-//    
-//    return count;
-//}
+
+- (NSUInteger)countWithDictionary:(NSDictionary *)dictionary {
+    NSUInteger count = 0;
+    
+    for (BNAlphabet *alphabet in dictionary.allKeys) {
+        count += [alphabet count];
+    }
+    
+    return count;
+}
 
 #pragma mark -
 #pragma mark Enumeration

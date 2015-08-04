@@ -15,6 +15,7 @@
 
 + (void)performJSONStringTest;
 + (void)performRandomStringTest;
++ (void)performAlphabetTest;
 
 @end
 

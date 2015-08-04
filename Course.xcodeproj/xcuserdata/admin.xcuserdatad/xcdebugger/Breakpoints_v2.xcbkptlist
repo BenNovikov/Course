@@ -137,13 +137,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "StringExtension/Source/NSString+BNExtensions.m"
-            timestampString = "460329910.420066"
+            filePath = "StringExtension/Tests/BNStringExtensionsTest.m"
+            timestampString = "460344313.635853"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
-            landmarkName = "+dictionaryFromJSONString:options:"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
+            landmarkName = "+performAlphabetTest"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

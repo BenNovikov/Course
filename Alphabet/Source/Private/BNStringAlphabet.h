@@ -1,5 +1,5 @@
 //
-//  BNStringsAlphabet.h
+//  BNStringAlphabet.h
 //  Course
 //
 //  Created by Admin on 15/08/03/.
@@ -10,9 +10,9 @@
 
 #import "BNAlphabet.h"
 
-@interface BNStringsAlphabet : BNAlphabet <NSFastEnumeration>
+@interface BNStringAlphabet : BNAlphabet <NSFastEnumeration>
 
-+ (instancetype)alphabetWithString:(NSString *)string;
+- (instancetype)alphabetWithString:(NSString *)string;
 
 - (instancetype)initWithString:(NSString *)string;
 

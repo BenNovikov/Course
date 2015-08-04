@@ -18,7 +18,6 @@ NS_STRING_KEY(kBNErrorConvertToDictionary, @"An error converting to dictionary")
 NS_INT_KEY(kBNDefaultRangeLocation, 'A');
 NS_INT_KEY(kBNDefaultRangeLength, 'Z' - 'A' + 1);
 
-
 @interface NSString (NSString_BNExtensions)
 
 + (NSString *)downloadJSONfromURL:(NSString *)url;

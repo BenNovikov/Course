@@ -41,14 +41,21 @@
     NSString *message = kBNErrorNoParameter;
     if (nil != dictionary)
     {
-        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dictionary
-                                                           options:NSJSONWritingPrettyPrinted
-                                                             error:&error];
-        NSString *jsonString = [[[NSString alloc] initWithData:jsonData
-                                                      encoding:NSUTF8StringEncoding] autorelease];
+        //commented realization keeps Quotation Marks in the output string
+//        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dictionary
+//                                                           options:NSJSONWritingPrettyPrinted
+//                                                             error:&error];
+//        NSString *jsonString = [[[NSString alloc] initWithData:jsonData
+//                                                      encoding:NSUTF8StringEncoding] autorelease];
+        NSMutableString *string = [[NSMutableString new] autorelease];
+        
+        [dictionary enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+            [string appendFormat:@"%@ : %@\n", key, obj];
+        }];
+        
         if (nil == error) {
             
-            return jsonString;
+            return [[string copy] autorelease];
         }
         message = kBNErrorConvertToString;
     }

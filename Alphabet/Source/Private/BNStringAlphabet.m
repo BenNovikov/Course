@@ -1,23 +1,32 @@
 //
-//  BNStringsAlphabet.m
+//  BNStringAlphabet.m
 //  Course
 //
 //  Created by Admin on 15/08/03/.
 //  Copyright (c) 2015 BenNovikov. All rights reserved.
 //
 
-#import "BNStringsAlphabet.h"
+#import "BNStringAlphabet.h"
 
-@implementation BNStringsAlphabet
+@interface BNStringAlphabet()
+@property (nonatomic, retain)   NSMutableString *mutableString;
 
-+ (instancetype)alphabetWithString:(NSString *)string {
-    
-    return nil;
+@end
+
+@implementation BNStringAlphabet
+
+- (instancetype)alphabetWithString:(NSString *)string {
+
+    return [self initWithString:string];
 }
 
 - (instancetype)initWithString:(NSString *)string {
+    self = [super init];
+    if (nil != self) {
+        [self.mutableString appendString:string];
+    }
     
-    return [[BNStringsAlphabet alphabetWithString:string] autorelease] ;
+    return self;
 }
 
 #pragma mark -

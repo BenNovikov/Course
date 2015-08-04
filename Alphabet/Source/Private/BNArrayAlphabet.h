@@ -13,7 +13,7 @@
 @interface BNArrayAlphabet : BNAlphabet <NSFastEnumeration>
 @property   (nonatomic, readonly) NSArray *myArray;
 
-+ (instancetype)alphabetWithArray:(NSArray *)array;
+- (instancetype)alphabetWithArray:(NSArray *)array;
 
 - (instancetype)initWithArray:(NSArray *)array;
 

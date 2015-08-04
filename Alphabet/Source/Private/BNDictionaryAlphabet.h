@@ -13,4 +13,11 @@
 @interface BNDictionaryAlphabet : BNAlphabet
 @property   (nonatomic, readonly) NSDictionary *dictionary;
 
+- (instancetype)alphabetWithDictionary:(NSDictionary *)dictionary;
+
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+
+- (NSUInteger)count;
+- (NSString *)stringAtIndex:(NSUInteger)index;
+
 @end

@@ -9,14 +9,14 @@
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "845518BE1B6576AA00D21CFA"
-               BuildableName = "StringExtension"
-               BlueprintName = "StringExtension"
+               BlueprintIdentifier = "5E71874C1B6A3E9C0008B805"
+               BuildableName = "TestTarget.xctest"
+               BlueprintName = "TestTarget"
                ReferencedContainer = "container:Course.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -42,9 +42,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "845518BE1B6576AA00D21CFA"
-            BuildableName = "StringExtension"
-            BlueprintName = "StringExtension"
+            BlueprintIdentifier = "5E71874C1B6A3E9C0008B805"
+            BuildableName = "TestTarget.xctest"
+            BlueprintName = "TestTarget"
             ReferencedContainer = "container:Course.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -58,16 +58,15 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "845518BE1B6576AA00D21CFA"
-            BuildableName = "StringExtension"
-            BlueprintName = "StringExtension"
+            BlueprintIdentifier = "5E71874C1B6A3E9C0008B805"
+            BuildableName = "TestTarget.xctest"
+            BlueprintName = "TestTarget"
             ReferencedContainer = "container:Course.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -77,16 +76,15 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "845518BE1B6576AA00D21CFA"
-            BuildableName = "StringExtension"
-            BlueprintName = "StringExtension"
+            BlueprintIdentifier = "5E71874C1B6A3E9C0008B805"
+            BuildableName = "TestTarget.xctest"
+            BlueprintName = "TestTarget"
             ReferencedContainer = "container:Course.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

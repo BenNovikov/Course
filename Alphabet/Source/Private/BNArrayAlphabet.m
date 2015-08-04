@@ -9,6 +9,7 @@
 #import "BNArrayAlphabet.h"
 
 @interface BNArrayAlphabet ()
+@property (nonatomic, retain) NSMutableArray *mutableArray;
 
 - (NSUInteger)countWithArray:(NSArray *)array;
 
@@ -16,14 +17,18 @@
 
 @implementation BNArrayAlphabet
 
-+ (instancetype)alphabetWithArray:(NSArray *)array {
-    
-    return nil;
+- (instancetype)alphabetWithArray:(NSArray *)array {
+
+    return [self initWithArray:array];
 }
 
-- (instancetype)initWithArray:(NSArray *)array {
+- (instancetype)initWithArray:(NSArray *)array {    
+    self = [super init];
+    if (nil != self) {
+        [self.mutableArray addObjectsFromArray:array];
+    }
     
-    return nil;
+    return self;
 }
 
 #pragma mark -

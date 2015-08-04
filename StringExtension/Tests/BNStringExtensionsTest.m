@@ -9,7 +9,13 @@
 #import <Foundation/Foundation.h>
 
 #import "BNStringExtensionsTest.h"
+
 #import "BNAlphabet.h"
+#import "BNRangeAlphabet.h"
+#import "BNArrayAlphabet.h"
+#import "BNStringAlphabet.h"
+#import "BNDictionaryAlphabet.h"
+#import "NSString+BNExtensions.h"
 
 @implementation BNStringExtensionsTest
 
@@ -23,15 +29,15 @@
     NSString *myJSONString = [NSString downloadJSONfromURL:myURL];
     NSDictionary *myDictionary = [NSString dictionaryFromJSONString:myJSONString options:0];
     NSInteger humidity = [[[myDictionary objectForKey:@"main"] objectForKey:@"humidity"] integerValue];
-    NSInteger temperatureMax = [[[myDictionary objectForKey:@"main"] objectForKey:@"temp_max"] integerValue]- 273.15;
-    NSInteger temperatureMin = [[[myDictionary objectForKey:@"main"] objectForKey:@"temp_min"] integerValue]- 273.15;
+    NSInteger temperatureMax = [[[myDictionary objectForKey:@"main"] objectForKey:@"temp_max"] integerValue]- 273;
+    NSInteger temperatureMin = [[[myDictionary objectForKey:@"main"] objectForKey:@"temp_min"] integerValue]- 273;
     NSArray *weather = [[myDictionary objectForKey:@"weather"] valueForKey:@"main"];
-    NSLog(@"\nKiev Forecast: %@\nTemperature Maximum: %ld\nTemperature Minimum: %ld\nHumidity: %ld\n\n",
+    NSLog(@"\nThe weather in Kiev: %@. Temperature: %ld-%ld\u00b0C. Humidity: %ld%%.\n\n",
           weather[0],
-          temperatureMax,
           temperatureMin,
+          temperatureMax,
           humidity);
-    
+
     //  get data and convert JSON String to NSDictionary:
     myURL = @"http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.quotes%20where%20symbol%20in%20(%22AAPL%22)&env=store://datatables.org/alltableswithkeys&format=json";
     myJSONString = [NSString downloadJSONfromURL:myURL];
@@ -46,24 +52,19 @@
                            @"DaysLow",
                            @"LastTradeDate",
                            @"LastTradeTime",
-                           @"Volume", nil];
+                           @"Volume",
+                           nil];
     
-    NSMutableString *myString = [NSMutableString stringWithString:@"\nApple Inc. traded today:\n"];
+    NSMutableString *myString = [NSMutableString stringWithString:@"\nApple Inc. last trade session:\n"];
     
     for (NSString *key in sortedKeys) {
         [myString appendFormat:@"%@ : %@\n", key, [myData objectForKey:key]];
     }
     NSLog(@"%@\n", myString);
-    
-    //
+
     //  convert JSON NSDictionary to String:
-    //
-//    myJSONString = [NSString JSONStringFromDictionary:myData];
-//    NSLog(@"JSON String: \n%@", myJSONString);
-//    [myData enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
-//        [myString appendFormat:@"%@ : %@\n", key, obj];
-//    }];
-//    NSLog(@"%@\n", myString);
+    myJSONString = [NSString JSONStringFromDictionary:myData];
+//    NSLog(@"\nApple Inc. full data:\n%@\n", myJSONString);
     
     //  catching errors test
 //    myJSONString = [NSString downloadJSONfromURL:nil];
@@ -100,6 +101,40 @@
     NSLog(@"Random String with 16 symbols of JSON string    : %@",
           [NSString randomStringWithLength:16 string:myJSONString]);
 
+}
+
++ (void)performAlphabetTest
+{
+    NSLog(@"================= AlphabetTest started ...");
+    BOOL testResult;
+    BNAlphabet *alphabet;
+   
+    NSString *string = [NSString stringWithFormat:@"%@", [NSString alphabetAlphanumeric]];
+    testResult = [string isKindOfClass:[NSString class]];
+    NSAssert(testResult, @"Class mismatch");
+    
+    alphabet = [BNAlphabet alphabetWithRange:NSMakeRange('A', 'Z' - 'A' + 1)];
+    testResult = [alphabet isKindOfClass:[BNRangeAlphabet class]];
+    NSAssert(testResult, @"Class mismatch");    
+    
+    alphabet = [BNAlphabet alphabetWithString:@"SampleString"];
+    testResult = [alphabet isKindOfClass:[BNStringAlphabet class]];
+    NSAssert(testResult, @"Class mismatch");
+    
+    alphabet = [BNAlphabet alphabetWithArray:@[@"SampleString",@"AnotherString"]];
+    testResult = [alphabet isKindOfClass:[BNArrayAlphabet class]];
+    NSAssert(testResult, @"Class mismatch");
+    
+    NSDictionary *originalValues = @{ @"Ko" : @"prefix",
+                                      @"Po" : @"prefix",
+                                      @"zel": @"affix",
+                                      @"za" : @"affix"};
+    
+    alphabet = [BNAlphabet alphabetWithDictionary:originalValues];
+    testResult = [alphabet isKindOfClass:[BNDictionaryAlphabet class]];
+    NSAssert(testResult, @"Class mismatch");
+    
+    NSLog(@"================= AlphabetTest finished O.K.");
 }
 
 @end

@@ -12,8 +12,8 @@
 
 @interface BNRangeAlphabet : BNAlphabet <NSFastEnumeration>
 
-+ (instancetype)alphabetWithRange:(NSRange *)range;
+- (instancetype)alphabetWithRange:(NSRange)range;
 
-- (instancetype)initWithRange:(NSRange *)range;
+- (instancetype)initWithRange:(NSRange)range;
 
 @end
