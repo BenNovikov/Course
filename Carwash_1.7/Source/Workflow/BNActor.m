@@ -10,28 +10,38 @@
 
 @implementation BNActor
 
+#pragma mark -
+#pragma mark Class Methods
 + (id)addActorWithPosition:(NSString *)position
-                asConstant:(BOOL)constant
+                asStaff:(BOOL)staff
                      money:(double)money
                 experience:(unsigned int)experience
                     reward:(unsigned int)reward
 {
     return [[[self alloc] initActorWithPosition:(NSString *)position
-                                     asConstant:(BOOL)constant
+                                     asStaff:(BOOL)staff
                                           money:(double)money
                                      experience:(unsigned int)experience
                                          reward:(unsigned int)reward]
             autorelease];}
 
+#pragma mark -
+#pragma mark Init and Declare
+
+- (void)dealloc {
+    
+    [super dealloc];
+}
+
 - (instancetype)initActorWithPosition:(NSString *)position
-                           asConstant:(BOOL)constant
+                           asStaff:(BOOL)staff
                                 money:(double)money
                            experience:(unsigned int)experience
                                reward:(unsigned int)reward {
     
     if (self = [super init]) {
         self.position = position;
-        self.constant = constant;
+        self.staff = staff;
         self.money = money;
         self.experience = experience;
         self.reward = reward;        

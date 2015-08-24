@@ -8,22 +8,25 @@
 
 #import <Foundation/Foundation.h>
 #import "BNActor.h"
-#import "BNConstants.h"
-
 
 @interface BNWorkflow : NSObject
 
-+ (NSDictionary *)actorsData;
-
 + (NSArray *)labelNames;
 
-- (void)controllerToStopIn:(NSDate*)seconds
-                    actors:(NSArray*)actorsArray;
++ (BNWorkflow *)createWithBoss:(BNActor *)boss
+                   accountants:(NSArray *)accountants
+                       washers:(NSArray *)washers;
 
-- (void)generateVisitorsInBackground:(unsigned int)number
-                  withDelayInSeconds:(unsigned int)lowerBound
-                                  to:(unsigned int)upperBound;
+- (BNWorkflow *)initWithBoss:(BNActor *)boss
+                 accountants:(NSArray *)accountants
+                     washers:(NSArray *)washers;
 
-- (BNActor*)generateVisitor;
+- (void)runCarwash;
+
+- (void)generateVisitors:(NSUInteger)number
+      withDelayInSeconds:(double)lowerBound
+                      to:(double)upperBound;
+
+- (BNActor *)newVisitor;
 
 @end
