@@ -41,6 +41,25 @@
 		845AB2611B5F09B10076828E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AB2601B5F09B10076828E /* main.m */; };
 		845AB27A1B5F09D80076828E /* BNBuilding.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AB2681B5F09D80076828E /* BNBuilding.m */; };
 		845AB27C1B5F09D80076828E /* BNRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AB26C1B5F09D80076828E /* BNRoom.m */; };
+		847D99F91B8B83AB009291C5 /* BNCarwashActor.m in Sources */ = {isa = PBXBuildFile; fileRef = 847D99F81B8B83AB009291C5 /* BNCarwashActor.m */; };
+		84A6CE891B8A37250080866F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A6CE831B8A37250080866F /* main.m */; };
+		84A6CE8A1B8A37250080866F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A6CE831B8A37250080866F /* main.m */; };
+		84A6CE8B1B8A37250080866F /* BNEmployee.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A6CE871B8A37250080866F /* BNEmployee.m */; };
+		84A6CE8C1B8A37250080866F /* BNEmployee.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A6CE871B8A37250080866F /* BNEmployee.m */; };
+		84A6CE8F1B8A37BA0080866F /* BNEnterprise.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A6CE8E1B8A37BA0080866F /* BNEnterprise.m */; };
+		84A6CE901B8A37BA0080866F /* BNEnterprise.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A6CE8E1B8A37BA0080866F /* BNEnterprise.m */; };
+		84A6CE941B8A37E70080866F /* BNVisitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A6CE931B8A37E70080866F /* BNVisitor.m */; };
+		84A6CE951B8A37E70080866F /* BNVisitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A6CE931B8A37E70080866F /* BNVisitor.m */; };
+		84A6CE991B8A4C770080866F /* BNTest7.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A6CE981B8A4C770080866F /* BNTest7.m */; };
+		84A6CE9A1B8A4C770080866F /* BNTest7.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A6CE981B8A4C770080866F /* BNTest7.m */; };
+		84A6CE9D1B8A514E0080866F /* BNDirector.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A6CE9C1B8A514E0080866F /* BNDirector.m */; };
+		84A6CE9E1B8A514E0080866F /* BNDirector.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A6CE9C1B8A514E0080866F /* BNDirector.m */; };
+		84A6CEA11B8A51630080866F /* BNCashier.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A6CEA01B8A51630080866F /* BNCashier.m */; };
+		84A6CEA21B8A51630080866F /* BNCashier.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A6CEA01B8A51630080866F /* BNCashier.m */; };
+		84A6CEA51B8A517A0080866F /* BNWasher.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A6CEA41B8A517A0080866F /* BNWasher.m */; };
+		84A6CEA61B8A517A0080866F /* BNWasher.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A6CEA41B8A517A0080866F /* BNWasher.m */; };
+		84A6CEAA1B8A69200080866F /* BNObservableObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A6CEA91B8A69200080866F /* BNObservableObject.m */; };
+		84A6CEAB1B8A69200080866F /* BNObservableObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A6CEA91B8A69200080866F /* BNObservableObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -63,6 +82,15 @@
 			runOnlyForDeploymentPostprocessing = 1;
 		};
 		845AB25C1B5F09B00076828E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		84A6CE791B8A36FE0080866F /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -127,6 +155,27 @@
 		845AB2681B5F09D80076828E /* BNBuilding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNBuilding.m; sourceTree = "<group>"; };
 		845AB26B1B5F09D80076828E /* BNRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRoom.h; sourceTree = "<group>"; };
 		845AB26C1B5F09D80076828E /* BNRoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRoom.m; sourceTree = "<group>"; };
+		847D99F71B8B83AA009291C5 /* BNCarwashActor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BNCarwashActor.h; path = Carwash_1.7/Source/Enterprise/BNCarwashActor.h; sourceTree = SOURCE_ROOT; };
+		847D99F81B8B83AB009291C5 /* BNCarwashActor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BNCarwashActor.m; path = Carwash_1.7/Source/Enterprise/BNCarwashActor.m; sourceTree = SOURCE_ROOT; };
+		84A6CE7B1B8A36FE0080866F /* Carwash_1.7 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Carwash_1.7; sourceTree = BUILT_PRODUCTS_DIR; };
+		84A6CE831B8A37250080866F /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		84A6CE861B8A37250080866F /* BNEmployee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNEmployee.h; sourceTree = "<group>"; };
+		84A6CE871B8A37250080866F /* BNEmployee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNEmployee.m; sourceTree = "<group>"; };
+		84A6CE8D1B8A37BA0080866F /* BNEnterprise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BNEnterprise.h; path = Enterprise/BNEnterprise.h; sourceTree = "<group>"; };
+		84A6CE8E1B8A37BA0080866F /* BNEnterprise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BNEnterprise.m; path = Enterprise/BNEnterprise.m; sourceTree = "<group>"; };
+		84A6CE921B8A37E70080866F /* BNVisitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BNVisitor.h; path = Visitors/BNVisitor.h; sourceTree = "<group>"; };
+		84A6CE931B8A37E70080866F /* BNVisitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BNVisitor.m; path = Visitors/BNVisitor.m; sourceTree = "<group>"; };
+		84A6CE971B8A4C770080866F /* BNTest7.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNTest7.h; sourceTree = "<group>"; };
+		84A6CE981B8A4C770080866F /* BNTest7.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNTest7.m; sourceTree = "<group>"; };
+		84A6CE9B1B8A514E0080866F /* BNDirector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNDirector.h; sourceTree = "<group>"; };
+		84A6CE9C1B8A514E0080866F /* BNDirector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNDirector.m; sourceTree = "<group>"; };
+		84A6CE9F1B8A51630080866F /* BNCashier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNCashier.h; sourceTree = "<group>"; };
+		84A6CEA01B8A51630080866F /* BNCashier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNCashier.m; sourceTree = "<group>"; };
+		84A6CEA31B8A517A0080866F /* BNWasher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNWasher.h; sourceTree = "<group>"; };
+		84A6CEA41B8A517A0080866F /* BNWasher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNWasher.m; sourceTree = "<group>"; };
+		84A6CEA81B8A69200080866F /* BNObservableObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BNObservableObject.h; path = "Extensions and Protocols/BNObservableObject.h"; sourceTree = "<group>"; };
+		84A6CEA91B8A69200080866F /* BNObservableObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BNObservableObject.m; path = "Extensions and Protocols/BNObservableObject.m"; sourceTree = "<group>"; };
+		84A6CEAC1B8A6C7B0080866F /* BNEmployeeObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNEmployeeObserver.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +201,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		845AB25B1B5F09B00076828E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84A6CE781B8A36FE0080866F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -276,6 +332,7 @@
 				845AB2591B5F091A0076828E /* Tasks */,
 				845AB2461B5F07470076828E /* Creature */,
 				845AB25F1B5F09B10076828E /* Carwash_1.0 */,
+				84A6CE821B8A37250080866F /* Carwash_1.7 */,
 				845518C01B6576AA00D21CFA /* StringExtension */,
 				5E71874E1B6A3E9C0008B805 /* TestTarget */,
 				845AB20F1B5F05450076828E /* Products */,
@@ -289,6 +346,7 @@
 				845AB25E1B5F09B00076828E /* Carwash_1.0 */,
 				845518BF1B6576AA00D21CFA /* StringExtension */,
 				5E71874D1B6A3E9C0008B805 /* TestTarget.xctest */,
+				84A6CE7B1B8A36FE0080866F /* Carwash_1.7 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -347,6 +405,81 @@
 				845AB26C1B5F09D80076828E /* BNRoom.m */,
 			);
 			path = Locations;
+			sourceTree = "<group>";
+		};
+		84A6CE821B8A37250080866F /* Carwash_1.7 */ = {
+			isa = PBXGroup;
+			children = (
+				84A6CE831B8A37250080866F /* main.m */,
+				84A6CE841B8A37250080866F /* Source */,
+				84A6CE881B8A37250080866F /* Tests */,
+			);
+			path = Carwash_1.7;
+			sourceTree = SOURCE_ROOT;
+		};
+		84A6CE841B8A37250080866F /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				84A6CEA71B8A63460080866F /* Extensions and Protocols */,
+				84A6CE911B8A37BF0080866F /* Enterprise */,
+				84A6CE851B8A37250080866F /* Employees */,
+				84A6CE961B8A37EB0080866F /* Visitors */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		84A6CE851B8A37250080866F /* Employees */ = {
+			isa = PBXGroup;
+			children = (
+				84A6CE861B8A37250080866F /* BNEmployee.h */,
+				84A6CE871B8A37250080866F /* BNEmployee.m */,
+				84A6CEAC1B8A6C7B0080866F /* BNEmployeeObserver.h */,
+				84A6CEA31B8A517A0080866F /* BNWasher.h */,
+				84A6CEA41B8A517A0080866F /* BNWasher.m */,
+				84A6CE9B1B8A514E0080866F /* BNDirector.h */,
+				84A6CE9C1B8A514E0080866F /* BNDirector.m */,
+				84A6CE9F1B8A51630080866F /* BNCashier.h */,
+				84A6CEA01B8A51630080866F /* BNCashier.m */,
+			);
+			path = Employees;
+			sourceTree = "<group>";
+		};
+		84A6CE881B8A37250080866F /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				84A6CE971B8A4C770080866F /* BNTest7.h */,
+				84A6CE981B8A4C770080866F /* BNTest7.m */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		84A6CE911B8A37BF0080866F /* Enterprise */ = {
+			isa = PBXGroup;
+			children = (
+				84A6CE8D1B8A37BA0080866F /* BNEnterprise.h */,
+				84A6CE8E1B8A37BA0080866F /* BNEnterprise.m */,
+				847D99F71B8B83AA009291C5 /* BNCarwashActor.h */,
+				847D99F81B8B83AB009291C5 /* BNCarwashActor.m */,
+			);
+			name = Enterprise;
+			sourceTree = "<group>";
+		};
+		84A6CE961B8A37EB0080866F /* Visitors */ = {
+			isa = PBXGroup;
+			children = (
+				84A6CE921B8A37E70080866F /* BNVisitor.h */,
+				84A6CE931B8A37E70080866F /* BNVisitor.m */,
+			);
+			name = Visitors;
+			sourceTree = "<group>";
+		};
+		84A6CEA71B8A63460080866F /* Extensions and Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				84A6CEA81B8A69200080866F /* BNObservableObject.h */,
+				84A6CEA91B8A69200080866F /* BNObservableObject.m */,
+			);
+			name = "Extensions and Protocols";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -420,6 +553,23 @@
 			productReference = 845AB25E1B5F09B00076828E /* Carwash_1.0 */;
 			productType = "com.apple.product-type.tool";
 		};
+		84A6CE7A1B8A36FE0080866F /* Carwash_1.7 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84A6CE811B8A36FE0080866F /* Build configuration list for PBXNativeTarget "Carwash_1.7" */;
+			buildPhases = (
+				84A6CE771B8A36FE0080866F /* Sources */,
+				84A6CE781B8A36FE0080866F /* Frameworks */,
+				84A6CE791B8A36FE0080866F /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Carwash_1.7;
+			productName = Carwash_1.7;
+			productReference = 84A6CE7B1B8A36FE0080866F /* Carwash_1.7 */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -441,6 +591,9 @@
 					845AB25D1B5F09B00076828E = {
 						CreatedOnToolsVersion = 6.4;
 					};
+					84A6CE7A1B8A36FE0080866F = {
+						CreatedOnToolsVersion = 6.4;
+					};
 				};
 			};
 			buildConfigurationList = 845AB2091B5F05450076828E /* Build configuration list for PBXProject "Course" */;
@@ -457,6 +610,7 @@
 			targets = (
 				845AB2441B5F07470076828E /* Creature */,
 				845AB25D1B5F09B00076828E /* Carwash_1.0 */,
+				84A6CE7A1B8A36FE0080866F /* Carwash_1.7 */,
 				845518BE1B6576AA00D21CFA /* StringExtension */,
 				5E71874C1B6A3E9C0008B805 /* TestTarget */,
 			);
@@ -478,16 +632,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84A6CE951B8A37E70080866F /* BNVisitor.m in Sources */,
 				5E552BC01B70D06000C73298 /* BNCarwasher.m in Sources */,
 				5E552BBA1B70D06000C73298 /* BNPerson.m in Sources */,
+				84A6CE9E1B8A514E0080866F /* BNDirector.m in Sources */,
 				5E552BB81B70D06000C73298 /* BNClient.m in Sources */,
+				84A6CEA61B8A517A0080866F /* BNWasher.m in Sources */,
+				84A6CEAB1B8A69200080866F /* BNObservableObject.m in Sources */,
+				84A6CE9A1B8A4C770080866F /* BNTest7.m in Sources */,
 				5E552BC61B70D09B00C73298 /* BNCarwash.m in Sources */,
 				5E7187571B6A3EE90008B805 /* NSString+BNExtensions.m in Sources */,
 				5E7187521B6A3E9C0008B805 /* TestTarget.m in Sources */,
 				5E7187561B6A3ED10008B805 /* NSString+BNExtensionsTest.m in Sources */,
 				5E552BBE1B70D06000C73298 /* BNBoss.m in Sources */,
 				5E552BC21B70D06000C73298 /* BNStaff.m in Sources */,
+				84A6CEA21B8A51630080866F /* BNCashier.m in Sources */,
+				84A6CE8A1B8A37250080866F /* main.m in Sources */,
 				5E552BBC1B70D06000C73298 /* BNAccountant.m in Sources */,
+				84A6CE901B8A37BA0080866F /* BNEnterprise.m in Sources */,
+				84A6CE8C1B8A37250080866F /* BNEmployee.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,6 +696,23 @@
 				843F1D881B60405D0001016B /* SuperPooperMegaWasherTest.m in Sources */,
 				845AB27A1B5F09D80076828E /* BNBuilding.m in Sources */,
 				5E552BBD1B70D06000C73298 /* BNBoss.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84A6CE771B8A36FE0080866F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84A6CEAA1B8A69200080866F /* BNObservableObject.m in Sources */,
+				847D99F91B8B83AB009291C5 /* BNCarwashActor.m in Sources */,
+				84A6CE891B8A37250080866F /* main.m in Sources */,
+				84A6CEA11B8A51630080866F /* BNCashier.m in Sources */,
+				84A6CE9D1B8A514E0080866F /* BNDirector.m in Sources */,
+				84A6CE8F1B8A37BA0080866F /* BNEnterprise.m in Sources */,
+				84A6CE941B8A37E70080866F /* BNVisitor.m in Sources */,
+				84A6CE8B1B8A37250080866F /* BNEmployee.m in Sources */,
+				84A6CE991B8A4C770080866F /* BNTest7.m in Sources */,
+				84A6CEA51B8A517A0080866F /* BNWasher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -711,6 +891,26 @@
 			};
 			name = Release;
 		};
+		84A6CE7F1B8A36FE0080866F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		84A6CE801B8A36FE0080866F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -755,6 +955,15 @@
 			buildConfigurations = (
 				845AB2631B5F09B10076828E /* Debug */,
 				845AB2641B5F09B10076828E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84A6CE811B8A36FE0080866F /* Build configuration list for PBXNativeTarget "Carwash_1.7" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84A6CE7F1B8A36FE0080866F /* Debug */,
+				84A6CE801B8A36FE0080866F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

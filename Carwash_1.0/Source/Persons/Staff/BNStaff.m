@@ -24,10 +24,10 @@ static float const kBNIniialExperience = 0;
 #pragma mark -
 #pragma mark Init and Declare
 
-//- (void)dealloc {
-//    
-//    [super dealloc];
-//}
+- (void)dealloc {
+    
+    [super dealloc];
+}
 
 - (instancetype)init {
     return [BNStaff createWithSalary:kBNIniialSalary experience:kBNIniialExperience];
@@ -36,8 +36,8 @@ static float const kBNIniialExperience = 0;
 - (instancetype)initWithSalary:(uint64_t)salary experience:(float)experience {
 //    self = [super init];
     if(self){
-        self.salary = salary;
-        self.experience = experience;
+        _salary = salary;
+        _experience = experience;
     }
     
     return self;
