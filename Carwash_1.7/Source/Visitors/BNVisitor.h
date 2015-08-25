@@ -9,11 +9,10 @@
 #import <Foundation/Foundation.h>
 
 #import "BNObservableObject.h"
-
 #import "BNCashFlowProtocol.h"
 
 @interface BNVisitor : BNObservableObject<BNCashFlowProtocol>
-//@property (nonatomic, assign) float                    money;
+@property (nonatomic, assign) float                     money;
 @property (nonatomic, assign, getter = isClean) BOOL    clean;
 
 + (id)initWithCleanCar:(BOOL)clean money:(float)money;

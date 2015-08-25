@@ -19,9 +19,10 @@
 
 
 @property (nonatomic, assign)   unsigned int    salary;
-//@property (nonatomic, assign)   float          money;
+@property (nonatomic, assign)   float           money;
+//@property (nonatomic, assign)   float           price;
 //@property (nonatomic, assign)   BNObjectState   state;
-//@property (nonatomic, retain)   id              retainedObject;
+@property (nonatomic, retain)   id              retainedObject;
 
 + (id)hireWithSalary:(unsigned int)salary;
 
@@ -36,3 +37,4 @@
 - (void)mayBeFree;
 
 @end
+//424-0547 sewage dispatcher

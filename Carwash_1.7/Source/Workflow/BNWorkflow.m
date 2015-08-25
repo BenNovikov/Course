@@ -17,7 +17,7 @@
     static NSArray *names;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        names = [[[NSArray alloc] initWithObjects:kBNActorsPosition count:kBNHierarchyLevels] autorelease];
+//        names = [[[NSArray alloc] initWithObjects:kBNActorsPosition count:kBNHierarchyLevels] autorelease];
     });
     
     return names;

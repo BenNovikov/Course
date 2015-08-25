@@ -12,7 +12,7 @@
 //#import "BNConstants.h"
 
 //#import "BNEnterprise.h"
-//#import "BNDirector.h"
+//#import "BNBigBoss.h"
 //#import "BNCashier.h"
 //#import "BNWasher.h"
 //#import "BNVisitor.h"
@@ -34,7 +34,7 @@
 //    NSArray *washers = [NSArray arrayWithArray:testWashers];
 //    [testWashers release];
 //    
-//    BNEnterprise *carwash = [BNEnterprise createWithDirector:[BNDirector hireWithSalary:kBNDirectorSalary]
+//    BNEnterprise *carwash = [BNEnterprise createWithBigBoss:[BNBigBoss hireWithSalary:kBNBigBossSalary]
 //                                                    cashiers:cashiers
 //                                                     washers:washers];
 

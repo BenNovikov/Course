@@ -9,24 +9,27 @@
 #import <Foundation/Foundation.h>
 #import "BNStateProtocol.h"
 #import "BNConstants.h"
+#import "BNCashFlowProtocol.h"
 
-@class BNDirector;
+@class BNBigBoss;
 @class BNVisitor;
 
 @interface BNEnterprise : NSObject<BNStateProtocol>
-@property (nonatomic, assign) BNDirector        *director;
+@property (nonatomic, assign) BNBigBoss         *bigBoss;
 @property (nonatomic, assign) NSMutableArray    *cashiers;
 @property (nonatomic, assign) NSMutableArray    *washers;
 
-+ (id)createWithDirector:(BNDirector *)director
++ (id)createWithBigBoss:(BNBigBoss *)bigBoss
                 cashiers:(NSArray *)cashiers
                  washers:(NSArray *)washers;
 
-- (instancetype)initWithDirector:(BNDirector *)director
+- (instancetype)initWithBigBoss:(BNBigBoss *)bigBoss
                         cashiers:(NSArray *)cashiers
                          washers:(NSArray *)washers NS_DESIGNATED_INITIALIZER;
 
 - (void)runWithNumberOfCars:(NSUInteger)numberOfCars
                         price:(NSUInteger)price;
+
+- (void)processObject:(id<BNCashFlowProtocol>)object;
 
 @end

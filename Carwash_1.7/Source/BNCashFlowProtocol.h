@@ -14,6 +14,7 @@
 @property (nonatomic, assign) float money;
 
 @optional
+@property (nonatomic, assign) float price;
 - (void)receiveMoney:(float)money fromPayer:(id<BNCashFlowProtocol>)payer;
 
 @end

@@ -1,14 +1,13 @@
 //
-//  BNDirector.h
+//  BNBigBoss.m
 //  Course
 //
 //  Created by Admin on 15/08/23/.
 //  Copyright (c) 2015 BenNovikov. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import "BNEmployee.h"
+#import "BNBigBoss.h"
 
-@interface BNDirector : BNEmployee
+@implementation BNBigBoss
 
 @end

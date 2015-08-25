@@ -13,11 +13,11 @@
 @property (nonatomic, assign) BNObjectState state;
 
 // [Name of associated class] + [Did | Will] + [UniquePartOfName] + Notification
-- (void)objectDidBecomeFree:(id)object;
-- (void)objectDidBecomeBusy:(id)object;
-- (void)objectDidFinishProcess:(id)object;
 
 @optional
 - (SEL)selectorForState:(BNObjectState)state;
+- (void)objectDidBecomeFree:(id)object;
+- (void)objectDidBecomeBusy:(id)object;
+- (void)objectDidFinishProcess:(id)object;
 
 @end

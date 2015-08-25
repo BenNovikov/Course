@@ -28,11 +28,11 @@
 
 #pragma mark -
 #pragma mark Class Methods
-+ (id)createWithDirector:(BNDirector *)director
++ (id)createWithBigBoss:(BNBigBoss *)bigBoss
                 cashiers:(NSArray *)cashiers
                  washers:(NSArray *)washers
 {
-    return [[[self alloc] initWithDirector:(BNDirector *)director
+    return [[[self alloc] initWithBigBoss:(BNBigBoss *)bigBoss
                                   cashiers:(NSArray *)cashiers
                                    washers:(NSArray *)washers]
             autorelease];
@@ -41,27 +41,27 @@
 #pragma mark -
 #pragma mark Init and Declare
 - (void)dealloc {
-    self.director = nil;
+    self.bigBoss = nil;
     self.cashiers = nil;
     self.washers = nil;
     
     [super dealloc];
 }
 
-- (instancetype)initWithDirector:(BNDirector *)director
+- (instancetype)initWithBigBoss:(BNBigBoss *)bigBoss
                         cashiers:(NSArray *)cashiers
                          washers:(NSArray *)washers
 {
     if (self = [super init]) {
-        self.director   = director;
+        self.bigBoss    = bigBoss;
         self.cashiers   = [NSMutableArray arrayWithArray:cashiers];
         self.washers    = [NSMutableArray arrayWithArray:washers];
         
-        for (id washer in washers) {
-            [washer addObserver:cashiers[0]]; //there is only one cashier yet!
+        for (BNWasher *washer in self.washers) {
+            [washer addObserver:self.cashiers[0]]; //there is only one cashier yet!
         }
-        [cashiers[0] addObserver:director];
-        [director addObserver:self];
+        [self.cashiers[0] addObserver:self.bigBoss];
+        [self.bigBoss addObserver:self];
     }
     
     return self;
@@ -72,6 +72,16 @@
 - (void)runWithNumberOfCars:(NSUInteger)numberOfCars
                         price:(NSUInteger)price
 {
+
+    
+    for (NSUInteger counter = 0; counter < numberOfCars; counter++) {
+        BNVisitor *visitor = [[self receiveVisitor] autorelease];
+        visitor.price = price;
+        [self performSelectorInBackground:@selector(processObject:) withObject:visitor];
+    }
+}
+
+- (void)processObject:(id<BNCashFlowProtocol>)object {
     
 }
 

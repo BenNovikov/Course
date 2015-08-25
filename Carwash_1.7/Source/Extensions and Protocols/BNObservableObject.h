@@ -12,7 +12,7 @@
 
 @interface BNObservableObject : NSObject<BNStateProtocol>
 //@property (nonatomic, assign) NSHashTable     *observers;
-//@property (nonatomic, assign) BNObjectState state;
+@property (nonatomic, assign) BNObjectState state;
 
 - (void)addObserver:(id)observer;
 - (void)removeObserver:(id)observer;

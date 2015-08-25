@@ -12,7 +12,7 @@
 //@end
 
 @implementation BNEmployee {
-    id<BNStateProtocol> retainedObject;
+//    id<BNStateProtocol> retainedObject;
 
 }
 //@synthesize money;
@@ -26,7 +26,8 @@
 #pragma mark -
 #pragma mark Init and Declare
 - (void)dealloc {
-    retainedObject = nil;
+//    retainedObject = nil;
+    self.retainedObject = nil;
     
     [super dealloc];
 }
@@ -72,9 +73,11 @@
             self.state = kBNObjectStateIsBusy;
         }
         @synchronized(object) {
-            retainedObject = object;
-            [retainedObject retain];
-            retainedObject.state = kBNObjectStateIsBusy;
+//            retainedObject = object;
+//            [retainedObject retain];
+//            retainedObject.state = kBNObjectStateIsBusy;
+            self.retainedObject = object;
+            object.state = kBNObjectStateIsBusy;
         }
     }
 }
@@ -83,10 +86,14 @@
     @synchronized(self) {
         self.state = kBNObjectStateFinishedProcess;
     }
-    @synchronized(retainedObject) {
-        retainedObject.state = kBNObjectStateFinishedProcess;
-        [retainedObject release];
-        retainedObject = nil;
+//    @synchronized(retainedObject) {
+//        retainedObject.state = kBNObjectStateFinishedProcess;
+//        [retainedObject release];
+//        retainedObject = nil;
+    id<BNStateProtocol> object = self.retainedObject;
+    @synchronized(object) {
+        object.state = kBNObjectStateFinishedProcess;
+        object = nil;
     }
 }
 
