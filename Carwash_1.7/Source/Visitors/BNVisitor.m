@@ -11,12 +11,17 @@
 static uint64_t const kBNVisitorInitialMoney = 10000;
 
 @implementation BNVisitor
+//@synthesize money;
 
 #pragma mark -
 #pragma mark Class Methods
 
-+ (id)visitorWithCleanCar:(BOOL)clean money:(float)money {
++ (id)initWithCleanCar:(BOOL)clean money:(float)money {
     return [[[self alloc] initWithCleanCar:(BOOL)clean money:(float)money] autorelease];
+}
+
++ (id)initWithCleanCar:(BOOL)clean {
+    return [[[self alloc] initWithCleanCar:(BOOL)clean] autorelease];
 }
 
 #pragma mark -
@@ -27,15 +32,15 @@ static uint64_t const kBNVisitorInitialMoney = 10000;
     [super dealloc];
 }
 
-- (instancetype)init  {
+- (instancetype)initWithCleanCar:(BOOL)clean {
     return [self initWithCleanCar:NO money:kBNVisitorInitialMoney];
 }
 
-- (instancetype)initWithCleanCar:(BOOL)isClean money:(float)money {
+- (instancetype)initWithCleanCar:(BOOL)clean money:(float)money {
     self = [super init];
     if(self){
-        [self setClean:NO];
-        [self setMoney:money];
+        self.clean = NO;
+        self.money = money;
     }
     
     return self;

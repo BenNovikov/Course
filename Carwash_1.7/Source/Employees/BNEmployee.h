@@ -8,25 +8,31 @@
 
 #import <Foundation/Foundation.h>
 
-//#import "BNObservableObject.h"
-#import "BNEmployeeObserver.h"
+#import "BNObservableObject.h"
+//#import "BNEnterprise.h"
 
-typedef NS_ENUM(NSUInteger, BNEmployeeState) {
-    kBNEmployeeIsReadyToWork,
-    kBNEmployeeIsBusyWithClient,
-    kBNEmployeeIsReadyToCashUp
-};
+#import "BNCashFlowProtocol.h"
+#import "BNStateProtocol.h"
+#import "BNConstants.h"
 
-@interface BNEmployee : NSObject
+@interface BNEmployee : BNObservableObject<BNCashFlowProtocol>
+
 
 @property (nonatomic, assign)   unsigned int    salary;
-@property (nonatomic, assign)   double          cash;
-//@property (nonatomic, retain)   NSMutableSet    *mutableObserverSet;
+//@property (nonatomic, assign)   float          money;
+//@property (nonatomic, assign)   BNObjectState   state;
+//@property (nonatomic, retain)   id              retainedObject;
 
 + (id)hireWithSalary:(unsigned int)salary;
 
-- (instancetype)initWithSalary:(unsigned int)salary;
+- (instancetype)initWithSalary:(unsigned int)salary NS_DESIGNATED_INITIALIZER;
 
-- (SEL)selectorForState:(BNEmployeeState)state;
+- (void)setState:(BNObjectState)state;
+
+- (void)performProcessWithObject:(id)object;
+- (void)performSpecificOperationWithObject:(id)object;
+- (void)startTaskWithObject:(id<BNStateProtocol>)object;
+- (void)finishTask;
+- (void)mayBeFree;
 
 @end

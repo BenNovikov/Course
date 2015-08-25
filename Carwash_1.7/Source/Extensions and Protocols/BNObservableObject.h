@@ -8,8 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface BNObservableObject : NSObject
-@property (nonatomic, readonly) NSArray     *observers;
+#import "BNStateProtocol.h"
+
+@interface BNObservableObject : NSObject<BNStateProtocol>
+//@property (nonatomic, assign) NSHashTable     *observers;
+//@property (nonatomic, assign) BNObjectState state;
 
 - (void)addObserver:(id)observer;
 - (void)removeObserver:(id)observer;

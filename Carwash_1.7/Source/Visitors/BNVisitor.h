@@ -8,12 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
-@interface BNVisitor : NSObject
-@property (nonatomic, assign) double                    money;
+#import "BNObservableObject.h"
+
+#import "BNCashFlowProtocol.h"
+
+@interface BNVisitor : BNObservableObject<BNCashFlowProtocol>
+//@property (nonatomic, assign) float                    money;
 @property (nonatomic, assign, getter = isClean) BOOL    clean;
 
-+ (id)visitorWithCleanCar:(BOOL)clean money:(float)money;
++ (id)initWithCleanCar:(BOOL)clean money:(float)money;
++ (id)initWithCleanCar:(BOOL)clean;
 
-- (instancetype)initWithCleanCar:(BOOL)clean money:(float)money;
+- (instancetype)initWithCleanCar:(BOOL)clean money:(float)money NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithCleanCar:(BOOL)clean;
 
 @end

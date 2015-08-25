@@ -138,7 +138,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StringExtension/Tests/BNStringExtensionsTest.m"
-            timestampString = "460344313.635853"
+            timestampString = "462211414.700508"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "119"
@@ -153,13 +153,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Carwash_1.7/Tests/BNTest7.m"
-            timestampString = "462146624.928537"
+            filePath = "StringExtension/Tests/BNStringExtensionsTest.m"
+            timestampString = "462211414.700508"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "+performTest"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "+performJSONStringTest"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

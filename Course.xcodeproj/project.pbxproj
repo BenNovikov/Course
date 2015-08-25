@@ -176,9 +176,11 @@
 		84A6CEA41B8A517A0080866F /* BNWasher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNWasher.m; sourceTree = "<group>"; };
 		84A6CEA81B8A69200080866F /* BNObservableObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BNObservableObject.h; path = "Extensions and Protocols/BNObservableObject.h"; sourceTree = "<group>"; };
 		84A6CEA91B8A69200080866F /* BNObservableObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BNObservableObject.m; path = "Extensions and Protocols/BNObservableObject.m"; sourceTree = "<group>"; };
+		84DD0C7F1B8CC99D00009629 /* BNStateProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BNStateProtocol.h; path = "Extensions and Protocols/BNStateProtocol.h"; sourceTree = "<group>"; };
+		84DD0C801B8D02A300009629 /* BNCashFlowProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNCashFlowProtocol.h; sourceTree = "<group>"; };
 		84DFD2421B8BC0600089BB64 /* BNActor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNActor.h; sourceTree = "<group>"; };
 		84DFD2431B8BC0600089BB64 /* BNActor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNActor.m; sourceTree = "<group>"; };
-		84DFD2441B8BC0600089BB64 /* BNConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNConstants.h; sourceTree = "<group>"; };
+		84DFD2441B8BC0600089BB64 /* BNConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BNConstants.h; path = Workflow/BNConstants.h; sourceTree = "<group>"; };
 		84DFD2451B8BC0600089BB64 /* BNWorkflow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNWorkflow.h; sourceTree = "<group>"; };
 		84DFD2461B8BC0600089BB64 /* BNWorkflow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNWorkflow.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -415,19 +417,20 @@
 		84A6CE821B8A37250080866F /* Carwash_1.7 */ = {
 			isa = PBXGroup;
 			children = (
-				84DFD2361B8B95830089BB64 /* Obsolete */,
+				84DFD2361B8B95830089BB64 /* Source */,
 				84A6CE831B8A37250080866F /* main.m */,
-				84A6CE841B8A37250080866F /* Source */,
+				84A6CE841B8A37250080866F /* SpinOff */,
 				84A6CE881B8A37250080866F /* Tests */,
 			);
 			path = Carwash_1.7;
 			sourceTree = SOURCE_ROOT;
 		};
-		84A6CE841B8A37250080866F /* Source */ = {
+		84A6CE841B8A37250080866F /* SpinOff */ = {
 			isa = PBXGroup;
 			children = (
 				84DFD2411B8BC0600089BB64 /* Workflow */,
 			);
+			name = SpinOff;
 			path = Source;
 			sourceTree = "<group>";
 		};
@@ -481,12 +484,15 @@
 			children = (
 				84A6CEA81B8A69200080866F /* BNObservableObject.h */,
 				84A6CEA91B8A69200080866F /* BNObservableObject.m */,
+				84DD0C801B8D02A300009629 /* BNCashFlowProtocol.h */,
+				84DD0C7F1B8CC99D00009629 /* BNStateProtocol.h */,
+				84DFD2441B8BC0600089BB64 /* BNConstants.h */,
 			);
 			name = "Extensions and Protocols";
 			path = Source;
 			sourceTree = "<group>";
 		};
-		84DFD2361B8B95830089BB64 /* Obsolete */ = {
+		84DFD2361B8B95830089BB64 /* Source */ = {
 			isa = PBXGroup;
 			children = (
 				84A6CEA71B8A63460080866F /* Extensions and Protocols */,
@@ -494,13 +500,12 @@
 				84A6CE961B8A37EB0080866F /* Visitors */,
 				84A6CE851B8A37250080866F /* Employees */,
 			);
-			name = Obsolete;
+			name = Source;
 			sourceTree = "<group>";
 		};
 		84DFD2411B8BC0600089BB64 /* Workflow */ = {
 			isa = PBXGroup;
 			children = (
-				84DFD2441B8BC0600089BB64 /* BNConstants.h */,
 				84DFD2421B8BC0600089BB64 /* BNActor.h */,
 				84DFD2431B8BC0600089BB64 /* BNActor.m */,
 				84DFD2451B8BC0600089BB64 /* BNWorkflow.h */,

@@ -22,9 +22,7 @@
 #pragma mark -
 #pragma mark Public Method
 + (void)performTest {
-    
-    NSArray *actorsData = [BNWorkflow labelNames];
-    NSLog(@"<MMJKCD");
+
     
 //    BNCashier *cashier = ;
 //    NSArray *cashiers = @[[BNCashier hireWithSalary:kBNCashierSalary]];

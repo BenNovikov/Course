@@ -11,26 +11,6 @@
 
 @implementation BNWorkflow
 
-//+ (NSDictionary *)actorsData {
-//    NSDictionary *data = [[NSMutableDictionary alloc] init];
-//    static dispatch_once_t onceToken;
-//    dispatch_once(&onceToken, ^{
-//        [data setValue:[NSArray arrayWithObjects:kBNActorsPosition count:kBNHierarchyLevels]
-//                forKey:@"position"];
-//        [data setValue:[NSArray arrayWithObjects:kBNActorsConstant count:kBNHierarchyLevels]
-//                forKey:@"constant"];
-//        [data setValue:[NSArray arrayWithObjects:kBNActorsMoney count:kBNHierarchyLevels]
-//                forKey:@"money"];
-//        [data setValue:[NSArray arrayWithObjects:kBNActorsExperienceUpperBound count:kBNHierarchyLevels]
-//                forKey:@"experience"];
-//        [data setValue:[NSArray arrayWithObjects:kBNActorsRewardUpperBound count:kBNHierarchyLevels]
-//                forKey:@"reward"];
-//    });
-//    
-//    return data;
-//}
-
-
 #pragma mark -
 #pragma mark Class Methods
 + (NSArray *)labelNames {
@@ -66,9 +46,9 @@
 {
     if (self = [super init]) {
 
-    [self generateVisitors:kBNActorsNumber[0]
-        withDelayInSeconds:kBNActorsGenerationDelayLowerBound[0]
-                        to:kBNActorsGenerationDelayUpperBound[0]];
+//    [self generateVisitors:kBNActorsNumber[0]
+//        withDelayInSeconds:kBNActorsGenerationDelayLowerBound[0]
+//                        to:kBNActorsGenerationDelayUpperBound[0]];
     };
     
     return self;
@@ -76,6 +56,9 @@
 
 #pragma mark -
 #pragma mark Public
+- (void)runCarwash {
+    
+}
 
 // [Name of associated class] + [Did | Will] + [UniquePartOfName] + Notification
 // [[NSNotificationCenter defaultCenter] postNotificationName:notificationName object:notificationSender];
@@ -89,11 +72,16 @@
             // Do something
             dispatch_async(dispatch_get_main_queue(), ^{
                 [[NSNotificationCenter defaultCenter]
-                 postNotificationName:BNBackgroundOperationDidGenerateVisitorNotification
+                 postNotificationName:@"BNBackgroundOperationDidGenerateVisitorNotification"
                  object:self];
             });
         }
     }
+}
+
+- (BNActor *)newVisitor {
+    
+    return nil;
 }
 
 @end

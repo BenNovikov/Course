@@ -7,12 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BNStateProtocol.h"
+#import "BNConstants.h"
 
-//@class BNEmployee;
 @class BNDirector;
 @class BNVisitor;
 
-@interface BNEnterprise : NSObject
+@interface BNEnterprise : NSObject<BNStateProtocol>
 @property (nonatomic, assign) BNDirector        *director;
 @property (nonatomic, assign) NSMutableArray    *cashiers;
 @property (nonatomic, assign) NSMutableArray    *washers;
@@ -23,10 +24,9 @@
 
 - (instancetype)initWithDirector:(BNDirector *)director
                         cashiers:(NSArray *)cashiers
-                         washers:(NSArray *)washers;
+                         washers:(NSArray *)washers NS_DESIGNATED_INITIALIZER;
 
-- (BNVisitor *)receiveVisitor:(BNVisitor *)visitor;
-- (void)startWorkflow;
-- (void)finishWorkflow;
+- (void)runWithNumberOfCars:(NSUInteger)numberOfCars
+                        price:(NSUInteger)price;
 
 @end

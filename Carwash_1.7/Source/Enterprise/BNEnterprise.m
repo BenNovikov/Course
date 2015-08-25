@@ -7,21 +7,24 @@
 //
 
 #import "BNEnterprise.h"
+#import "BNVisitor.h"
 
 //@interface BNEnterprise()
 //@property (nonatomic, retain) NSMutableArray *mutableWashers;
 //@end
-@class BNDirector;
+
+@class BNEmployee;
 @class BNCashier;
 @class BNWasher;
-@class BNEmployee;
+//@class BNVisitor;
 
 @interface BNEnterprise()
-
+- (BNVisitor *)receiveVisitor;
 
 @end
 
 @implementation BNEnterprise
+@synthesize state;
 
 #pragma mark -
 #pragma mark Class Methods
@@ -53,6 +56,12 @@
         self.director   = director;
         self.cashiers   = [NSMutableArray arrayWithArray:cashiers];
         self.washers    = [NSMutableArray arrayWithArray:washers];
+        
+        for (id washer in washers) {
+            [washer addObserver:cashiers[0]]; //there is only one cashier yet!
+        }
+        [cashiers[0] addObserver:director];
+        [director addObserver:self];
     }
     
     return self;
@@ -60,17 +69,33 @@
 
 #pragma mark -
 #pragma mark Public Methods
-- (BNVisitor *)receiveVisitor:(BNVisitor *)visitor {
+- (void)runWithNumberOfCars:(NSUInteger)numberOfCars
+                        price:(NSUInteger)price
+{
+    
+}
+
+#pragma mark -
+#pragma mark <BNStateProtocol>
+
+- (void)objectDidBecomeFree:(id)object {
+    
+}
+
+- (void)objectDidBecomeBusy:(id)object {
+    
+}
+
+- (void)objectDidFinishProcess:(id)object {
+    
+}
+
+#pragma mark -
+#pragma mark Private Methods
+- (BNVisitor *)receiveVisitor {
+    BNVisitor *visitor = [BNVisitor initWithCleanCar:NO];
     
     return visitor;
-}
-
-- (void)startWorkflow {
-    
-}
-
-- (void)finishWorkflow {
-    
 }
 
 @end
