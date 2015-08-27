@@ -24,7 +24,7 @@ typedef NS_ENUM(NSUInteger, BNActorState) {
 ///     and disappear just after that;
 /// -   staff actors make their job receiving salary at the end of the operation period (day, shift, etc.)
 ///     deallocating with money they get as a payment;
-@property (nonatomic, assign, getter = isStaff)  BOOL    staff;
+@property (nonatomic, assign, getter = isStaff)  BOOL       staff;
 /// -   money transferred and counted means cash or any other account used and processed in workflow;
 @property (nonatomic, assign)   double                      money;
 /// -   experience is a staff job experience or loyal customers retention period for nonstaff actors;

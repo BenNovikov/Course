@@ -8,7 +8,7 @@
 
 #import "BNVisitor.h"
 
-static uint64_t const kBNVisitorInitialMoney = 10000;
+
 
 @implementation BNVisitor
 //@synthesize money;
@@ -16,12 +16,12 @@ static uint64_t const kBNVisitorInitialMoney = 10000;
 #pragma mark -
 #pragma mark Class Methods
 
-+ (id)initWithCleanCar:(BOOL)clean money:(float)money {
++ (BNVisitor *)createWithCleanCar:(BOOL)clean money:(float)money {
     return [[[self alloc] initWithCleanCar:(BOOL)clean money:(float)money] autorelease];
 }
 
-+ (id)initWithCleanCar:(BOOL)clean {
-    return [[[self alloc] initWithCleanCar:(BOOL)clean] autorelease];
++ (BNVisitor *)createWithMoney:(float)money {
+    return [[[self alloc] initWithMoney:(float)money] autorelease];
 }
 
 #pragma mark -
@@ -31,11 +31,6 @@ static uint64_t const kBNVisitorInitialMoney = 10000;
 
     [super dealloc];
 }
-
-- (instancetype)initWithCleanCar:(BOOL)clean {
-    return [self initWithCleanCar:NO money:kBNVisitorInitialMoney];
-}
-
 - (instancetype)initWithCleanCar:(BOOL)clean money:(float)money {
     self = [super init];
     if(self){
@@ -44,6 +39,10 @@ static uint64_t const kBNVisitorInitialMoney = 10000;
     }
     
     return self;
+}
+
+- (instancetype)initWithMoney:(float)money {
+    return [self initWithCleanCar:NO money:money];
 }
 
 @end

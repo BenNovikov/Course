@@ -55,9 +55,9 @@ static NSString const *kBNCarwashMessageBusyCarwash     = @"Dear %@! We are sorr
 }
 
 - (instancetype)initWithBuilding:(BNBuilding *)currentBuilding
-                        boss:(BNBoss *)boss
-                  accountant:(BNAccountant *)accountant
-                  carwashers:(NSArray *)carwashers
+                            boss:(BNBoss *)boss
+                      accountant:(BNAccountant *)accountant
+                      carwashers:(NSArray *)carwashers
 {
     self = [super init];
     if(self){

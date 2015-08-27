@@ -10,15 +10,16 @@
 
 #import "BNObservableObject.h"
 #import "BNCashFlowProtocol.h"
+#import "BNConstants.h"
 
 @interface BNVisitor : BNObservableObject<BNCashFlowProtocol>
 @property (nonatomic, assign) float                     money;
 @property (nonatomic, assign, getter = isClean) BOOL    clean;
 
-+ (id)initWithCleanCar:(BOOL)clean money:(float)money;
-+ (id)initWithCleanCar:(BOOL)clean;
++ (BNVisitor *)createWithCleanCar:(BOOL)clean money:(float)money;
++ (BNVisitor *)createWithMoney:(float)money;
 
 - (instancetype)initWithCleanCar:(BOOL)clean money:(float)money NS_DESIGNATED_INITIALIZER;
-- (instancetype)initWithCleanCar:(BOOL)clean;
+- (instancetype)initWithMoney:(float)money;
 
 @end

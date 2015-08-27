@@ -18,10 +18,11 @@
 @property (nonatomic, assign) BNBigBoss         *bigBoss;
 @property (nonatomic, assign) NSMutableArray    *cashiers;
 @property (nonatomic, assign) NSMutableArray    *washers;
+@property (nonatomic, retain) NSMutableArray    *visitorsQueue;
 
-+ (id)createWithBigBoss:(BNBigBoss *)bigBoss
-                cashiers:(NSArray *)cashiers
-                 washers:(NSArray *)washers;
++ (BNEnterprise *)createWithBigBoss:(BNBigBoss *)bigBoss
+                           cashiers:(NSArray *)cashiers
+                            washers:(NSArray *)washers;
 
 - (instancetype)initWithBigBoss:(BNBigBoss *)bigBoss
                         cashiers:(NSArray *)cashiers

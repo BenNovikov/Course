@@ -7,6 +7,7 @@
 //
 
 #import "BNEnterprise.h"
+#import "BNEmployee.h"
 #import "BNVisitor.h"
 
 //@interface BNEnterprise()
@@ -19,11 +20,15 @@
 //@class BNVisitor;
 
 @interface BNEnterprise()
-- (BNVisitor *)receiveVisitor;
+- (void)enqueueVisitor:(BNVisitor *)visitor;
+- (void)processVisitorsQueue;
+- (id)getObjectForEmployee:(BNEmployee *)employee;
 
 @end
 
-@implementation BNEnterprise
+@implementation BNEnterprise {
+    unsigned int temp;
+}
 @synthesize state;
 
 #pragma mark -
@@ -56,12 +61,19 @@
         self.bigBoss    = bigBoss;
         self.cashiers   = [NSMutableArray arrayWithArray:cashiers];
         self.washers    = [NSMutableArray arrayWithArray:washers];
+//        self.visitorsQueue   = [NSMutableArray initWithCapacity:kBNNumberOfCars];
         
         for (BNWasher *washer in self.washers) {
-            [washer addObserver:self.cashiers[0]]; //there is only one cashier yet!
+            [washer addObserver:self];
         }
-        [self.cashiers[0] addObserver:self.bigBoss];
+        
+        for (BNCashier *cashier in self.cashiers) {
+            [cashier addObserver:self];
+        }
+        
         [self.bigBoss addObserver:self];
+        
+        
     }
     
     return self;
@@ -72,40 +84,104 @@
 - (void)runWithNumberOfCars:(NSUInteger)numberOfCars
                         price:(NSUInteger)price
 {
-
-    
+    NSUInteger washersNumber = [self.washers count];
     for (NSUInteger counter = 0; counter < numberOfCars; counter++) {
-        BNVisitor *visitor = [[self receiveVisitor] autorelease];
-        visitor.price = price;
-        [self performSelectorInBackground:@selector(processObject:) withObject:visitor];
+        BNVisitor *visitor = [BNVisitor createWithMoney:price];
+//        visitor.money = price;
+//        [visitor addObserver:self];
+        if (counter < washersNumber) {
+            [[self.washers objectAtIndex:counter] performProcessWithObject:visitor];
+        } else {
+            [self performSelectorInBackground:@selector(enqueueVisitor:) withObject:visitor];
+        }
     }
+//    NSLog(@"Visitors:%d",temp);
 }
 
 - (void)processObject:(id<BNCashFlowProtocol>)object {
-    
+
 }
 
 #pragma mark -
 #pragma mark <BNStateProtocol>
 
 - (void)objectDidBecomeFree:(id)object {
-    
+    id processObject = [self getObjectForEmployee:object];
+    [(BNEmployee *)object performProcessWithObject:processObject];
+    NSLog(@"%@ with %@", object, processObject);
 }
 
 - (void)objectDidBecomeBusy:(id)object {
     
 }
 
-- (void)objectDidFinishProcess:(id)object {
-    
+- (void)objectDidFinishProcess:(BNEmployee *)object {
+//    if (object != object.cashReceiver) {
+//        [object.cashReceiver performProcessWithObject:object];
+//    }
 }
 
 #pragma mark -
 #pragma mark Private Methods
-- (BNVisitor *)receiveVisitor {
-    BNVisitor *visitor = [BNVisitor initWithCleanCar:NO];
+- (void)enqueueVisitor:(BNVisitor *)visitor {
+    temp++;
+        @synchronized(self.visitorsQueue) {
+            [self.visitorsQueue addObject:visitor];
+        }
+
+    NSLog(@"Visitor %d received", temp);
+}
+
+- (void)processVisitorsQueue {
+    do {
+        
+    } while (self.visitorsQueue.count > 0);
     
-    return visitor;
+}
+
+//- (BNEmployee *)getFreeEmployeeForObject:(id)object {
+////    Class objectClass = [object class];
+//    if ([object isKindOfClass:[BNBigBoss class]]) {
+//        return self.bigBoss;
+//    } else if ([object isKindOfClass:[BNCashier class]]) {
+//        return self.bigBoss;
+//    } else if ([object isKindOfClass:[BNWasher class]]) {
+//        for (NSUInteger counter = 0; counter < [self.cashiers count]; counter++) {
+//            BNEmployee *currentEmployee = self.cashiers[counter];
+//            if (kBNObjectStateIsFree == currentEmployee.state) {
+//                return currentEmployee;
+//            }
+//        }
+//    } else if ([object isKindOfClass:[BNWasher class]]) {
+//
+//    
+//    return nil;
+//}
+
+- (id)getObjectForEmployee:(BNEmployee *)employee {
+    if ([employee isKindOfClass:[BNBigBoss class]]) {
+        for (BNCashier *cashier in self.cashiers) {
+            if (kBNObjectStateFinishedProcess == ((BNEmployee *)cashier).state) {
+                return cashier;
+            }
+        }
+    } else if ([employee isKindOfClass:[BNCashier class]]) {
+        for (BNWasher *washer in self.washers) {
+            if (kBNObjectStateFinishedProcess == ((BNEmployee *)washer).state) {
+                return washer;
+            }
+        }
+    } else if ([employee isKindOfClass:[BNWasher class]]) {
+        NSUInteger visitorsInQueue = [self.visitorsQueue count];
+        if (visitorsInQueue > 0) {
+            BNVisitor *visitor = [self.visitorsQueue objectAtIndex:0];
+            [self.visitorsQueue removeObjectAtIndex:0];
+            return visitor;
+        }
+    }
+    
+    
+    return nil;
 }
 
 @end

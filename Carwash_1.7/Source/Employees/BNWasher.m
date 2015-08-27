@@ -9,32 +9,31 @@
 #import "BNWasher.h"
 #import "BNVisitor.h"
 
-@implementation BNWasher {
-    BNVisitor *visitor;
-}
+@implementation BNWasher
 
 - (void)performSpecificOperationWithObject:(id)object {
     if (nil != object) {
-        @autoreleasepool {
+//        @autoreleasepool {
+        NSLog(@"%@ started with %@ car", self, object);
             @synchronized(self) {
-                NSLog(@"%@ started with %@ car", self, object);
-                [self receiveMoney:[object price] fromPayer:object];
+//                [self receiveMoney:[object price] fromPayer:object];
                 [super performSpecificOperationWithObject:object];
             }
-        }
+//        }
     }
 }
 
 - (void)startTaskWithObject:(id<BNStateProtocol>)object {
-    visitor = (BNVisitor *)object;
-    object.state = kBNObjectStateIsBusy;
+//    self.processedObject = (BNVisitor *)object;
+//    object.state = kBNObjectStateIsBusy;
     [super startTaskWithObject:object];
 }
 
 - (void)finishTask {
+    BNVisitor *visitor = self.processedObject;
     visitor.state = kBNObjectStateFinishedProcess;
     [super finishTask];
-    NSLog(@"%@ finished, %f money on pocket", self, self.money);
+    NSLog(@"%@ finished with %f money on the pocket", self, self.money);
 }
 
 @end

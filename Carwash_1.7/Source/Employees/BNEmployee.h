@@ -17,12 +17,12 @@
 
 @interface BNEmployee : BNObservableObject<BNCashFlowProtocol>
 
-
-@property (nonatomic, assign)   unsigned int    salary;
-@property (nonatomic, assign)   float           money;
 //@property (nonatomic, assign)   float           price;
 //@property (nonatomic, assign)   BNObjectState   state;
-@property (nonatomic, retain)   id              retainedObject;
+@property (nonatomic, assign)   unsigned int    salary;
+@property (nonatomic, assign)   float           money;
+@property (nonatomic, retain)   id              processedObject;
+//@property (nonatomic, assign)   BNEmployee      *cashReceiver;
 
 + (id)hireWithSalary:(unsigned int)salary;
 
@@ -31,8 +31,8 @@
 - (void)setState:(BNObjectState)state;
 
 - (void)performProcessWithObject:(id)object;
-- (void)performSpecificOperationWithObject:(id)object;
 - (void)startTaskWithObject:(id<BNStateProtocol>)object;
+- (void)performSpecificOperationWithObject:(id)object;
 - (void)finishTask;
 - (void)mayBeFree;
 

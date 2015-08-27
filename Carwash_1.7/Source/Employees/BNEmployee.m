@@ -11,13 +11,8 @@
 //@interface BNEmployee()
 //@end
 
-@implementation BNEmployee {
-//    id<BNStateProtocol> retainedObject;
+@implementation BNEmployee
 
-}
-//@synthesize money;
-
-#pragma mark -
 #pragma mark Class
 + (id)hireWithSalary:(unsigned int)salary {
     return [[[self alloc] initWithSalary:salary] autorelease];
@@ -26,12 +21,11 @@
 #pragma mark -
 #pragma mark Init and Declare
 - (void)dealloc {
-//    retainedObject = nil;
-    self.retainedObject = nil;
+//    processedObject = nil;
+    self.processedObject = nil;
     
     [super dealloc];
 }
-
 
 - (instancetype)initWithSalary:(unsigned int)salary {    
     if (self = [super init]) {
@@ -48,7 +42,8 @@
     if (state != currentState) {
         @synchronized(self) {
             if (state != currentState) {
-                self.state = state;
+                super.state = state;
+//                self.state = state;
             }
             [self notifyObserversWithSelector:[self selectorForState:state] withObject:self];
         }
@@ -60,40 +55,35 @@
 - (void)performProcessWithObject:(id<BNStateProtocol>)object {
     [self startTaskWithObject:object];
     [self performSelectorInBackground:@selector(performSpecificOperationWithObject:) withObject:object];
-}
-
-- (void)performSpecificOperationWithObject:(id)object {
-    sleep(arc4random_uniform(kBNSleepInterval));
-    [self finishTask];
+//        [self performSelectorOnMainThread:@selector(finishTask) withObject:self waitUntilDone:NO];
 }
 
 - (void)startTaskWithObject:(id<BNStateProtocol>)object {
     if (nil != object) {
-        @synchronized(self) {
-            self.state = kBNObjectStateIsBusy;
-        }
         @synchronized(object) {
-//            retainedObject = object;
-//            [retainedObject retain];
-//            retainedObject.state = kBNObjectStateIsBusy;
-            self.retainedObject = object;
-            object.state = kBNObjectStateIsBusy;
+            self.processedObject = object;
+//            object.state = kBNObjectStateIsBusy;
         }
     }
 }
 
+- (void)performSpecificOperationWithObject:(id)object {
+    usleep(arc4random_uniform(kBNSleepInterval));
+    [self finishTask];
+    
+}
+
 - (void)finishTask; {
+    NSLog(@"Finishing");
+    [self receiveMoney:kBNServicePrice fromPayer:self.processedObject];
     @synchronized(self) {
         self.state = kBNObjectStateFinishedProcess;
     }
-//    @synchronized(retainedObject) {
-//        retainedObject.state = kBNObjectStateFinishedProcess;
-//        [retainedObject release];
-//        retainedObject = nil;
-    id<BNStateProtocol> object = self.retainedObject;
+
+    id<BNStateProtocol> object = self.processedObject;
     @synchronized(object) {
-        object.state = kBNObjectStateFinishedProcess;
-        object = nil;
+        object.state = kBNObjectStateIsFree;
+        self.processedObject = nil;
     }
 }
 

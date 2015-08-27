@@ -9,13 +9,13 @@
 #import "BNTest7.h"
 #import "BNWorkflow.h"
 #import "BNActor.h"
-//#import "BNConstants.h"
+#import "BNConstants.h"
 
-//#import "BNEnterprise.h"
-//#import "BNBigBoss.h"
-//#import "BNCashier.h"
-//#import "BNWasher.h"
-//#import "BNVisitor.h"
+#import "BNEnterprise.h"
+#import "BNBigBoss.h"
+#import "BNCashier.h"
+#import "BNWasher.h"
+#import "BNVisitor.h"
 
 @implementation BNTest7
 
@@ -23,21 +23,19 @@
 #pragma mark Public Method
 + (void)performTest {
 
+    NSArray *cashiers = @[[BNCashier hireWithSalary:kBNCashierSalary]];
     
-//    BNCashier *cashier = ;
-//    NSArray *cashiers = @[[BNCashier hireWithSalary:kBNCashierSalary]];
-//    
-//    NSMutableArray *testWashers = [NSMutableArray arrayWithCapacity:kBNWashers];
-//    for (NSUInteger index = 0; index < kBNWashers; index++) {
-//        [testWashers addObject:[BNWasher hireWithSalary:kBNWasherSalary]];
-//    }
-//    NSArray *washers = [NSArray arrayWithArray:testWashers];
-//    [testWashers release];
-//    
-//    BNEnterprise *carwash = [BNEnterprise createWithBigBoss:[BNBigBoss hireWithSalary:kBNBigBossSalary]
-//                                                    cashiers:cashiers
-//                                                     washers:washers];
+    NSMutableArray *washers = [NSMutableArray arrayWithCapacity:kBNNumberOfWashers];
+    for (NSUInteger index = 0; index < kBNNumberOfWashers; index++) {
+        [washers addObject:[BNWasher hireWithSalary:kBNWasherSalary]];
+    }
 
+    BNBigBoss *bigboss = [BNBigBoss hireWithSalary:kBNBigBossSalary];
+    BNEnterprise *carwash = [BNEnterprise createWithBigBoss:bigboss
+                                                   cashiers:cashiers
+                                                    washers:washers];
+    [carwash runWithNumberOfCars:kBNNumberOfCars
+                           price:kBNServicePrice];
 
 };
 
