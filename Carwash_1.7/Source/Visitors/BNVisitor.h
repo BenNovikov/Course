@@ -12,7 +12,7 @@
 #import "BNCashFlowProtocol.h"
 #import "BNConstants.h"
 
-@interface BNVisitor : BNObservableObject<BNCashFlowProtocol>
+@interface BNVisitor : NSObject<BNCashFlowProtocol>
 @property (nonatomic, assign) float                     money;
 @property (nonatomic, assign, getter = isClean) BOOL    clean;
 

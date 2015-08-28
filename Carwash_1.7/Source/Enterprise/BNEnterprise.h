@@ -14,11 +14,7 @@
 @class BNBigBoss;
 @class BNVisitor;
 
-@interface BNEnterprise : NSObject<BNStateProtocol>
-@property (nonatomic, assign) BNBigBoss         *bigBoss;
-@property (nonatomic, assign) NSMutableArray    *cashiers;
-@property (nonatomic, assign) NSMutableArray    *washers;
-@property (nonatomic, retain) NSMutableArray    *visitorsQueue;
+@interface BNEnterprise : NSObject <BNStateProtocol>
 
 + (BNEnterprise *)createWithBigBoss:(BNBigBoss *)bigBoss
                            cashiers:(NSArray *)cashiers
@@ -28,9 +24,6 @@
                         cashiers:(NSArray *)cashiers
                          washers:(NSArray *)washers NS_DESIGNATED_INITIALIZER;
 
-- (void)runWithNumberOfCars:(NSUInteger)numberOfCars
-                        price:(NSUInteger)price;
-
-- (void)processObject:(id<BNCashFlowProtocol>)object;
+- (void)runWithNumberOfCars:(NSUInteger)numberOfCars;
 
 @end

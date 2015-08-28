@@ -13,9 +13,11 @@
 @required
 @property (nonatomic, assign) float money;
 
+- (BOOL)isAbleToPayMoney:(float)money;
+
 @optional
 @property (nonatomic, assign) float price;
-- (float)receiveMoney:(float)money fromPayer:(id<BNCashFlowProtocol>)payer;
-- (float)countMoneyOfPayer:(id<BNCashFlowProtocol>)payer;
+
+- (void)receiveMoney:(float)money fromPayer:(id<BNCashFlowProtocol>)payer;
 
 @end

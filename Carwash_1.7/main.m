@@ -12,9 +12,7 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        
         [BNTest7 performTest];
-        
     }
     
     return 0;

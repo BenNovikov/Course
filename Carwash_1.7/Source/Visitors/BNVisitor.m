@@ -8,10 +8,7 @@
 
 #import "BNVisitor.h"
 
-
-
 @implementation BNVisitor
-//@synthesize money;
 
 #pragma mark -
 #pragma mark Class Methods
@@ -26,11 +23,12 @@
 
 #pragma mark -
 #pragma mark Init and Declare
+//
+//- (void)dealloc {
+//
+//    [super dealloc];
+//}
 
-- (void)dealloc {
-
-    [super dealloc];
-}
 - (instancetype)initWithCleanCar:(BOOL)clean money:(float)money {
     self = [super init];
     if(self){
@@ -43,6 +41,13 @@
 
 - (instancetype)initWithMoney:(float)money {
     return [self initWithCleanCar:NO money:money];
+}
+
+#pragma mark -
+#pragma mark BNCashFlowProtocol
+
+- (BOOL)isAbleToPayMoney:(float)money {
+    return self.money >= money;
 }
 
 @end

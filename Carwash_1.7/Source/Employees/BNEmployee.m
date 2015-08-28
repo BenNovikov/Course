@@ -8,15 +8,24 @@
 
 #import "BNEmployee.h"
 
+@interface BNEmployee ()
+
+- (SEL)selectorForState:(BNObjectState)state;
+
+@end
+
 @implementation BNEmployee
 
+#pragma mark -
 #pragma mark Class
+
 + (id)hireWithSalary:(unsigned int)salary {
     return [[[self alloc] initWithSalary:salary] autorelease];
 }
 
 #pragma mark -
-#pragma mark Init and Declare
+#pragma mark Initializations and Deallocations
+
 - (void)dealloc {
     self.processedObject = nil;
     
@@ -24,8 +33,10 @@
 }
 
 - (instancetype)initWithSalary:(unsigned int)salary {    
-    if (self = [super init]) {
+    self = [super init];
+    if (self) {
         self.salary = salary;
+        self.state = kBNObjectStateIsFree;
     };
     
     return self;
@@ -33,90 +44,81 @@
 
 #pragma mark -
 #pragma mark Accessors
+
 - (void)setState:(BNObjectState)state {
     BNObjectState currentState = self.state;
-    if (state != currentState) {
+    
+    if (currentState != state) {
         @synchronized(self) {
-            if (state != currentState) {
-                super.state = state;
+            if (currentState != state) {
+                _state = state;
+                
+                [self notifyObserversWithSelector:[self selectorForState:state] withObject:self];
             }
-            [self notifyObserversWithSelector:[self selectorForState:state] withObject:self];
         }
     }
 }
 
 #pragma mark -
 #pragma mark Public
-- (void)performProcessWithObject:(id<BNStateProtocol>)object {
+
+- (void)performProcessWithObject:(id)object {    
     [self startTaskWithObject:object];
     [self performSelectorInBackground:@selector(performSpecificOperationWithObject:) withObject:object];
 }
 
-- (void)startTaskWithObject:(id<BNStateProtocol>)object {
-    if (nil != object) {
-        @synchronized(object) {
-            self.processedObject = object;
-            object.state = kBNObjectStateIsBusy;
-        }
-    }
+- (void)startTaskWithObject:(id)object {
+    self.state = kBNObjectStateIsBusy;
+    self.processedObject = object;
 }
 
 - (void)performSpecificOperationWithObject:(id)object {
     usleep(arc4random_uniform(kBNSleepInterval));
     [self finishTask];
-    
 }
 
-- (void)finishTask; {
-    @synchronized(self) {
-        id<BNStateProtocol> object = self.processedObject;
-        
-        if (self != object && object != nil) {
-            object.state = kBNObjectStateFinishedProcess;
-            
-            float money = [self countMoneyOfPayer:(id<BNCashFlowProtocol>)object];
-            if (money > 0) {
-                [self receiveMoney:money fromPayer:(id<BNCashFlowProtocol>)object];
-                NSLog(kBNReceivedMoney, self, money, object);
-            }
-        }
-        object.state = kBNObjectStateIsFree;
-        object = nil;
-        NSLog(kBNFinishedMoney, self, self.money);
-        [self mayBeFree];
-    }
+- (void)finishTask {
+    self.processedObject = nil;
+    self.state = kBNObjectStateFinishedProcess;
 }
 
 - (void)mayBeFree {
-    @synchronized(self) {
-        self.state = kBNObjectStateIsFree;
-    }
+    self.state = kBNObjectStateIsFree;
 }
 
 #pragma mark -
 #pragma mark <BNCashFlowProtocol>
-- (float)receiveMoney:(float)money fromPayer:(id<BNCashFlowProtocol>)payer {
-    @synchronized(payer) {
-        if (self != payer && payer != nil) {
-            if (payer.money < money && payer.money > 0 ) {
-                money = payer.money;
-            }
-            
-            payer.money -= money;
-            self.money += money;
-            return money;
-        }
+
+- (void)receiveMoney:(float)money fromPayer:(id<BNCashFlowProtocol>)payer {
+    if ([payer isAbleToPayMoney:money]) {
+        payer.money -= money;
+        self.money += money;
     }
-    return 0;
 }
 
-- (float)countMoneyOfPayer:(id<BNCashFlowProtocol>)payer {
-    
-    return (payer != nil) ? payer.money : 0;
+- (BOOL)isAbleToPayMoney:(float)money {
+    return self.money >= money;
 }
 
 #pragma mark -
 #pragma mark <BNStateProtocol>
+
+- (void)objectDidBecomeFree:(id)object {
+//    NSLog(kBNLogBecomeFree, [self class], self, self.processedObject, self.money);
+}
+
+- (void)objectDidBecomeBusy:(id)object {
+//    NSLog(kBNLogBecomeBusy, [self class], self, self.processedObject, self.money);
+}
+
+- (void)objectDidFinishProcess:(id)object {
+//    NSLog(kBNLogFinishProcess, [self class], self, self.processedObject, self.money);
+    [self performProcessWithObject:object];
+}
+
+#pragma mark -
+#pragma mark Private
+
 - (SEL)selectorForState:(BNObjectState)state {
     NSDictionary *dictionary = kBNStateSelectors;
     

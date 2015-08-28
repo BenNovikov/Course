@@ -7,10 +7,7 @@
 //
 
 #import "BNTest7.h"
-#import "BNWorkflow.h"
-#import "BNActor.h"
 #import "BNConstants.h"
-
 #import "BNEnterprise.h"
 #import "BNBigBoss.h"
 #import "BNCashier.h"
@@ -22,8 +19,10 @@
 #pragma mark -
 #pragma mark Public Method
 + (void)performTest {
+    BNCashier *cashier = [BNCashier hireWithSalary:kBNCashierSalary];
 
-    NSArray *cashiers = @[[BNCashier hireWithSalary:kBNCashierSalary]];
+    NSMutableArray *cashiers = [NSMutableArray new];
+    [cashiers addObject:cashier];
     
     NSMutableArray *washers = [NSMutableArray arrayWithCapacity:kBNNumberOfWashers];
     for (NSUInteger index = 0; index < kBNNumberOfWashers; index++) {
@@ -35,13 +34,14 @@
                                                    cashiers:cashiers
                                                     washers:washers];
     
-    NSLog(@"Starting...");
-    [carwash runWithNumberOfCars:kBNNumberOfCars
-                           price:kBNServicePrice];
+    NSLog(@"Test started...");
+    [carwash runWithNumberOfCars:kBNNumberOfCars];
+   
+    do {
+        [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:1]];
+    } while (bigboss.money != kBNNumberOfCars * kBNServicePrice);
     
-    NSLog(@"Finishing...");
-    
-    [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:500]];
+    NSLog(@"...Test finished");
 };
 
 @end

@@ -10,10 +10,10 @@
 #import "BNConstants.h"
 
 @protocol BNStateProtocol <NSObject>
-@property (nonatomic, assign) BNObjectState state;
 
 @optional
-- (SEL)selectorForState:(BNObjectState)state;
+@property (nonatomic, assign) BNObjectState state;
+
 - (void)objectDidBecomeFree:(id)object;
 - (void)objectDidBecomeBusy:(id)object;
 - (void)objectDidFinishProcess:(id)object;

@@ -10,9 +10,8 @@
 
 #import "BNStateProtocol.h"
 
-@interface BNObservableObject : NSObject<BNStateProtocol>
-//@property (nonatomic, assign) NSHashTable     *observers;
-@property (nonatomic, assign) BNObjectState state;
+@interface BNObservableObject : NSObject
+@property (nonatomic, assign) NSHashTable     *observers;
 
 - (void)addObserver:(id)observer;
 - (void)removeObserver:(id)observer;

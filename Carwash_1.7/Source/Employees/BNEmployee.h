@@ -9,23 +9,19 @@
 #import <Foundation/Foundation.h>
 
 #import "BNObservableObject.h"
-
 #import "BNCashFlowProtocol.h"
 #import "BNStateProtocol.h"
 #import "BNConstants.h"
 
-@interface BNEmployee : BNObservableObject<BNCashFlowProtocol>
-
+@interface BNEmployee : BNObservableObject <BNCashFlowProtocol>
 @property (nonatomic, assign)   unsigned int    salary;
 @property (nonatomic, assign)   float           money;
 @property (nonatomic, retain)   id              processedObject;
-
+@property (nonatomic, assign)   BNObjectState   state;
 
 + (id)hireWithSalary:(unsigned int)salary;
 
 - (instancetype)initWithSalary:(unsigned int)salary NS_DESIGNATED_INITIALIZER;
-
-- (void)setState:(BNObjectState)state;
 
 - (void)performProcessWithObject:(id)object;
 - (void)startTaskWithObject:(id<BNStateProtocol>)object;

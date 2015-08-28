@@ -11,24 +11,17 @@
 @implementation BNBigBoss
 
 - (void)performSpecificOperationWithObject:(id)object {
-    if (nil != object) {
+    @autoreleasepool {
         @synchronized(self) {
-            NSLog(@"%@ counting money:%f", self, self.money);
+            [self receiveMoney:kBNServicePrice fromPayer:object];
+            
+            NSLog(kBNLogBossMakesProfit, self, self.money);
+            [object mayBeFree];
+            [self mayBeFree];
+            
             [super performSpecificOperationWithObject:object];
         }
     }
 }
-
-//- (void)startTaskWithObject:(id<BNStateProtocol>)object {
-//    object.state = kBNObjectStateIsBusy;
-//    [super startTaskWithObject:object];
-//}
-//
-//- (void)finishTask {
-//    BNEmployee *visitor = self.processedObject;
-//    visitor.state = kBNObjectStateFinishedProcess;
-//    [super finishTask];
-//    NSLog(@"%@ finished with %f money on the pocket", self, self.money);
-//}
 
 @end

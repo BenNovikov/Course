@@ -11,23 +11,17 @@
 @implementation BNCashier
 
 - (void)performSpecificOperationWithObject:(id)object {
-    if (nil != object) {
+    @autoreleasepool {
         @synchronized(self) {
-            NSLog(@"%@ counting money:%f", self, self.money);
+            [self receiveMoney:kBNServicePrice fromPayer:object];
+            
+            NSLog(kBNLogCashierCountsMoney, self, self.money);
+            [object mayBeFree];
+            [self mayBeFree];
+            
             [super performSpecificOperationWithObject:object];
         }
     }
 }
-
-//- (void)startTaskWithObject:(id<BNStateProtocol>)object {
-//        object.state = kBNObjectStateIsBusy;
-//    [super startTaskWithObject:object];
-//}
-//
-//- (void)finishTask {
-//
-//    [super finishTask];
-//
-//}
 
 @end

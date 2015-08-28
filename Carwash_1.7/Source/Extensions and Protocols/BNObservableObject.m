@@ -8,55 +8,51 @@
 
 #import "BNObservableObject.h"
 
-@implementation BNObservableObject {
-    
-    NSHashTable *observers;
-}
+@implementation BNObservableObject
 
 #pragma mark -
-#pragma mark Init and Declare
+#pragma mark Initialization and Declaration
+
 - (id)init {
-    if (self = [super init]) {
-        observers = [NSHashTable weakObjectsHashTable];
+    self = [super init];
+    if (self) {
+        _observers = [NSHashTable weakObjectsHashTable];
     }
     
     return self;
 }
 
 - (void)dealloc {
-    observers = nil;
+    self.observers = nil;
     
     [super dealloc];
 }
 
 #pragma mark -
-#pragma mark Public
+#pragma mark Public Methods
+
 - (void)addObserver:(id)observer {
-    if (nil != observer) {
-        @synchronized(observers) {
-            [observers addObject:observer];
-        }
+    @synchronized(self.observers) {
+        [self.observers addObject:observer];
     }
 }
 
 - (void)removeObserver:(id)observer {
-    if (nil != observer) {
-        @synchronized(observers) {
-            [observers removeObject:observer];
-        }
+    @synchronized(self.observers) {
+        [self.observers removeObject:observer];
     }
 }
 
 - (BOOL)isObserver:(id)observer {
     if (nil != observer) {
-        return [observers containsObject:observer];
+        return [self.observers containsObject:observer];
     }
     
     return NO;
 }
 
 - (void)notifyObserversWithSelector:(SEL)selector {
-    for (id observer in observers) {
+    for (id observer in self.observers) {
         if ([observer respondsToSelector:selector]) {
             [observer performSelectorOnMainThread:selector withObject:self waitUntilDone:NO];
         }
@@ -64,19 +60,11 @@
 }
 
 - (void)notifyObserversWithSelector:(SEL)selector withObject:(id)object {
-    for (id observer in observers) {
+    for (id observer in self.observers) {
         if ([observer respondsToSelector:selector]) {
             [observer performSelectorOnMainThread:selector withObject:object waitUntilDone:NO];
         }
     }
-}
-
-#pragma mark -
-#pragma mark <BNStateProtocol>
-- (SEL)selectorForState:(BNObjectState)state {
-    NSDictionary *dictionary = kBNStateSelectors;
-    
-    return NSSelectorFromString(dictionary[@(state)]);
 }
 
 @end
