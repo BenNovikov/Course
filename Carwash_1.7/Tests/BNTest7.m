@@ -34,9 +34,13 @@
     BNEnterprise *carwash = [BNEnterprise createWithBigBoss:bigboss
                                                    cashiers:cashiers
                                                     washers:washers];
+    
+    NSLog(@"Starting...");
     [carwash runWithNumberOfCars:kBNNumberOfCars
                            price:kBNServicePrice];
-
+    
+    NSLog(@"Finishing...");
+    [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:500]];
 };
 
 @end

@@ -62,7 +62,7 @@
     if (nil != object) {
         @synchronized(object) {
             self.processedObject = object;
-//            object.state = kBNObjectStateIsBusy;
+            object.state = kBNObjectStateIsBusy;
         }
     }
 }
@@ -74,16 +74,23 @@
 }
 
 - (void)finishTask; {
-    NSLog(@"Finishing");
-    [self receiveMoney:kBNServicePrice fromPayer:self.processedObject];
     @synchronized(self) {
-        self.state = kBNObjectStateFinishedProcess;
-    }
-
-    id<BNStateProtocol> object = self.processedObject;
-    @synchronized(object) {
-        object.state = kBNObjectStateIsFree;
-        self.processedObject = nil;
+        id<BNStateProtocol> object = self.processedObject;
+        
+        if (self != object && object != nil) {
+            object.state = kBNObjectStateFinishedProcess;
+            
+            float money = [self countMoneyOfPayer:(id<BNCashFlowProtocol>)object];
+            if (money > 0) {
+                [self receiveMoney:money fromPayer:(id<BNCashFlowProtocol>)object];
+                NSLog(kBNReceivedMoney, self, money, object);
+            }
+            
+            object.state = kBNObjectStateIsFree;
+            object = nil;
+        }
+        NSLog(kBNFinishedMoney, self, self.money);
+        [self mayBeFree];
     }
 }
 
@@ -95,13 +102,23 @@
 
 #pragma mark -
 #pragma mark <BNCashFlowProtocol>
-- (void)receiveMoney:(float)money fromPayer:(id<BNCashFlowProtocol>)payer {
-    if (nil != payer && money > 0 && payer.money >= money) {
+- (float)receiveMoney:(float)money fromPayer:(id<BNCashFlowProtocol>)payer {
+    if (self != payer && payer != nil) {
+        if (payer.money < money && payer.money > 0 ) {
+            money = payer.money;
+        }
         @synchronized(payer) {
             payer.money -= money;
             self.money += money;
+            return money;            
         }
     }
+    return 0;
+}
+
+- (float)countMoneyOfPayer:(id<BNCashFlowProtocol>)payer {
+    
+    return (payer != nil) ? payer.money : 0;
 }
 
 #pragma mark -

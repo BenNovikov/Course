@@ -34,9 +34,9 @@ typedef NS_ENUM(NSUInteger, BNObjectState) {
                             @(kBNObjectStateFinishedProcess) : NSStringFromSelector(@selector(objectDidFinishProcess:))}
 
 #define NS_STRING_KEY(key, value) static NSString *const key = value
-//NS_STRING_KEY(kBNErrorNoParameter, @"Parameter must not be null!");
-//NS_STRING_KEY(kBNErrorReadJSON, @"An error reading JSON");
-//NS_STRING_KEY(kBNErrorConvertToString, @"An error converting to string");
+NS_STRING_KEY(kBNWillReceive, @"%@ will receive money from %@");
+NS_STRING_KEY(kBNFinishedMoney, @"%@ finished with %f money on the pocket");
+NS_STRING_KEY(kBNReceivedMoney, @"%@ received %f from %@");
 //NS_STRING_KEY(kBNErrorConvertToDictionary, @"An error converting to dictionary");
 
 #define NS_INT_KEY(key, value) static int const key = value
@@ -52,7 +52,7 @@ NS_INT_KEY(kBNBigBossSalary, 100);
 //static uint64_t const kBNVisitorInitialMoney = 10000;
 
 #define NS_FLOAT_KEY(key, value) static float const key = value
-NS_FLOAT_KEY(kBNServicePrice, 20.00);
-NS_FLOAT_KEY(kBNSleepInterval, 1000);
+NS_FLOAT_KEY(kBNServicePrice, 100.00);
+NS_FLOAT_KEY(kBNSleepInterval, 100);
 
 #endif
