@@ -40,6 +40,7 @@
                            price:kBNServicePrice];
     
     NSLog(@"Finishing...");
+    
     [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:500]];
 };
 

@@ -37,22 +37,20 @@ typedef NS_ENUM(NSUInteger, BNObjectState) {
 NS_STRING_KEY(kBNWillReceive, @"%@ will receive money from %@");
 NS_STRING_KEY(kBNFinishedMoney, @"%@ finished with %f money on the pocket");
 NS_STRING_KEY(kBNReceivedMoney, @"%@ received %f from %@");
-//NS_STRING_KEY(kBNErrorConvertToDictionary, @"An error converting to dictionary");
+NS_STRING_KEY(kBNWith, @"%@ with %@");
 
 #define NS_INT_KEY(key, value) static int const key = value
 NS_INT_KEY(kBNNumberOfCashiers, 1);
 NS_INT_KEY(kBNNumberOfWashers, 2);
-NS_INT_KEY(kBNNumberOfCars, 6);
+NS_INT_KEY(kBNNumberOfCars, 50);
 
 NS_INT_KEY(kBNDefaultVisitorsMoney, 100);
 NS_INT_KEY(kBNWasherSalary, 50);
 NS_INT_KEY(kBNCashierSalary, 100);
 NS_INT_KEY(kBNBigBossSalary, 100);
 
-//static uint64_t const kBNVisitorInitialMoney = 10000;
-
 #define NS_FLOAT_KEY(key, value) static float const key = value
 NS_FLOAT_KEY(kBNServicePrice, 100.00);
-NS_FLOAT_KEY(kBNSleepInterval, 100);
+NS_FLOAT_KEY(kBNSleepInterval, 1000);
 
 #endif

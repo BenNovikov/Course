@@ -8,9 +8,6 @@
 
 #import "BNEmployee.h"
 
-//@interface BNEmployee()
-//@end
-
 @implementation BNEmployee
 
 #pragma mark Class
@@ -21,7 +18,6 @@
 #pragma mark -
 #pragma mark Init and Declare
 - (void)dealloc {
-//    processedObject = nil;
     self.processedObject = nil;
     
     [super dealloc];
@@ -43,7 +39,6 @@
         @synchronized(self) {
             if (state != currentState) {
                 super.state = state;
-//                self.state = state;
             }
             [self notifyObserversWithSelector:[self selectorForState:state] withObject:self];
         }
@@ -55,7 +50,6 @@
 - (void)performProcessWithObject:(id<BNStateProtocol>)object {
     [self startTaskWithObject:object];
     [self performSelectorInBackground:@selector(performSpecificOperationWithObject:) withObject:object];
-//        [self performSelectorOnMainThread:@selector(finishTask) withObject:self waitUntilDone:NO];
 }
 
 - (void)startTaskWithObject:(id<BNStateProtocol>)object {
@@ -85,10 +79,9 @@
                 [self receiveMoney:money fromPayer:(id<BNCashFlowProtocol>)object];
                 NSLog(kBNReceivedMoney, self, money, object);
             }
-            
-            object.state = kBNObjectStateIsFree;
-            object = nil;
         }
+        object.state = kBNObjectStateIsFree;
+        object = nil;
         NSLog(kBNFinishedMoney, self, self.money);
         [self mayBeFree];
     }
@@ -103,14 +96,15 @@
 #pragma mark -
 #pragma mark <BNCashFlowProtocol>
 - (float)receiveMoney:(float)money fromPayer:(id<BNCashFlowProtocol>)payer {
-    if (self != payer && payer != nil) {
-        if (payer.money < money && payer.money > 0 ) {
-            money = payer.money;
-        }
-        @synchronized(payer) {
+    @synchronized(payer) {
+        if (self != payer && payer != nil) {
+            if (payer.money < money && payer.money > 0 ) {
+                money = payer.money;
+            }
+            
             payer.money -= money;
             self.money += money;
-            return money;            
+            return money;
         }
     }
     return 0;
@@ -128,6 +122,5 @@
     
     return NSSelectorFromString(dictionary[@(state)]);
 }
-
 
 @end

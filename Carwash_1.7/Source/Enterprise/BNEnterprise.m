@@ -78,15 +78,14 @@
     NSUInteger washersNumber = [self.washers count];
     for (NSUInteger counter = 0; counter < numberOfCars; counter++) {
         BNVisitor *visitor = [BNVisitor createWithMoney:price];
-//        visitor.money = price;
-//        [visitor addObserver:self];
+
         if (counter < washersNumber) {
             [[self.washers objectAtIndex:counter] performProcessWithObject:visitor];
         } else {
             [self performSelectorInBackground:@selector(enqueueVisitor:) withObject:visitor];
         }
     }
-//    NSLog(@"Visitors:%d",temp);
+//    NSLog(@"Visitors:%lu",(unsigned long)(self.visitorsQueue.count));
 }
 
 - (void)processObject:(id<BNCashFlowProtocol>)object {
@@ -102,7 +101,7 @@
             id processObject = [self getObjectForEmployee:object];
             if (processObject != nil && processObject != object && object != nil) {
                 [(BNEmployee *)object performProcessWithObject:processObject];
-                NSLog(@"%@ with %@", object, processObject);
+                NSLog(kBNWith, object, processObject);
             }
         }
     }

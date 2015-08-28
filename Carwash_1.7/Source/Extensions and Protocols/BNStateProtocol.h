@@ -12,8 +12,6 @@
 @protocol BNStateProtocol <NSObject>
 @property (nonatomic, assign) BNObjectState state;
 
-// [Name of associated class] + [Did | Will] + [UniquePartOfName] + Notification
-
 @optional
 - (SEL)selectorForState:(BNObjectState)state;
 - (void)objectDidBecomeFree:(id)object;

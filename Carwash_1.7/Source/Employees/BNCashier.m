@@ -23,7 +23,7 @@
 //        object.state = kBNObjectStateIsBusy;
 //    [super startTaskWithObject:object];
 //}
-
+//
 //- (void)finishTask {
 //
 //    [super finishTask];

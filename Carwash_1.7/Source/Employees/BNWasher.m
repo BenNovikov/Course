@@ -22,7 +22,7 @@
 //        }
     }
 }
-
+//
 //- (void)startTaskWithObject:(id<BNStateProtocol>)object {
 ////    self.processedObject = (BNVisitor *)object;
 ////    object.state = kBNObjectStateIsBusy;
@@ -30,10 +30,10 @@
 //}
 //
 //- (void)finishTask {
-//    BNVisitor *visitor = self.processedObject;
-//    visitor.state = kBNObjectStateFinishedProcess;
+////    BNVisitor *visitor = self.processedObject;
+////    visitor.state = kBNObjectStateFinishedProcess;
 //    [super finishTask];
-//    NSLog(@"%@ finished with %f money on the pocket", self, self.money);
+////    NSLog(@"%@ finished with %f money on the pocket", self, self.money);
 //}
 
 @end

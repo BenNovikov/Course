@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 
 #import "BNObservableObject.h"
-//#import "BNEnterprise.h"
 
 #import "BNCashFlowProtocol.h"
 #import "BNStateProtocol.h"
@@ -17,12 +16,10 @@
 
 @interface BNEmployee : BNObservableObject<BNCashFlowProtocol>
 
-//@property (nonatomic, assign)   float           price;
-//@property (nonatomic, assign)   BNObjectState   state;
 @property (nonatomic, assign)   unsigned int    salary;
 @property (nonatomic, assign)   float           money;
 @property (nonatomic, retain)   id              processedObject;
-//@property (nonatomic, assign)   BNEmployee      *cashReceiver;
+
 
 + (id)hireWithSalary:(unsigned int)salary;
 
