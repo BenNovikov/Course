@@ -30,7 +30,7 @@ static uint64_t const kBNAgeToStartSpeaking = 2;
 }
 
 #pragma mark -
-#pragma mark Init and Declare
+#pragma mark Initializations and Deallocations
 
 - (void)dealloc {
     self.name = nil;

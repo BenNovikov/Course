@@ -57,8 +57,12 @@
 		84A6CEA21B8A51630080866F /* BNCashier.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A6CEA01B8A51630080866F /* BNCashier.m */; };
 		84A6CEA51B8A517A0080866F /* BNWasher.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A6CEA41B8A517A0080866F /* BNWasher.m */; };
 		84A6CEA61B8A517A0080866F /* BNWasher.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A6CEA41B8A517A0080866F /* BNWasher.m */; };
-		84A6CEAA1B8A69200080866F /* BNObservableObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A6CEA91B8A69200080866F /* BNObservableObject.m */; };
-		84A6CEAB1B8A69200080866F /* BNObservableObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A6CEA91B8A69200080866F /* BNObservableObject.m */; };
+		84C200011B9656FE0025F8DE /* BNEnterpriseTask8.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C200001B9656FE0025F8DE /* BNEnterpriseTask8.m */; };
+		84C200021B9656FE0025F8DE /* BNEnterpriseTask8.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C200001B9656FE0025F8DE /* BNEnterpriseTask8.m */; };
+		84C2FFF71B9656780025F8DE /* BNObservableObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C2FFF61B9656780025F8DE /* BNObservableObject.m */; };
+		84C2FFF81B9656780025F8DE /* BNObservableObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C2FFF61B9656780025F8DE /* BNObservableObject.m */; };
+		84C2FFFC1B96568A0025F8DE /* BNDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C2FFFB1B96568A0025F8DE /* BNDispatcher.m */; };
+		84C2FFFD1B96568A0025F8DE /* BNDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C2FFFB1B96568A0025F8DE /* BNDispatcher.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -170,8 +174,12 @@
 		84A6CEA01B8A51630080866F /* BNCashier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNCashier.m; sourceTree = "<group>"; };
 		84A6CEA31B8A517A0080866F /* BNWasher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNWasher.h; sourceTree = "<group>"; };
 		84A6CEA41B8A517A0080866F /* BNWasher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNWasher.m; sourceTree = "<group>"; };
-		84A6CEA81B8A69200080866F /* BNObservableObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BNObservableObject.h; path = "Extensions and Protocols/BNObservableObject.h"; sourceTree = "<group>"; };
-		84A6CEA91B8A69200080866F /* BNObservableObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BNObservableObject.m; path = "Extensions and Protocols/BNObservableObject.m"; sourceTree = "<group>"; };
+		84C200001B9656FE0025F8DE /* BNEnterpriseTask8.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNEnterpriseTask8.m; sourceTree = "<group>"; };
+		84C2FFF51B9656780025F8DE /* BNObservableObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNObservableObject.h; sourceTree = "<group>"; };
+		84C2FFF61B9656780025F8DE /* BNObservableObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNObservableObject.m; sourceTree = "<group>"; };
+		84C2FFFA1B96568A0025F8DE /* BNDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNDispatcher.h; sourceTree = "<group>"; };
+		84C2FFFB1B96568A0025F8DE /* BNDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNDispatcher.m; sourceTree = "<group>"; };
+		84C2FFFF1B9656FE0025F8DE /* BNEnterpriseTask8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNEnterpriseTask8.h; sourceTree = "<group>"; };
 		84DD0C7F1B8CC99D00009629 /* BNStateProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BNStateProtocol.h; path = "Extensions and Protocols/BNStateProtocol.h"; sourceTree = "<group>"; };
 		84DD0C801B8D02A300009629 /* BNCashFlowProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BNCashFlowProtocol.h; path = "Extensions and Protocols/BNCashFlowProtocol.h"; sourceTree = "<group>"; };
 		84DFD2441B8BC0600089BB64 /* BNConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BNConstants.h; path = "Extensions and Protocols/BNConstants.h"; sourceTree = "<group>"; };
@@ -411,6 +419,8 @@
 			children = (
 				84DFD2361B8B95830089BB64 /* Source */,
 				84A6CE831B8A37250080866F /* main.m */,
+				84C2FFFE1B9656FE0025F8DE /* EnterpriseTask8 */,
+				84C2FFF91B96568A0025F8DE /* Dispatcher */,
 				84A6CE881B8A37250080866F /* Tests */,
 			);
 			path = Carwash_1.7;
@@ -464,8 +474,6 @@
 		84A6CEA71B8A63460080866F /* Extensions and Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				84A6CEA81B8A69200080866F /* BNObservableObject.h */,
-				84A6CEA91B8A69200080866F /* BNObservableObject.m */,
 				84DD0C801B8D02A300009629 /* BNCashFlowProtocol.h */,
 				84DD0C7F1B8CC99D00009629 /* BNStateProtocol.h */,
 				84DFD2441B8BC0600089BB64 /* BNConstants.h */,
@@ -474,9 +482,40 @@
 			path = Source;
 			sourceTree = "<group>";
 		};
+		84C2FFF41B9656780025F8DE /* ObservableObject */ = {
+			isa = PBXGroup;
+			children = (
+				84C2FFF51B9656780025F8DE /* BNObservableObject.h */,
+				84C2FFF61B9656780025F8DE /* BNObservableObject.m */,
+			);
+			name = ObservableObject;
+			path = Source/ObservableObject;
+			sourceTree = "<group>";
+		};
+		84C2FFF91B96568A0025F8DE /* Dispatcher */ = {
+			isa = PBXGroup;
+			children = (
+				84C2FFFA1B96568A0025F8DE /* BNDispatcher.h */,
+				84C2FFFB1B96568A0025F8DE /* BNDispatcher.m */,
+			);
+			name = Dispatcher;
+			path = Source/Dispatcher;
+			sourceTree = "<group>";
+		};
+		84C2FFFE1B9656FE0025F8DE /* EnterpriseTask8 */ = {
+			isa = PBXGroup;
+			children = (
+				84C2FFFF1B9656FE0025F8DE /* BNEnterpriseTask8.h */,
+				84C200001B9656FE0025F8DE /* BNEnterpriseTask8.m */,
+			);
+			name = EnterpriseTask8;
+			path = Source/EnterpriseTask8;
+			sourceTree = "<group>";
+		};
 		84DFD2361B8B95830089BB64 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				84C2FFF41B9656780025F8DE /* ObservableObject */,
 				84A6CEA71B8A63460080866F /* Extensions and Protocols */,
 				84A6CE911B8A37BF0080866F /* Enterprise */,
 				84A6CE961B8A37EB0080866F /* Visitors */,
@@ -640,8 +679,9 @@
 				5E552BBA1B70D06000C73298 /* BNPerson.m in Sources */,
 				84A6CE9E1B8A514E0080866F /* BNBigBoss.m in Sources */,
 				5E552BB81B70D06000C73298 /* BNClient.m in Sources */,
+				84C200021B9656FE0025F8DE /* BNEnterpriseTask8.m in Sources */,
 				84A6CEA61B8A517A0080866F /* BNWasher.m in Sources */,
-				84A6CEAB1B8A69200080866F /* BNObservableObject.m in Sources */,
+				84C2FFF81B9656780025F8DE /* BNObservableObject.m in Sources */,
 				84A6CE9A1B8A4C770080866F /* BNTest7.m in Sources */,
 				5E552BC61B70D09B00C73298 /* BNCarwash.m in Sources */,
 				5E7187571B6A3EE90008B805 /* NSString+BNExtensions.m in Sources */,
@@ -651,6 +691,7 @@
 				5E552BC21B70D06000C73298 /* BNStaff.m in Sources */,
 				84A6CEA21B8A51630080866F /* BNCashier.m in Sources */,
 				84A6CE8A1B8A37250080866F /* main.m in Sources */,
+				84C2FFFD1B96568A0025F8DE /* BNDispatcher.m in Sources */,
 				5E552BBC1B70D06000C73298 /* BNAccountant.m in Sources */,
 				84A6CE901B8A37BA0080866F /* BNEnterprise.m in Sources */,
 				84A6CE8C1B8A37250080866F /* BNEmployee.m in Sources */,
@@ -706,14 +747,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84A6CEAA1B8A69200080866F /* BNObservableObject.m in Sources */,
 				84A6CE891B8A37250080866F /* main.m in Sources */,
 				84A6CEA11B8A51630080866F /* BNCashier.m in Sources */,
 				84A6CE9D1B8A514E0080866F /* BNBigBoss.m in Sources */,
+				84C2FFF71B9656780025F8DE /* BNObservableObject.m in Sources */,
 				84A6CE8F1B8A37BA0080866F /* BNEnterprise.m in Sources */,
 				84A6CE941B8A37E70080866F /* BNVisitor.m in Sources */,
 				84A6CE8B1B8A37250080866F /* BNEmployee.m in Sources */,
 				84A6CE991B8A4C770080866F /* BNTest7.m in Sources */,
+				84C2FFFC1B96568A0025F8DE /* BNDispatcher.m in Sources */,
+				84C200011B9656FE0025F8DE /* BNEnterpriseTask8.m in Sources */,
 				84A6CEA51B8A517A0080866F /* BNWasher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

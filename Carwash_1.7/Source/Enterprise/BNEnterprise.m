@@ -39,7 +39,7 @@
 }
 
 #pragma mark -
-#pragma mark Init and Declare
+#pragma mark Initializations and Deallocations
 
 - (void)dealloc {
     self.bigBoss = nil;
@@ -54,7 +54,8 @@
                         cashiers:(NSArray *)cashiers
                          washers:(NSArray *)washers
 {
-    if (self = [super init]) {
+    self = [super init];
+    if (self) {
         self.bigBoss    = bigBoss;
         self.cashiers   = [NSMutableArray arrayWithArray:cashiers];
         self.washers    = [NSMutableArray arrayWithArray:washers];
@@ -69,7 +70,6 @@
         }
         
         for (BNCashier *cashier in self.cashiers) {
-//            [cashier addObserver:self];
             [cashier addObserver:self.bigBoss];
         }
         
@@ -108,10 +108,10 @@
 //    NSLog(kBNLogBecomeFree, [object class], object, object.processedObject, object.money);
     if ([object isKindOfClass:[BNWasher class]]) {
         @synchronized(self) {
-            id processObject = [self.visitorsQueue firstObject];
-            if (processObject && object.state == kBNObjectStateIsFree) {
+            id processedObject = [self.visitorsQueue firstObject];
+            if (processedObject && object.state == kBNObjectStateIsFree) {
                 [self.visitorsQueue removeObjectAtIndex:0];
-                [object performProcessWithObject:processObject];
+                [object performProcessWithObject:processedObject];
             }
         }
     }

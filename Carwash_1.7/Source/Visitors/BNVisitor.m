@@ -22,12 +22,12 @@
 }
 
 #pragma mark -
-#pragma mark Init and Declare
-//
-//- (void)dealloc {
-//
-//    [super dealloc];
-//}
+#pragma mark Initializations and Deallocations
+
+- (void)dealloc {
+
+    [super dealloc];
+}
 
 - (instancetype)initWithCleanCar:(BOOL)clean money:(float)money {
     self = [super init];

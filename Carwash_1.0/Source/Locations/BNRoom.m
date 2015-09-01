@@ -30,7 +30,7 @@
 }
 
 #pragma mark -
-#pragma mark Init and Declare
+#pragma mark Initializations and Deallocations
 
 - (void)dealloc {
     self.mutablePersons = nil;

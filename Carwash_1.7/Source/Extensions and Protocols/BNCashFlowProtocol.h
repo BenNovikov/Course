@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 BenNovikov. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
 #import "BNConstants.h"
 
 @protocol BNCashFlowProtocol <NSObject>

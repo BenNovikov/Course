@@ -29,8 +29,8 @@ NS_STRING_KEY(kBNLogCashierCountsMoney,     @"   %@ counts money: %5.2f");
 
 #define NS_INT_KEY(key, value) static int const key = value
 NS_INT_KEY(kBNNumberOfCashiers,     1);
-NS_INT_KEY(kBNNumberOfWashers,      50);
-NS_INT_KEY(kBNNumberOfCars,         500);
+NS_INT_KEY(kBNNumberOfWashers,      5);
+NS_INT_KEY(kBNNumberOfCars,         50);
 
 NS_INT_KEY(kBNDefaultVisitorsMoney, 100);
 NS_INT_KEY(kBNWasherSalary,         50);

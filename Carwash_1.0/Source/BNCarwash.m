@@ -32,7 +32,7 @@ static NSString const *kBNCarwashMessageBusyCarwash     = @"Dear %@! We are sorr
 }
 
 #pragma mark -
-#pragma mark Init and Declare
+#pragma mark Initializations and Deallocations
 
 - (void)dealloc {
     self.building = nil;

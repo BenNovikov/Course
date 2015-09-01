@@ -20,7 +20,7 @@ static uint64_t const kBNClientInitialMoney = 10000;
 }
 
 #pragma mark -
-#pragma mark Init and Declare
+#pragma mark Initializations and Deallocations
 
 //- (void)dealloc {
 //    

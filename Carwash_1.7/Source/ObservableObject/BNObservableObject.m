@@ -11,7 +11,7 @@
 @implementation BNObservableObject
 
 #pragma mark -
-#pragma mark Initialization and Declaration
+#pragma mark Initialization and Deallocation
 
 - (id)init {
     self = [super init];
