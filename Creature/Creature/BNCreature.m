@@ -1,6 +1,6 @@
 //
 //  BNCreature.m
-//  Human
+//  Course
 //
 //  Created by BenNovikov on 7/7/15.
 //  Copyright (c) 2015 ___BasicNotation___. All rights reserved.
@@ -30,7 +30,7 @@ static uint64_t const kBNAgeToStartSpeaking = 2;
 }
 
 #pragma mark -
-#pragma mark Init and Declare
+#pragma mark Initializations and Deallocations
 
 - (void)dealloc {
     self.name = nil;

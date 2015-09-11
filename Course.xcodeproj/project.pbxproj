@@ -7,6 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E552BB71B70D06000C73298 /* BNClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E552BAB1B70D06000C73298 /* BNClient.m */; };
+		5E552BB81B70D06000C73298 /* BNClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E552BAB1B70D06000C73298 /* BNClient.m */; };
+		5E552BB91B70D06000C73298 /* BNPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E552BAD1B70D06000C73298 /* BNPerson.m */; };
+		5E552BBA1B70D06000C73298 /* BNPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E552BAD1B70D06000C73298 /* BNPerson.m */; };
+		5E552BBB1B70D06000C73298 /* BNAccountant.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E552BB01B70D06000C73298 /* BNAccountant.m */; };
+		5E552BBC1B70D06000C73298 /* BNAccountant.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E552BB01B70D06000C73298 /* BNAccountant.m */; };
+		5E552BBD1B70D06000C73298 /* BNBoss.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E552BB21B70D06000C73298 /* BNBoss.m */; };
+		5E552BBE1B70D06000C73298 /* BNBoss.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E552BB21B70D06000C73298 /* BNBoss.m */; };
+		5E552BBF1B70D06000C73298 /* BNCarwasher.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E552BB41B70D06000C73298 /* BNCarwasher.m */; };
+		5E552BC01B70D06000C73298 /* BNCarwasher.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E552BB41B70D06000C73298 /* BNCarwasher.m */; };
+		5E552BC11B70D06000C73298 /* BNStaff.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E552BB61B70D06000C73298 /* BNStaff.m */; };
+		5E552BC21B70D06000C73298 /* BNStaff.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E552BB61B70D06000C73298 /* BNStaff.m */; };
+		5E552BC51B70D09B00C73298 /* BNCarwash.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E552BC41B70D09B00C73298 /* BNCarwash.m */; };
+		5E552BC61B70D09B00C73298 /* BNCarwash.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E552BC41B70D09B00C73298 /* BNCarwash.m */; };
+		5E7187521B6A3E9C0008B805 /* TestTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7187511B6A3E9C0008B805 /* TestTarget.m */; };
+		5E7187561B6A3ED10008B805 /* NSString+BNExtensionsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7187471B6A2ACD0008B805 /* NSString+BNExtensionsTest.m */; };
+		5E7187571B6A3EE90008B805 /* NSString+BNExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 845518C71B65772E00D21CFA /* NSString+BNExtensions.m */; };
+		843F1D881B60405D0001016B /* SuperPooperMegaWasherTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 843F1D871B60405D0001016B /* SuperPooperMegaWasherTest.m */; };
+		8443A6A61B6ED78B00FF9B09 /* BNAlphabet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8443A6A51B6ED78B00FF9B09 /* BNAlphabet.m */; };
+		8443A6AC1B6ED7B600FF9B09 /* BNRangeAlphabet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8443A6AB1B6ED7B600FF9B09 /* BNRangeAlphabet.m */; };
+		8443A6AF1B6ED7DC00FF9B09 /* BNArrayAlphabet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8443A6AE1B6ED7DC00FF9B09 /* BNArrayAlphabet.m */; };
+		8443A6B21B6ED7F000FF9B09 /* BNStringAlphabet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8443A6B11B6ED7F000FF9B09 /* BNStringAlphabet.m */; };
+		8443A6B51B6EE40100FF9B09 /* BNDictionaryAlphabet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8443A6B41B6EE40100FF9B09 /* BNDictionaryAlphabet.m */; };
+		8443A6B71B6FB59E00FF9B09 /* BNStringExtensionsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8443A6B61B6FB59E00FF9B09 /* BNStringExtensionsTest.m */; };
+		845518C21B6576AA00D21CFA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 845518C11B6576AA00D21CFA /* main.m */; };
+		845518C81B65772E00D21CFA /* NSString+BNExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 845518C71B65772E00D21CFA /* NSString+BNExtensions.m */; };
 		845AB2481B5F07470076828E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AB2471B5F07470076828E /* main.m */; };
 		845AB2551B5F076F0076828E /* BNCreature.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AB24E1B5F076F0076828E /* BNCreature.m */; };
 		845AB2561B5F076F0076828E /* BNFemaleCreature.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AB2501B5F076F0076828E /* BNFemaleCreature.m */; };
@@ -14,17 +40,41 @@
 		845AB2581B5F076F0076828E /* NSObject+BNExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AB2541B5F076F0076828E /* NSObject+BNExtensions.m */; };
 		845AB2611B5F09B10076828E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AB2601B5F09B10076828E /* main.m */; };
 		845AB27A1B5F09D80076828E /* BNBuilding.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AB2681B5F09D80076828E /* BNBuilding.m */; };
-		845AB27B1B5F09D80076828E /* BNCarwash.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AB26A1B5F09D80076828E /* BNCarwash.m */; };
 		845AB27C1B5F09D80076828E /* BNRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AB26C1B5F09D80076828E /* BNRoom.m */; };
-		845AB27D1B5F09D80076828E /* BNAccountant.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AB26F1B5F09D80076828E /* BNAccountant.m */; };
-		845AB27E1B5F09D80076828E /* BNCarwasher.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AB2711B5F09D80076828E /* BNCarwasher.m */; };
-		845AB27F1B5F09D80076828E /* BNClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AB2731B5F09D80076828E /* BNClient.m */; };
-		845AB2801B5F09D80076828E /* BNManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AB2751B5F09D80076828E /* BNManager.m */; };
-		845AB2811B5F09D80076828E /* BNPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AB2771B5F09D80076828E /* BNPerson.m */; };
-		845AB2821B5F09D80076828E /* BNStaff.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AB2791B5F09D80076828E /* BNStaff.m */; };
+		84A6CE891B8A37250080866F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A6CE831B8A37250080866F /* main.m */; };
+		84A6CE8A1B8A37250080866F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A6CE831B8A37250080866F /* main.m */; };
+		84A6CE8B1B8A37250080866F /* BNEmployee.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A6CE871B8A37250080866F /* BNEmployee.m */; };
+		84A6CE8C1B8A37250080866F /* BNEmployee.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A6CE871B8A37250080866F /* BNEmployee.m */; };
+		84A6CE8F1B8A37BA0080866F /* BNEnterprise.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A6CE8E1B8A37BA0080866F /* BNEnterprise.m */; };
+		84A6CE901B8A37BA0080866F /* BNEnterprise.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A6CE8E1B8A37BA0080866F /* BNEnterprise.m */; };
+		84A6CE941B8A37E70080866F /* BNVisitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A6CE931B8A37E70080866F /* BNVisitor.m */; };
+		84A6CE951B8A37E70080866F /* BNVisitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A6CE931B8A37E70080866F /* BNVisitor.m */; };
+		84A6CE991B8A4C770080866F /* BNTest7.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A6CE981B8A4C770080866F /* BNTest7.m */; };
+		84A6CE9A1B8A4C770080866F /* BNTest7.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A6CE981B8A4C770080866F /* BNTest7.m */; };
+		84A6CE9D1B8A514E0080866F /* BNBigBoss.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A6CE9C1B8A514E0080866F /* BNBigBoss.m */; };
+		84A6CE9E1B8A514E0080866F /* BNBigBoss.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A6CE9C1B8A514E0080866F /* BNBigBoss.m */; };
+		84A6CEA11B8A51630080866F /* BNCashier.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A6CEA01B8A51630080866F /* BNCashier.m */; };
+		84A6CEA21B8A51630080866F /* BNCashier.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A6CEA01B8A51630080866F /* BNCashier.m */; };
+		84A6CEA51B8A517A0080866F /* BNWasher.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A6CEA41B8A517A0080866F /* BNWasher.m */; };
+		84A6CEA61B8A517A0080866F /* BNWasher.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A6CEA41B8A517A0080866F /* BNWasher.m */; };
+		84C200011B9656FE0025F8DE /* BNEnterpriseTask8.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C200001B9656FE0025F8DE /* BNEnterpriseTask8.m */; };
+		84C200021B9656FE0025F8DE /* BNEnterpriseTask8.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C200001B9656FE0025F8DE /* BNEnterpriseTask8.m */; };
+		84C2FFF71B9656780025F8DE /* BNObservableObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C2FFF61B9656780025F8DE /* BNObservableObject.m */; };
+		84C2FFF81B9656780025F8DE /* BNObservableObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C2FFF61B9656780025F8DE /* BNObservableObject.m */; };
+		84C2FFFC1B96568A0025F8DE /* BNDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C2FFFB1B96568A0025F8DE /* BNDispatcher.m */; };
+		84C2FFFD1B96568A0025F8DE /* BNDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C2FFFB1B96568A0025F8DE /* BNDispatcher.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		845518BD1B6576AA00D21CFA /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		845AB2431B5F07470076828E /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -43,9 +93,54 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		84A6CE791B8A36FE0080866F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5E552BAA1B70D06000C73298 /* BNClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNClient.h; sourceTree = "<group>"; };
+		5E552BAB1B70D06000C73298 /* BNClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNClient.m; sourceTree = "<group>"; };
+		5E552BAC1B70D06000C73298 /* BNPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNPerson.h; sourceTree = "<group>"; };
+		5E552BAD1B70D06000C73298 /* BNPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNPerson.m; sourceTree = "<group>"; };
+		5E552BAF1B70D06000C73298 /* BNAccountant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNAccountant.h; sourceTree = "<group>"; };
+		5E552BB01B70D06000C73298 /* BNAccountant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNAccountant.m; sourceTree = "<group>"; };
+		5E552BB11B70D06000C73298 /* BNBoss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNBoss.h; sourceTree = "<group>"; };
+		5E552BB21B70D06000C73298 /* BNBoss.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNBoss.m; sourceTree = "<group>"; };
+		5E552BB31B70D06000C73298 /* BNCarwasher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNCarwasher.h; sourceTree = "<group>"; };
+		5E552BB41B70D06000C73298 /* BNCarwasher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNCarwasher.m; sourceTree = "<group>"; };
+		5E552BB51B70D06000C73298 /* BNStaff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNStaff.h; sourceTree = "<group>"; };
+		5E552BB61B70D06000C73298 /* BNStaff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNStaff.m; sourceTree = "<group>"; };
+		5E552BC31B70D09B00C73298 /* BNCarwash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNCarwash.h; sourceTree = "<group>"; };
+		5E552BC41B70D09B00C73298 /* BNCarwash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNCarwash.m; sourceTree = "<group>"; };
+		5E7187471B6A2ACD0008B805 /* NSString+BNExtensionsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+BNExtensionsTest.m"; path = "Test/NSString+BNExtensionsTest.m"; sourceTree = "<group>"; };
+		5E71874D1B6A3E9C0008B805 /* TestTarget.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestTarget.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E7187501B6A3E9C0008B805 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E7187511B6A3E9C0008B805 /* TestTarget.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTarget.m; sourceTree = "<group>"; };
+		843F1D861B60405D0001016B /* SuperPooperMegaWasherTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SuperPooperMegaWasherTest.h; path = Tests/SuperPooperMegaWasherTest.h; sourceTree = "<group>"; };
+		843F1D871B60405D0001016B /* SuperPooperMegaWasherTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SuperPooperMegaWasherTest.m; path = Tests/SuperPooperMegaWasherTest.m; sourceTree = "<group>"; };
+		8443A6A41B6ED78B00FF9B09 /* BNAlphabet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BNAlphabet.h; path = Alphabet/Source/BNAlphabet.h; sourceTree = SOURCE_ROOT; };
+		8443A6A51B6ED78B00FF9B09 /* BNAlphabet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BNAlphabet.m; path = Alphabet/Source/BNAlphabet.m; sourceTree = SOURCE_ROOT; };
+		8443A6AA1B6ED7B600FF9B09 /* BNRangeAlphabet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRangeAlphabet.h; sourceTree = "<group>"; };
+		8443A6AB1B6ED7B600FF9B09 /* BNRangeAlphabet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRangeAlphabet.m; sourceTree = "<group>"; };
+		8443A6AD1B6ED7DC00FF9B09 /* BNArrayAlphabet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNArrayAlphabet.h; sourceTree = "<group>"; };
+		8443A6AE1B6ED7DC00FF9B09 /* BNArrayAlphabet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNArrayAlphabet.m; sourceTree = "<group>"; };
+		8443A6B01B6ED7F000FF9B09 /* BNStringAlphabet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNStringAlphabet.h; sourceTree = "<group>"; };
+		8443A6B11B6ED7F000FF9B09 /* BNStringAlphabet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNStringAlphabet.m; sourceTree = "<group>"; };
+		8443A6B31B6EE40100FF9B09 /* BNDictionaryAlphabet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNDictionaryAlphabet.h; sourceTree = "<group>"; };
+		8443A6B41B6EE40100FF9B09 /* BNDictionaryAlphabet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNDictionaryAlphabet.m; sourceTree = "<group>"; };
+		8443A6B61B6FB59E00FF9B09 /* BNStringExtensionsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BNStringExtensionsTest.m; path = Tests/BNStringExtensionsTest.m; sourceTree = "<group>"; };
+		8443A6B91B6FB5FB00FF9B09 /* BNStringExtensionsTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNStringExtensionsTest.h; sourceTree = "<group>"; };
+		845518BF1B6576AA00D21CFA /* StringExtension */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = StringExtension; sourceTree = BUILT_PRODUCTS_DIR; };
+		845518C11B6576AA00D21CFA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		845518C61B65772E00D21CFA /* NSString+BNExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+BNExtensions.h"; path = "Source/NSString+BNExtensions.h"; sourceTree = "<group>"; };
+		845518C71B65772E00D21CFA /* NSString+BNExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+BNExtensions.m"; path = "Source/NSString+BNExtensions.m"; sourceTree = "<group>"; };
 		845AB2451B5F07470076828E /* Creature */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Creature; sourceTree = BUILT_PRODUCTS_DIR; };
 		845AB2471B5F07470076828E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		845AB24D1B5F076F0076828E /* BNCreature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNCreature.h; sourceTree = "<group>"; };
@@ -61,25 +156,50 @@
 		845AB2601B5F09B10076828E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		845AB2671B5F09D80076828E /* BNBuilding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNBuilding.h; sourceTree = "<group>"; };
 		845AB2681B5F09D80076828E /* BNBuilding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNBuilding.m; sourceTree = "<group>"; };
-		845AB2691B5F09D80076828E /* BNCarwash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNCarwash.h; sourceTree = "<group>"; };
-		845AB26A1B5F09D80076828E /* BNCarwash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNCarwash.m; sourceTree = "<group>"; };
 		845AB26B1B5F09D80076828E /* BNRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRoom.h; sourceTree = "<group>"; };
 		845AB26C1B5F09D80076828E /* BNRoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRoom.m; sourceTree = "<group>"; };
-		845AB26E1B5F09D80076828E /* BNAccountant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNAccountant.h; sourceTree = "<group>"; };
-		845AB26F1B5F09D80076828E /* BNAccountant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNAccountant.m; sourceTree = "<group>"; };
-		845AB2701B5F09D80076828E /* BNCarwasher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNCarwasher.h; sourceTree = "<group>"; };
-		845AB2711B5F09D80076828E /* BNCarwasher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNCarwasher.m; sourceTree = "<group>"; };
-		845AB2721B5F09D80076828E /* BNClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNClient.h; sourceTree = "<group>"; };
-		845AB2731B5F09D80076828E /* BNClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNClient.m; sourceTree = "<group>"; };
-		845AB2741B5F09D80076828E /* BNManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNManager.h; sourceTree = "<group>"; };
-		845AB2751B5F09D80076828E /* BNManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNManager.m; sourceTree = "<group>"; };
-		845AB2761B5F09D80076828E /* BNPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNPerson.h; sourceTree = "<group>"; };
-		845AB2771B5F09D80076828E /* BNPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNPerson.m; sourceTree = "<group>"; };
-		845AB2781B5F09D80076828E /* BNStaff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNStaff.h; sourceTree = "<group>"; };
-		845AB2791B5F09D80076828E /* BNStaff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNStaff.m; sourceTree = "<group>"; };
+		84A6CE7B1B8A36FE0080866F /* Carwash_1.7 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Carwash_1.7; sourceTree = BUILT_PRODUCTS_DIR; };
+		84A6CE831B8A37250080866F /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		84A6CE861B8A37250080866F /* BNEmployee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNEmployee.h; sourceTree = "<group>"; };
+		84A6CE871B8A37250080866F /* BNEmployee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNEmployee.m; sourceTree = "<group>"; };
+		84A6CE8D1B8A37BA0080866F /* BNEnterprise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BNEnterprise.h; path = Enterprise/BNEnterprise.h; sourceTree = "<group>"; };
+		84A6CE8E1B8A37BA0080866F /* BNEnterprise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BNEnterprise.m; path = Enterprise/BNEnterprise.m; sourceTree = "<group>"; };
+		84A6CE921B8A37E70080866F /* BNVisitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BNVisitor.h; path = Visitors/BNVisitor.h; sourceTree = "<group>"; };
+		84A6CE931B8A37E70080866F /* BNVisitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BNVisitor.m; path = Visitors/BNVisitor.m; sourceTree = "<group>"; };
+		84A6CE971B8A4C770080866F /* BNTest7.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNTest7.h; sourceTree = "<group>"; };
+		84A6CE981B8A4C770080866F /* BNTest7.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNTest7.m; sourceTree = "<group>"; };
+		84A6CE9B1B8A514E0080866F /* BNBigBoss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNBigBoss.h; sourceTree = "<group>"; };
+		84A6CE9C1B8A514E0080866F /* BNBigBoss.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNBigBoss.m; sourceTree = "<group>"; };
+		84A6CE9F1B8A51630080866F /* BNCashier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNCashier.h; sourceTree = "<group>"; };
+		84A6CEA01B8A51630080866F /* BNCashier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNCashier.m; sourceTree = "<group>"; };
+		84A6CEA31B8A517A0080866F /* BNWasher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNWasher.h; sourceTree = "<group>"; };
+		84A6CEA41B8A517A0080866F /* BNWasher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNWasher.m; sourceTree = "<group>"; };
+		84C200001B9656FE0025F8DE /* BNEnterpriseTask8.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNEnterpriseTask8.m; sourceTree = "<group>"; };
+		84C2FFF51B9656780025F8DE /* BNObservableObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNObservableObject.h; sourceTree = "<group>"; };
+		84C2FFF61B9656780025F8DE /* BNObservableObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNObservableObject.m; sourceTree = "<group>"; };
+		84C2FFFA1B96568A0025F8DE /* BNDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNDispatcher.h; sourceTree = "<group>"; };
+		84C2FFFB1B96568A0025F8DE /* BNDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNDispatcher.m; sourceTree = "<group>"; };
+		84C2FFFF1B9656FE0025F8DE /* BNEnterpriseTask8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNEnterpriseTask8.h; sourceTree = "<group>"; };
+		84DD0C7F1B8CC99D00009629 /* BNStateProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BNStateProtocol.h; path = "Extensions and Protocols/BNStateProtocol.h"; sourceTree = "<group>"; };
+		84DD0C801B8D02A300009629 /* BNCashFlowProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BNCashFlowProtocol.h; path = "Extensions and Protocols/BNCashFlowProtocol.h"; sourceTree = "<group>"; };
+		84DFD2441B8BC0600089BB64 /* BNConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BNConstants.h; path = "Extensions and Protocols/BNConstants.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5E71874A1B6A3E9C0008B805 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		845518BC1B6576AA00D21CFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		845AB2421B5F07470076828E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -94,15 +214,134 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		84A6CE781B8A36FE0080866F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E552BA91B70D06000C73298 /* Persons */ = {
+			isa = PBXGroup;
+			children = (
+				5E552BAA1B70D06000C73298 /* BNClient.h */,
+				5E552BAB1B70D06000C73298 /* BNClient.m */,
+				5E552BAC1B70D06000C73298 /* BNPerson.h */,
+				5E552BAD1B70D06000C73298 /* BNPerson.m */,
+				5E552BAE1B70D06000C73298 /* Staff */,
+			);
+			path = Persons;
+			sourceTree = "<group>";
+		};
+		5E552BAE1B70D06000C73298 /* Staff */ = {
+			isa = PBXGroup;
+			children = (
+				5E552BAF1B70D06000C73298 /* BNAccountant.h */,
+				5E552BB01B70D06000C73298 /* BNAccountant.m */,
+				5E552BB11B70D06000C73298 /* BNBoss.h */,
+				5E552BB21B70D06000C73298 /* BNBoss.m */,
+				5E552BB31B70D06000C73298 /* BNCarwasher.h */,
+				5E552BB41B70D06000C73298 /* BNCarwasher.m */,
+				5E552BB51B70D06000C73298 /* BNStaff.h */,
+				5E552BB61B70D06000C73298 /* BNStaff.m */,
+			);
+			path = Staff;
+			sourceTree = "<group>";
+		};
+		5E71874E1B6A3E9C0008B805 /* TestTarget */ = {
+			isa = PBXGroup;
+			children = (
+				5E7187511B6A3E9C0008B805 /* TestTarget.m */,
+				5E71874F1B6A3E9C0008B805 /* Supporting Files */,
+			);
+			path = TestTarget;
+			sourceTree = "<group>";
+		};
+		5E71874F1B6A3E9C0008B805 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5E7187501B6A3E9C0008B805 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		843F1D891B6040660001016B /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				843F1D861B60405D0001016B /* SuperPooperMegaWasherTest.h */,
+				843F1D871B60405D0001016B /* SuperPooperMegaWasherTest.m */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+		8443A6A71B6ED79300FF9B09 /* Alphabet */ = {
+			isa = PBXGroup;
+			children = (
+				8443A6A81B6ED7A000FF9B09 /* Source */,
+				8443A6B81B6FB5A700FF9B09 /* Tests */,
+			);
+			name = Alphabet;
+			sourceTree = "<group>";
+		};
+		8443A6A81B6ED7A000FF9B09 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				845518C11B6576AA00D21CFA /* main.m */,
+				8443A6A41B6ED78B00FF9B09 /* BNAlphabet.h */,
+				8443A6A51B6ED78B00FF9B09 /* BNAlphabet.m */,
+				845518C61B65772E00D21CFA /* NSString+BNExtensions.h */,
+				845518C71B65772E00D21CFA /* NSString+BNExtensions.m */,
+				8443A6A91B6ED7B600FF9B09 /* Private */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		8443A6A91B6ED7B600FF9B09 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				8443A6AA1B6ED7B600FF9B09 /* BNRangeAlphabet.h */,
+				8443A6AB1B6ED7B600FF9B09 /* BNRangeAlphabet.m */,
+				8443A6B01B6ED7F000FF9B09 /* BNStringAlphabet.h */,
+				8443A6B11B6ED7F000FF9B09 /* BNStringAlphabet.m */,
+				8443A6AD1B6ED7DC00FF9B09 /* BNArrayAlphabet.h */,
+				8443A6AE1B6ED7DC00FF9B09 /* BNArrayAlphabet.m */,
+				8443A6B31B6EE40100FF9B09 /* BNDictionaryAlphabet.h */,
+				8443A6B41B6EE40100FF9B09 /* BNDictionaryAlphabet.m */,
+			);
+			name = Private;
+			path = Alphabet/Source/Private;
+			sourceTree = SOURCE_ROOT;
+		};
+		8443A6B81B6FB5A700FF9B09 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				8443A6B61B6FB59E00FF9B09 /* BNStringExtensionsTest.m */,
+				8443A6B91B6FB5FB00FF9B09 /* BNStringExtensionsTest.h */,
+				5E7187471B6A2ACD0008B805 /* NSString+BNExtensionsTest.m */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+		845518C01B6576AA00D21CFA /* StringExtension */ = {
+			isa = PBXGroup;
+			children = (
+				8443A6A71B6ED79300FF9B09 /* Alphabet */,
+			);
+			path = StringExtension;
+			sourceTree = "<group>";
+		};
 		845AB2051B5F05450076828E = {
 			isa = PBXGroup;
 			children = (
 				845AB2591B5F091A0076828E /* Tasks */,
 				845AB2461B5F07470076828E /* Creature */,
 				845AB25F1B5F09B10076828E /* Carwash_1.0 */,
+				84A6CE821B8A37250080866F /* Carwash_1.7 */,
+				845518C01B6576AA00D21CFA /* StringExtension */,
+				5E71874E1B6A3E9C0008B805 /* TestTarget */,
 				845AB20F1B5F05450076828E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -112,6 +351,9 @@
 			children = (
 				845AB2451B5F07470076828E /* Creature */,
 				845AB25E1B5F09B00076828E /* Carwash_1.0 */,
+				845518BF1B6576AA00D21CFA /* StringExtension */,
+				5E71874D1B6A3E9C0008B805 /* TestTarget.xctest */,
+				84A6CE7B1B8A36FE0080866F /* Carwash_1.7 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -145,6 +387,7 @@
 			children = (
 				845AB2651B5F09D80076828E /* Source */,
 				845AB2601B5F09B10076828E /* main.m */,
+				843F1D891B6040660001016B /* Tests */,
 			);
 			path = Carwash_1.0;
 			sourceTree = "<group>";
@@ -152,8 +395,10 @@
 		845AB2651B5F09D80076828E /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				5E552BC31B70D09B00C73298 /* BNCarwash.h */,
+				5E552BC41B70D09B00C73298 /* BNCarwash.m */,
+				5E552BA91B70D06000C73298 /* Persons */,
 				845AB2661B5F09D80076828E /* Locations */,
-				845AB26D1B5F09D80076828E /* People */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -163,36 +408,159 @@
 			children = (
 				845AB2671B5F09D80076828E /* BNBuilding.h */,
 				845AB2681B5F09D80076828E /* BNBuilding.m */,
-				845AB2691B5F09D80076828E /* BNCarwash.h */,
-				845AB26A1B5F09D80076828E /* BNCarwash.m */,
 				845AB26B1B5F09D80076828E /* BNRoom.h */,
 				845AB26C1B5F09D80076828E /* BNRoom.m */,
 			);
 			path = Locations;
 			sourceTree = "<group>";
 		};
-		845AB26D1B5F09D80076828E /* People */ = {
+		84A6CE821B8A37250080866F /* Carwash_1.7 */ = {
 			isa = PBXGroup;
 			children = (
-				845AB26E1B5F09D80076828E /* BNAccountant.h */,
-				845AB26F1B5F09D80076828E /* BNAccountant.m */,
-				845AB2701B5F09D80076828E /* BNCarwasher.h */,
-				845AB2711B5F09D80076828E /* BNCarwasher.m */,
-				845AB2721B5F09D80076828E /* BNClient.h */,
-				845AB2731B5F09D80076828E /* BNClient.m */,
-				845AB2741B5F09D80076828E /* BNManager.h */,
-				845AB2751B5F09D80076828E /* BNManager.m */,
-				845AB2761B5F09D80076828E /* BNPerson.h */,
-				845AB2771B5F09D80076828E /* BNPerson.m */,
-				845AB2781B5F09D80076828E /* BNStaff.h */,
-				845AB2791B5F09D80076828E /* BNStaff.m */,
+				84DFD2361B8B95830089BB64 /* Source */,
+				84A6CE831B8A37250080866F /* main.m */,
+				84C2FFFE1B9656FE0025F8DE /* EnterpriseTask8 */,
+				84C2FFF91B96568A0025F8DE /* Dispatcher */,
+				84A6CE881B8A37250080866F /* Tests */,
 			);
-			path = People;
+			path = Carwash_1.7;
+			sourceTree = SOURCE_ROOT;
+		};
+		84A6CE851B8A37250080866F /* Employees */ = {
+			isa = PBXGroup;
+			children = (
+				84A6CE861B8A37250080866F /* BNEmployee.h */,
+				84A6CE871B8A37250080866F /* BNEmployee.m */,
+				84A6CEA31B8A517A0080866F /* BNWasher.h */,
+				84A6CEA41B8A517A0080866F /* BNWasher.m */,
+				84A6CE9B1B8A514E0080866F /* BNBigBoss.h */,
+				84A6CE9C1B8A514E0080866F /* BNBigBoss.m */,
+				84A6CE9F1B8A51630080866F /* BNCashier.h */,
+				84A6CEA01B8A51630080866F /* BNCashier.m */,
+			);
+			name = Employees;
+			path = Source/Employees;
+			sourceTree = "<group>";
+		};
+		84A6CE881B8A37250080866F /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				84A6CE971B8A4C770080866F /* BNTest7.h */,
+				84A6CE981B8A4C770080866F /* BNTest7.m */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		84A6CE911B8A37BF0080866F /* Enterprise */ = {
+			isa = PBXGroup;
+			children = (
+				84A6CE8D1B8A37BA0080866F /* BNEnterprise.h */,
+				84A6CE8E1B8A37BA0080866F /* BNEnterprise.m */,
+			);
+			name = Enterprise;
+			path = Source;
+			sourceTree = "<group>";
+		};
+		84A6CE961B8A37EB0080866F /* Visitors */ = {
+			isa = PBXGroup;
+			children = (
+				84A6CE921B8A37E70080866F /* BNVisitor.h */,
+				84A6CE931B8A37E70080866F /* BNVisitor.m */,
+			);
+			name = Visitors;
+			path = Source;
+			sourceTree = "<group>";
+		};
+		84A6CEA71B8A63460080866F /* Extensions and Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				84DD0C801B8D02A300009629 /* BNCashFlowProtocol.h */,
+				84DD0C7F1B8CC99D00009629 /* BNStateProtocol.h */,
+				84DFD2441B8BC0600089BB64 /* BNConstants.h */,
+			);
+			name = "Extensions and Protocols";
+			path = Source;
+			sourceTree = "<group>";
+		};
+		84C2FFF41B9656780025F8DE /* ObservableObject */ = {
+			isa = PBXGroup;
+			children = (
+				84C2FFF51B9656780025F8DE /* BNObservableObject.h */,
+				84C2FFF61B9656780025F8DE /* BNObservableObject.m */,
+			);
+			name = ObservableObject;
+			path = Source/ObservableObject;
+			sourceTree = "<group>";
+		};
+		84C2FFF91B96568A0025F8DE /* Dispatcher */ = {
+			isa = PBXGroup;
+			children = (
+				84C2FFFA1B96568A0025F8DE /* BNDispatcher.h */,
+				84C2FFFB1B96568A0025F8DE /* BNDispatcher.m */,
+			);
+			name = Dispatcher;
+			path = Source/Dispatcher;
+			sourceTree = "<group>";
+		};
+		84C2FFFE1B9656FE0025F8DE /* EnterpriseTask8 */ = {
+			isa = PBXGroup;
+			children = (
+				84C2FFFF1B9656FE0025F8DE /* BNEnterpriseTask8.h */,
+				84C200001B9656FE0025F8DE /* BNEnterpriseTask8.m */,
+			);
+			name = EnterpriseTask8;
+			path = Source/EnterpriseTask8;
+			sourceTree = "<group>";
+		};
+		84DFD2361B8B95830089BB64 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				84C2FFF41B9656780025F8DE /* ObservableObject */,
+				84A6CEA71B8A63460080866F /* Extensions and Protocols */,
+				84A6CE911B8A37BF0080866F /* Enterprise */,
+				84A6CE961B8A37EB0080866F /* Visitors */,
+				84A6CE851B8A37250080866F /* Employees */,
+			);
+			name = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		5E71874C1B6A3E9C0008B805 /* TestTarget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E7187531B6A3E9C0008B805 /* Build configuration list for PBXNativeTarget "TestTarget" */;
+			buildPhases = (
+				5E7187491B6A3E9C0008B805 /* Sources */,
+				5E71874A1B6A3E9C0008B805 /* Frameworks */,
+				5E71874B1B6A3E9C0008B805 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TestTarget;
+			productName = TestTarget;
+			productReference = 5E71874D1B6A3E9C0008B805 /* TestTarget.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		845518BE1B6576AA00D21CFA /* StringExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 845518C51B6576AB00D21CFA /* Build configuration list for PBXNativeTarget "StringExtension" */;
+			buildPhases = (
+				845518BB1B6576AA00D21CFA /* Sources */,
+				845518BC1B6576AA00D21CFA /* Frameworks */,
+				845518BD1B6576AA00D21CFA /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StringExtension;
+			productName = StringExtension;
+			productReference = 845518BF1B6576AA00D21CFA /* StringExtension */;
+			productType = "com.apple.product-type.tool";
+		};
 		845AB2441B5F07470076828E /* Creature */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 845AB2491B5F07470076828E /* Build configuration list for PBXNativeTarget "Creature" */;
@@ -227,6 +595,23 @@
 			productReference = 845AB25E1B5F09B00076828E /* Carwash_1.0 */;
 			productType = "com.apple.product-type.tool";
 		};
+		84A6CE7A1B8A36FE0080866F /* Carwash_1.7 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84A6CE811B8A36FE0080866F /* Build configuration list for PBXNativeTarget "Carwash_1.7" */;
+			buildPhases = (
+				84A6CE771B8A36FE0080866F /* Sources */,
+				84A6CE781B8A36FE0080866F /* Frameworks */,
+				84A6CE791B8A36FE0080866F /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Carwash_1.7;
+			productName = Carwash_1.7;
+			productReference = 84A6CE7B1B8A36FE0080866F /* Carwash_1.7 */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -236,10 +621,19 @@
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = BenNovikov;
 				TargetAttributes = {
+					5E71874C1B6A3E9C0008B805 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					845518BE1B6576AA00D21CFA = {
+						CreatedOnToolsVersion = 6.4;
+					};
 					845AB2441B5F07470076828E = {
 						CreatedOnToolsVersion = 6.4;
 					};
 					845AB25D1B5F09B00076828E = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					84A6CE7A1B8A36FE0080866F = {
 						CreatedOnToolsVersion = 6.4;
 					};
 				};
@@ -258,11 +652,67 @@
 			targets = (
 				845AB2441B5F07470076828E /* Creature */,
 				845AB25D1B5F09B00076828E /* Carwash_1.0 */,
+				84A6CE7A1B8A36FE0080866F /* Carwash_1.7 */,
+				845518BE1B6576AA00D21CFA /* StringExtension */,
+				5E71874C1B6A3E9C0008B805 /* TestTarget */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		5E71874B1B6A3E9C0008B805 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		5E7187491B6A3E9C0008B805 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84A6CE951B8A37E70080866F /* BNVisitor.m in Sources */,
+				5E552BC01B70D06000C73298 /* BNCarwasher.m in Sources */,
+				5E552BBA1B70D06000C73298 /* BNPerson.m in Sources */,
+				84A6CE9E1B8A514E0080866F /* BNBigBoss.m in Sources */,
+				5E552BB81B70D06000C73298 /* BNClient.m in Sources */,
+				84C200021B9656FE0025F8DE /* BNEnterpriseTask8.m in Sources */,
+				84A6CEA61B8A517A0080866F /* BNWasher.m in Sources */,
+				84C2FFF81B9656780025F8DE /* BNObservableObject.m in Sources */,
+				84A6CE9A1B8A4C770080866F /* BNTest7.m in Sources */,
+				5E552BC61B70D09B00C73298 /* BNCarwash.m in Sources */,
+				5E7187571B6A3EE90008B805 /* NSString+BNExtensions.m in Sources */,
+				5E7187521B6A3E9C0008B805 /* TestTarget.m in Sources */,
+				5E7187561B6A3ED10008B805 /* NSString+BNExtensionsTest.m in Sources */,
+				5E552BBE1B70D06000C73298 /* BNBoss.m in Sources */,
+				5E552BC21B70D06000C73298 /* BNStaff.m in Sources */,
+				84A6CEA21B8A51630080866F /* BNCashier.m in Sources */,
+				84A6CE8A1B8A37250080866F /* main.m in Sources */,
+				84C2FFFD1B96568A0025F8DE /* BNDispatcher.m in Sources */,
+				5E552BBC1B70D06000C73298 /* BNAccountant.m in Sources */,
+				84A6CE901B8A37BA0080866F /* BNEnterprise.m in Sources */,
+				84A6CE8C1B8A37250080866F /* BNEmployee.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		845518BB1B6576AA00D21CFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8443A6AF1B6ED7DC00FF9B09 /* BNArrayAlphabet.m in Sources */,
+				845518C21B6576AA00D21CFA /* main.m in Sources */,
+				8443A6B71B6FB59E00FF9B09 /* BNStringExtensionsTest.m in Sources */,
+				845518C81B65772E00D21CFA /* NSString+BNExtensions.m in Sources */,
+				8443A6B21B6ED7F000FF9B09 /* BNStringAlphabet.m in Sources */,
+				8443A6AC1B6ED7B600FF9B09 /* BNRangeAlphabet.m in Sources */,
+				8443A6B51B6EE40100FF9B09 /* BNDictionaryAlphabet.m in Sources */,
+				8443A6A61B6ED78B00FF9B09 /* BNAlphabet.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		845AB2411B5F07470076828E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -279,22 +729,96 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				845AB2821B5F09D80076828E /* BNStaff.m in Sources */,
+				5E552BB71B70D06000C73298 /* BNClient.m in Sources */,
+				5E552BC51B70D09B00C73298 /* BNCarwash.m in Sources */,
+				5E552BBB1B70D06000C73298 /* BNAccountant.m in Sources */,
+				5E552BC11B70D06000C73298 /* BNStaff.m in Sources */,
+				5E552BBF1B70D06000C73298 /* BNCarwasher.m in Sources */,
+				5E552BB91B70D06000C73298 /* BNPerson.m in Sources */,
 				845AB27C1B5F09D80076828E /* BNRoom.m in Sources */,
-				845AB2811B5F09D80076828E /* BNPerson.m in Sources */,
-				845AB2801B5F09D80076828E /* BNManager.m in Sources */,
-				845AB27B1B5F09D80076828E /* BNCarwash.m in Sources */,
 				845AB2611B5F09B10076828E /* main.m in Sources */,
-				845AB27F1B5F09D80076828E /* BNClient.m in Sources */,
-				845AB27D1B5F09D80076828E /* BNAccountant.m in Sources */,
-				845AB27E1B5F09D80076828E /* BNCarwasher.m in Sources */,
+				843F1D881B60405D0001016B /* SuperPooperMegaWasherTest.m in Sources */,
 				845AB27A1B5F09D80076828E /* BNBuilding.m in Sources */,
+				5E552BBD1B70D06000C73298 /* BNBoss.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84A6CE771B8A36FE0080866F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84A6CE891B8A37250080866F /* main.m in Sources */,
+				84A6CEA11B8A51630080866F /* BNCashier.m in Sources */,
+				84A6CE9D1B8A514E0080866F /* BNBigBoss.m in Sources */,
+				84C2FFF71B9656780025F8DE /* BNObservableObject.m in Sources */,
+				84A6CE8F1B8A37BA0080866F /* BNEnterprise.m in Sources */,
+				84A6CE941B8A37E70080866F /* BNVisitor.m in Sources */,
+				84A6CE8B1B8A37250080866F /* BNEmployee.m in Sources */,
+				84A6CE991B8A4C770080866F /* BNTest7.m in Sources */,
+				84C2FFFC1B96568A0025F8DE /* BNDispatcher.m in Sources */,
+				84C200011B9656FE0025F8DE /* BNEnterpriseTask8.m in Sources */,
+				84A6CEA51B8A517A0080866F /* BNWasher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		5E7187541B6A3E9C0008B805 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TestTarget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5E7187551B6A3E9C0008B805 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TestTarget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		845518C31B6576AA00D21CFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		845518C41B6576AA00D21CFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		845AB2131B5F05450076828E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -412,9 +936,47 @@
 			};
 			name = Release;
 		};
+		84A6CE7F1B8A36FE0080866F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		84A6CE801B8A36FE0080866F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5E7187531B6A3E9C0008B805 /* Build configuration list for PBXNativeTarget "TestTarget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E7187541B6A3E9C0008B805 /* Debug */,
+				5E7187551B6A3E9C0008B805 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		845518C51B6576AB00D21CFA /* Build configuration list for PBXNativeTarget "StringExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				845518C31B6576AA00D21CFA /* Debug */,
+				845518C41B6576AA00D21CFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		845AB2091B5F05450076828E /* Build configuration list for PBXProject "Course" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -431,6 +993,7 @@
 				845AB24B1B5F07470076828E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		845AB2621B5F09B10076828E /* Build configuration list for PBXNativeTarget "Carwash_1.0" */ = {
 			isa = XCConfigurationList;
@@ -439,6 +1002,16 @@
 				845AB2641B5F09B10076828E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84A6CE811B8A36FE0080866F /* Build configuration list for PBXNativeTarget "Carwash_1.7" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84A6CE7F1B8A36FE0080866F /* Debug */,
+				84A6CE801B8A36FE0080866F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

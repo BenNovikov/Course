@@ -1,6 +1,6 @@
 //
 //  BNRoom.h
-//  Human
+//  Course
 //
 //  Created by Admin on 7/15/15.
 //  Copyright © 2015 ___IDAP College___. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "BNPerson.h"
+@class BNPerson;
 
 typedef NS_ENUM(NSUInteger, BNCarwashStructure) {
     BNCarwashUndefined,
@@ -21,10 +21,11 @@ typedef NS_ENUM(NSUInteger, BNCarwashStructure) {
 @property (nonatomic, assign)   BNCarwashStructure  structure;
 @property (nonatomic, readonly) NSArray *persons;
 
-+ (id)createRoomOfType:(BNCarwashStructure)structure withPersons:(NSArray *)persons;
++ (id)createRoomOfType:(BNCarwashStructure)structure;
++ (id)createRoomOfType:(BNCarwashStructure)structure persons:(NSArray *)persons;
 
 - (instancetype)init;
-- (instancetype)initWithType:(BNCarwashStructure)structure withPersons:(NSArray *)persons;
+- (instancetype)initWithType:(BNCarwashStructure)structure persons:(NSArray *)persons;
 
 - (NSArray *)persons;
 

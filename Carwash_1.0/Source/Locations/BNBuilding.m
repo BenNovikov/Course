@@ -1,6 +1,6 @@
 //
 //  BNBuilding.m
-//  Human
+//  Course
 //
 //  Created by Admin on 7/15/15.
 //  Copyright © 2015 ___IDAP College___. All rights reserved.
@@ -8,39 +8,42 @@
 
 #import "BNBuilding.h"
 
+@interface BNBuilding()
+@property (nonatomic, retain) NSMutableArray *mutableBays;
+
+@end
+
 @implementation BNBuilding
-@synthesize office;
-@synthesize bay;
+@dynamic bays;
 
 #pragma mark -
 #pragma mark Class Methods
 
-+ (id)createWithOffice:(BNRoom *)currentOffice withBay:(BNRoom *)currentBay {
++ (id)createWithOffice:(BNRoom *)currentOffice bays:(NSArray *)bays {
     
-    return [[[self alloc] initWithOffice:(BNRoom *)currentOffice withBay:(BNRoom *)currentBay] autorelease];
+    return [[[self alloc] initWithOffice:(BNRoom *)currentOffice bays:(NSArray *)bays] autorelease];
 }
 
 #pragma mark -
-#pragma mark Init and Declare
+#pragma mark Initializations and Deallocations
 
 - (void)dealloc {
     self.office = nil;
-    self.bay = nil;
+    self.mutableBays = nil;
     
     [super dealloc];
 }
 
-- (instancetype)init {
-    
-    return [self initWithOffice:nil withBay:nil];
+- (instancetype)init {    
+    return [self initWithOffice:nil bays:nil];
 }
 
-- (instancetype)initWithOffice:(BNRoom *)currentOffice withBay:(BNRoom *)currentBay {
+- (instancetype)initWithOffice:(BNRoom *)currentOffice bays:(NSArray *)bays {
     self = [super init];
     
     if(self){
         self.office = currentOffice;
-        self.bay    = currentBay;
+        self.mutableBays = [NSMutableArray arrayWithArray:bays];
     }
     
     return self;
@@ -49,9 +52,20 @@
 #pragma mark -
 #pragma mark Public Methods
 
+- (NSArray *)bays {
+    return [[self.mutableBays copy] autorelease];
+}
 
-#pragma mark -
-#pragma mark Private Methods
+- (void)addBay:(BNRoom *)bay {
+    if(nil != bay && NO == [self.mutableBays containsObject:bay]) {
+        [self.mutableBays addObject:bay];
+    }
+}
 
+- (void)removeBay:(BNRoom *)bay {
+    if(nil != bay && YES == [self.mutableBays containsObject:bay]) {
+        [self.mutableBays removeObject:bay];
+    }
+}
 
 @end
